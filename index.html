@@ -1979,6 +1979,106 @@
       box-shadow: 0 3px 12px rgba(98, 181, 117, 0.35);
     }
 
+    /* Hivatalos utalvány felfedés doboz */
+    .voucher-reveal-wrapper {
+      max-width: 660px;
+      margin: 1.8rem auto;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      border: 1.5px solid var(--med-border);
+      background: #ffffff;
+      transition: var(--transition-smooth);
+    }
+
+    .voucher-cover {
+      padding: 2.2rem 1.8rem;
+      background: linear-gradient(135deg, #1e1925 0%, #141724 100%);
+      color: #e6edf3;
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      cursor: pointer;
+    }
+
+    .voucher-cover:hover {
+      background: linear-gradient(135deg, #251f2e 0%, #181d2c 100%);
+    }
+
+    .voucher-cover-badge {
+      font-family: var(--font-dev);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--dev-green);
+      background: rgba(98, 181, 117, 0.14);
+      border: 1px solid rgba(98, 181, 117, 0.35);
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+    }
+
+    .voucher-cover-title {
+      font-family: var(--font-med-head);
+      font-size: 1.35rem;
+      color: #ffd8d4;
+      font-weight: 700;
+    }
+
+    .voucher-cover-text {
+      font-family: var(--font-med-body);
+      font-size: 0.92rem;
+      color: var(--dev-text-muted);
+      max-width: 440px;
+    }
+
+    .btn-reveal-ticket {
+      background: linear-gradient(135deg, var(--love-accent) 0%, #d67a8c 100%);
+      color: #ffffff;
+      border: none;
+      font-family: var(--font-dev);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.75rem 1.8rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(184, 93, 114, 0.35);
+      transition: var(--transition-smooth);
+      margin-top: 0.4rem;
+    }
+
+    .btn-reveal-ticket:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 6px 22px rgba(184, 93, 114, 0.5);
+    }
+
+    .voucher-revealed-content {
+      display: none;
+      padding: 1.6rem 1.4rem;
+      background: #ffffff;
+      text-align: center;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .voucher-revealed-content.active {
+      display: block;
+    }
+
+    .voucher-official-img {
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e8dcd8;
+      display: block;
+      margin: 0 auto 1.4rem auto;
+    }
+
     .btn-copy-code.copied {
       background: var(--dev-blue);
       color: #ffffff;
@@ -2927,17 +3027,33 @@
                 <strong>Beváltható:</strong> 2026. 08. 31. - 2027. 05. 31.
               </div>
 
-              <div class="bonus-code-container">
-                <span class="bonus-code-label">BÓNUSZKÓDOD:</span>
-                <span class="bonus-code-val" id="bonusCodeVal">[BÓNUSZKÓD HELYE]</span>
-                <button type="button" class="btn-copy-code" id="btnCopyCode" onclick="copyBonusCode()">Másolás 📋</button>
+              <!-- Hivatalos Utalvány és Bónuszkód Felfedése -->
+              <div class="voucher-reveal-wrapper" id="voucherRevealWrapper">
+                <!-- Zárt állapot (Kattints a felfedéshez) -->
+                <div class="voucher-cover" id="voucherCover" onclick="revealVoucher()">
+                  <span class="voucher-cover-badge">Hivatalos Bónusz Utalvány</span>
+                  <div class="voucher-cover-title">Az utalvány le van pecsételve</div>
+                  <p class="voucher-cover-text">Kattints ide a hivatalos kuponjegy és a bónuszkód felbontásához!</p>
+                  <button type="button" class="btn-reveal-ticket" id="btnRevealTicket">Kupon &amp; Bónuszkód Felfedése ✨</button>
+                </div>
+
+                <!-- Felfedett állapot -->
+                <div class="voucher-revealed-content" id="voucherRevealedContent">
+                  <img src="bonusz-utalvany.png" alt="Hivatalos Ajándékbónusz Utalvány" class="voucher-official-img">
+
+                  <div class="bonus-code-container">
+                    <span class="bonus-code-label">BÓNUSZKÓDOD:</span>
+                    <span class="bonus-code-val" id="bonusCodeVal">BB-VCEFV2498876</span>
+                    <button type="button" class="btn-copy-code" id="btnCopyCode" onclick="copyBonusCode()">Másolás 📋</button>
+                  </div>
+                </div>
               </div>
 
               <div class="gift-order-steps">
                 <h4 class="gift-section-heading">Fontos tudnivalók / Rendelés menete:</h4>
                 <ul class="gift-order-list">
-                  <li>📧 Rendelés e-mailben: <a href="mailto:info@kalandkonyv.hu?subject=Érzéki Kalandok bónuszkód beváltás - Bogi és Barna" class="gift-mail-link">info@kalandkonyv.hu</a></li>
-                  <li>📍 Az üzenetben meg kell adni a bónuszkódot és a pontos szállítási címet.</li>
+                  <li>📧 Rendelés e-mailben: <a href="mailto:info@kalandkonyv.hu?subject=%C3%89rz%C3%A9ki%20Kalandok%20b%C3%B3nuszk%C3%B3d%20bev%C3%A1lt%C3%A1s%20-%20Bogi%20%C3%A9s%20Barna&amp;body=Kedves%20Kalandk%C3%B6nyv%20Csapat!%0A%0ASzeretn%C3%A9nk%20bev%C3%A1ltani%20az%20al%C3%A1bbi%20b%C3%B3nuszk%C3%B3dot:%0AB%C3%B3nuszk%C3%B3d:%20BB-VCEFV2498876%0A%0ASz%C3%A1ll%C3%ADt%C3%A1si%20n%C3%A9v%20%C3%A9s%20c%C3%ADm:%0A...%0A%0AEl%C5%91re%20is%20k%C3%B6sz%C3%B6nj%C3%BCk!%0ABogi%20%C3%A9s%20Barna" class="gift-mail-link">info@kalandkonyv.hu</a></li>
+                  <li>📍 Az üzenetben add meg a bónuszkódot (<code>BB-VCEFV2498876</code>) és a pontos szállítási címet.</li>
                   <li>💳 Szállítási díj: 1.890 Ft előreutalással (vagy 390 Ft utánvét díj).</li>
                 </ul>
               </div>
@@ -3393,11 +3509,22 @@ Virginia ❤️`;
       }, 30);
     }
 
+    // Hivatalos utalvány és bónuszkód interaktív felfedése
+    function revealVoucher() {
+      const cover = document.getElementById('voucherCover');
+      const content = document.getElementById('voucherRevealedContent');
+      if (cover && content) {
+        cover.style.display = 'none';
+        content.classList.add('active');
+        launchConfetti();
+      }
+    }
+
     // Bónuszkód másolása vágólapra
     function copyBonusCode() {
       const bonusCodeEl = document.getElementById('bonusCodeVal');
       const btn = document.getElementById('btnCopyCode');
-      const textToCopy = bonusCodeEl ? bonusCodeEl.innerText.trim() : '';
+      const textToCopy = 'BB-VCEFV2498876';
 
       const onCopied = () => {
         const originalText = btn.innerHTML;
