@@ -2066,15 +2066,39 @@
       display: block;
     }
 
-    .voucher-official-img {
-      width: 100%;
-      height: auto;
-      max-width: 600px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      border: 1px solid #e8dcd8;
+    .voucher-qr-frame {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 2px solid var(--med-border);
+      border-radius: 16px;
+      padding: 1.25rem 1.4rem;
+      margin: 0.4rem auto 1.2rem auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .voucher-qr-frame:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(184, 93, 114, 0.18);
+      border-color: var(--love-accent);
+    }
+
+    .voucher-qr-img {
+      width: 160px;
+      height: 160px;
       display: block;
-      margin: 0 auto 1.4rem auto;
+      border-radius: 8px;
+    }
+
+    .voucher-qr-sub {
+      margin-top: 0.65rem;
+      font-family: var(--font-dev);
+      font-size: 0.76rem;
+      color: var(--med-text-muted);
+      letter-spacing: 0.5px;
     }
 
     .btn-copy-code.copied {
@@ -3007,8 +3031,6 @@
             <div class="gift-voucher-card" id="giftVoucherCard">
               <div class="gift-ribbon-banner">AJÁNDÉK UTALVÁNY</div>
               <h3 class="gift-card-title">Érzéki Kalandok Pároknak kártyacsomag</h3>
-              
-              <img src="erzeki-kalandok.png" alt="Érzéki Kalandok Pároknak" class="gift-preview-img">
 
               <div class="gift-info-section">
                 <h4 class="gift-section-heading">Jó, ha tudtok róla:</h4>
@@ -3037,7 +3059,10 @@
 
                 <!-- Felfedett állapot -->
                 <div class="voucher-revealed-content" id="voucherRevealedContent">
-                  <img src="bonusz-utalvany.png" alt="Hivatalos Ajándékbónusz Utalvány" class="voucher-official-img">
+                  <div class="voucher-qr-frame">
+                    <img src="utalvany-qr.png" alt="Hivatalos Bónusz QR-kód" class="voucher-qr-img">
+                    <div class="voucher-qr-sub">Hivatalos beváltó QR-kód</div>
+                  </div>
 
                   <div class="bonus-code-container">
                     <span class="bonus-code-label">BÓNUSZKÓDOD:</span>
@@ -3052,7 +3077,6 @@
                 <ul class="gift-order-list">
                   <li>📧 Rendelés e-mailben: <a href="mailto:info@kalandkonyv.hu?subject=%C3%89rz%C3%A9ki%20Kalandok%20b%C3%B3nuszk%C3%B3d%20bev%C3%A1lt%C3%A1s%20-%20Bogi%20%C3%A9s%20Barna&amp;body=Kedves%20Kalandk%C3%B6nyv%20Csapat!%0A%0ASzeretn%C3%A9nk%20bev%C3%A1ltani%20az%20al%C3%A1bbi%20b%C3%B3nuszk%C3%B3dot:%0AB%C3%B3nuszk%C3%B3d:%20BB-VCEFV2498876%0A%0ASz%C3%A1ll%C3%ADt%C3%A1si%20n%C3%A9v%20%C3%A9s%20c%C3%ADm:%0A...%0A%0AEl%C5%91re%20is%20k%C3%B6sz%C3%B6nj%C3%BCk!%0ABogi%20%C3%A9s%20Barna" class="gift-mail-link">info@kalandkonyv.hu</a></li>
                   <li>📍 Az üzenetben add meg a bónuszkódot (<code>BB-VCEFV2498876</code>) és a pontos szállítási címet.</li>
-                  <li>💳 Szállítási díj: 1.890 Ft előreutalással (vagy 390 Ft utánvét díj).</li>
                 </ul>
               </div>
 
@@ -3434,7 +3458,6 @@
     const loveLetterString = `Drága Bogi és Barna! 💕
 
 Először is: ha ezt olvassátok, gratulálok – sikeresen feltörtétek a széfet!
-(Barna, fogadok, hogy te jöttél rá a jelszóra 3 mp alatt. 😄)
 
 Ti ketten vagytok a tökéletes "merge request" – zero conflicts, all tests passing,
 és a világ legszebb szimbiózisa a kódok és a gyógyítás között.
