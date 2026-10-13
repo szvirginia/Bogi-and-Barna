@@ -1602,87 +1602,66 @@
     }
 
     .photo-card {
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
       transition: var(--transition-smooth);
       position: relative;
-      cursor: pointer;
+      background: #141824;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
     }
 
     .photo-card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.65);
+      border-color: var(--love-accent);
     }
 
-    .photo-card-dev-1 {
-      background: linear-gradient(135deg, #151a24 0%, #1e2634 100%);
-      border: 1px solid rgba(98, 181, 117, 0.25);
-    }
     .photo-card-dev-1:hover { border-color: var(--dev-green); }
-
-    .photo-card-med-1 {
-      background: linear-gradient(135deg, #271e22 0%, #35252b 100%);
-      border: 1px solid rgba(181, 111, 107, 0.25);
-    }
     .photo-card-med-1:hover { border-color: var(--med-rose); }
-
-    .photo-card-dev-2 {
-      background: linear-gradient(135deg, #131c28 0%, #1a2536 100%);
-      border: 1px solid rgba(93, 149, 207, 0.25);
-    }
     .photo-card-dev-2:hover { border-color: var(--dev-blue); }
 
-    .photo-card-med-2 {
-      background: linear-gradient(135deg, #1e2520 0%, #29342b 100%);
-      border: 1px solid rgba(130, 168, 130, 0.25);
-    }
-    .photo-card-med-2:hover { border-color: var(--med-sage); }
-
-    .photo-card-dev-3 {
-      background: linear-gradient(135deg, #1f182a 0%, #2b203c 100%);
-      border: 1px solid rgba(170, 143, 209, 0.25);
-    }
-    .photo-card-dev-3:hover { border-color: var(--dev-purple); }
-
-    .photo-card-med-3 {
-      background: linear-gradient(135deg, #2a221b 0%, #3b2c21 100%);
-      border: 1px solid rgba(191, 160, 116, 0.25);
-    }
-    .photo-card-med-3:hover { border-color: var(--med-gold); }
-
-    .photo-placeholder-inner {
-      height: 280px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .photo-img-wrapper {
       position: relative;
-      padding: 1.8rem;
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+      background: #0d1017;
+    }
+
+    .photo-real-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+      display: block;
+    }
+
+    .photo-card:hover .photo-real-img {
+      transform: scale(1.06);
+    }
+
+    .photo-caption-box {
+      padding: 1.25rem 1.4rem;
+      background: linear-gradient(180deg, rgba(22, 27, 38, 0.96) 0%, rgba(16, 20, 29, 0.98) 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
       text-align: center;
-    }
-
-    .photo-camera-icon {
-      font-size: 3.6rem;
-      margin-bottom: 0.85rem;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
-      transition: var(--transition-smooth);
-    }
-
-    .photo-card:hover .photo-camera-icon {
-      transform: scale(1.12) rotate(-4deg);
     }
 
     .photo-caption-title {
       font-family: var(--font-med-head);
-      font-size: 1.2rem;
+      font-size: 1.22rem;
       color: #f0f6fc;
       margin-bottom: 0.35rem;
+      font-weight: 700;
     }
 
     .photo-caption-sub {
       font-family: var(--font-dev);
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       color: var(--dev-text-muted);
     }
 
@@ -2244,7 +2223,7 @@
         <li><a href="#hero" class="nav-link dev-link">~/home</a></li>
         <li><a href="#timeline" class="nav-link med-link">Szinkronizáció</a></li>
         <li><a href="#documents" class="nav-link dev-link">Dokumentumok</a></li>
-        <li><a href="#interactive" class="nav-link accent-link">Teszt 🧪</a></li>
+        <li><a href="#interactive" class="nav-link accent-link">Teszt</a></li>
         <li><a href="#gallery" class="nav-link med-link">Pillanatok</a></li>
       </ul>
 
@@ -2720,8 +2699,7 @@
     <section class="section-wrapper interactive-section" id="interactive">
       <div class="section-header-block reveal-item">
         <h2 class="section-title bridged-gradient-title">
-          <span class="title-dev-part">Kompatibilitás</span>
-          <span class="title-bridge-icon">🧪</span>
+          <span class="title-dev-part">Kompatibilitási</span>
           <span class="title-med-part">Teszt</span>
         </h2>
         <p class="section-subtitle">Szigorúan tudományos és algoritmikus vizsgálat a közös jövőről</p>
@@ -2840,59 +2818,38 @@
       </div>
 
       <div class="gallery-grid">
-        <!-- 1. Képkártya -->
-        <div class="photo-card photo-card-dev-1 reveal-item">
-          <div class="photo-placeholder-inner">
-            <span class="photo-camera-icon">📸</span>
-            <div class="photo-caption-title">Közös pillanat #1</div>
-            <div class="photo-caption-sub">render_01.raw • Kezdetek</div>
+        <!-- 1. Képkártya: Téli kaland -->
+        <article class="photo-card photo-card-dev-1 reveal-item">
+          <div class="photo-img-wrapper">
+            <img src="bogi-barna-1.jpg" alt="Bogi és Barna a hegyekben" class="photo-real-img" loading="lazy">
           </div>
-        </div>
+          <div class="photo-caption-box">
+            <h3 class="photo-caption-title">Közös kalandok a hegyekben</h3>
+            <p class="photo-caption-sub">Hófödte csúcsok, forró tea &amp; végtelen mosoly ❄️</p>
+          </div>
+        </article>
 
-        <!-- 2. Képkártya -->
-        <div class="photo-card photo-card-med-1 reveal-item">
-          <div class="photo-placeholder-inner">
-            <span class="photo-camera-icon">📸</span>
-            <div class="photo-caption-title">Közös pillanat #2</div>
-            <div class="photo-caption-sub">anamnezis_foto_02.jpg • Első randi</div>
+        <!-- 2. Képkártya: Cseresznyevirágzás & Esküvő -->
+        <article class="photo-card photo-card-med-1 reveal-item">
+          <div class="photo-img-wrapper">
+            <img src="bogi-barna-2.jpg" alt="Bogi és Barna cseresznyevirágok alatt" class="photo-real-img" loading="lazy">
           </div>
-        </div>
+          <div class="photo-caption-box">
+            <h3 class="photo-caption-title">Tavaszi virágzás &amp; Szerelem</h3>
+            <p class="photo-caption-sub">Cseresznyevirágok alatt, kéz a kézben az oltár felé 🌸</p>
+          </div>
+        </article>
 
-        <!-- 3. Képkártya -->
-        <div class="photo-card photo-card-dev-2 reveal-item">
-          <div class="photo-placeholder-inner">
-            <span class="photo-camera-icon">📸</span>
-            <div class="photo-caption-title">Közös pillanat #3</div>
-            <div class="photo-caption-sub">shared_memory_03.png • Összeköltözés</div>
+        <!-- 3. Képkártya: Utazás -->
+        <article class="photo-card photo-card-dev-2 reveal-item">
+          <div class="photo-img-wrapper">
+            <img src="bogi-barna-3.jpg" alt="Bogi és Barna városnézésen" class="photo-real-img" loading="lazy">
           </div>
-        </div>
-
-        <!-- 4. Képkártya -->
-        <div class="photo-card photo-card-med-2 reveal-item">
-          <div class="photo-placeholder-inner">
-            <span class="photo-camera-icon">📸</span>
-            <div class="photo-caption-title">Közös pillanat #4</div>
-            <div class="photo-caption-sub">vital_snapshot_04.jpg • Közös emlék</div>
+          <div class="photo-caption-box">
+            <h3 class="photo-caption-title">Felejthetetlen utazások</h3>
+            <p class="photo-caption-sub">Városnézés, Big Ben &amp; közös felfedezések 🏛️</p>
           </div>
-        </div>
-
-        <!-- 5. Képkártya -->
-        <div class="photo-card photo-card-dev-3 reveal-item">
-          <div class="photo-placeholder-inner">
-            <span class="photo-camera-icon">📸</span>
-            <div class="photo-caption-title">Közös pillanat #5</div>
-            <div class="photo-caption-sub">engagement_render_05.png • Eljegyzés</div>
-          </div>
-        </div>
-
-        <!-- 6. Képkártya -->
-        <div class="photo-card photo-card-med-3 reveal-item">
-          <div class="photo-placeholder-inner">
-            <span class="photo-camera-icon">📸</span>
-            <div class="photo-caption-title">Közös pillanat #6</div>
-            <div class="photo-caption-sub">wedding_preview_06.jpg • Esküvő</div>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
