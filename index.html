@@ -1,0 +1,3448 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bogi & Barna — 2026.10.22 💍</title>
+  
+  <!-- Favicon (Gyűrű emoji) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+  
+  <!-- Google Fonts: JetBrains Mono (Dev), Playfair Display & Lora (Medical/Floral), Inter (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS VÁLTOZÓK ÉS FINOMÍTOTT SZÍNHARMÓNIA (DEV + MED + LOVE ACCENT)
+       ========================================================================== */
+    :root {
+      /* Fejlesztői téma (Barna) - Melegebb, lágyabb tónusú sötétkék-lila alappal */
+      --dev-bg: #0d111a;
+      --dev-surface: #151a26;
+      --dev-surface-hover: #1e2536;
+      --dev-border: #2d3648;
+      --dev-green: #7ee787;
+      --dev-blue: #58a6ff;
+      --dev-purple: #d2a8ff;
+      --dev-red: #ff7b72;
+      --dev-yellow: #e3b341;
+      --dev-text: #cdd5df;
+      --dev-text-muted: #8b95a5;
+      --font-dev: 'JetBrains Mono', monospace;
+
+      /* Orvosi / Florális téma (Bogi) - Hűvösebb rózsaszín és lágy krém tónusokkal */
+      --med-bg: #faf7f5;
+      --med-surface: #ffffff;
+      --med-border: #e8c6c2;
+      --med-rose: #c98580;
+      --med-sage: #8fbc8f;
+      --med-gold: #c9a87c;
+      --med-blush: #f6e1de;
+      --med-text: #38302e;
+      --med-text-muted: #786e6b;
+      --font-med-head: 'Playfair Display', serif;
+      --font-med-body: 'Lora', serif;
+
+      /* Átívelő központi szerelem akcentus */
+      --love-accent: #d4788c;
+      --love-glow: rgba(212, 120, 140, 0.45);
+      --love-soft: rgba(212, 120, 140, 0.15);
+      --font-ui: 'Inter', sans-serif;
+      --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--dev-bg);
+      color: var(--dev-text);
+      overflow-x: hidden;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    /* Finom lebegő háttérelemek rétege (csökkentett 0.15 opacitás a finomabb hatáshoz) */
+    .floating-particles-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .floating-symbol {
+      position: absolute;
+      opacity: 0.15;
+      user-select: none;
+      transition: transform 0.2s ease-out;
+      animation: floatSymbol 20s infinite linear;
+    }
+
+    @keyframes floatSymbol {
+      0% {
+        transform: translateY(105vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.15;
+      }
+      90% {
+        opacity: 0.15;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* ==========================================================================
+       NAVIGÁCIÓS SÁV (BRIDGING NAVBAR)
+       ========================================================================== */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: linear-gradient(
+        90deg,
+        rgba(13, 17, 26, 0.94) 0%,
+        rgba(21, 26, 38, 0.90) 35%,
+        rgba(35, 28, 38, 0.88) 55%,
+        rgba(250, 247, 245, 0.92) 85%,
+        rgba(250, 247, 245, 0.96) 100%
+      );
+      border-bottom: 1px solid rgba(212, 120, 140, 0.3);
+      padding: 0.75rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+    }
+
+    .nav-logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-family: var(--font-dev);
+      background: rgba(126, 231, 135, 0.12);
+      border: 1px solid rgba(126, 231, 135, 0.35);
+      color: var(--dev-green);
+    }
+
+    .nav-brand-title {
+      font-family: var(--font-med-head);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #38302e;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+      position: relative;
+      padding: 0.3rem 0;
+    }
+
+    .nav-link.dev-link {
+      font-family: var(--font-dev);
+      color: var(--dev-blue);
+    }
+
+    .nav-link.med-link {
+      font-family: var(--font-med-body);
+      color: var(--med-rose);
+      font-weight: 600;
+    }
+
+    .nav-link.accent-link {
+      font-family: var(--font-ui);
+      color: var(--love-accent);
+      font-weight: 600;
+    }
+
+    .nav-link:hover {
+      color: var(--love-accent);
+      transform: translateY(-1px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--love-accent);
+      transition: width 0.3s ease;
+      box-shadow: 0 0 8px var(--love-glow);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-vault-btn {
+      background: linear-gradient(135deg, rgba(212, 120, 140, 0.25), rgba(126, 231, 135, 0.2));
+      border: 1px solid var(--love-accent);
+      color: #38302e;
+      font-family: var(--font-dev);
+      font-size: 0.78rem;
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-smooth);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 2px 10px rgba(212, 120, 140, 0.15);
+    }
+
+    .nav-vault-btn:hover {
+      background: var(--love-accent);
+      color: #ffffff;
+      box-shadow: 0 0 18px var(--love-glow);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       SECTION 1: HERO SECTION (ORGANIC, SOFT GAUSSIAN BLEND)
+       ========================================================================== */
+    .hero-section {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 5.5rem;
+      padding-bottom: 3.5rem;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    /* Szerves, lágy és összefolyó háttér (nincs éles határvonal!) */
+    .hero-split-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(
+        110deg,
+        #0d111a 0%,
+        #131826 30%,
+        #1c1828 48%,
+        #3b2636 54%,
+        #ecd3d1 66%,
+        #f5e8e5 80%,
+        #faf7f5 100%
+      );
+    }
+
+    /* Bal oldali finom rács és dev fényréteg, lágy 60%-os maszkolással */
+    .hero-bg-left-mesh {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 65%;
+      height: 100%;
+      background-image: 
+        radial-gradient(rgba(126, 231, 135, 0.1) 1px, transparent 1px),
+        radial-gradient(rgba(88, 166, 255, 0.08) 1px, transparent 1px);
+      background-size: 32px 32px, 64px 64px;
+      background-position: 0 0, 16px 16px;
+      mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 45%, transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 45%, transparent 100%);
+      pointer-events: none;
+    }
+
+    /* Jobb oldali lágy med-virágos aurák és színfoltok */
+    .hero-bg-right-aurora {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      background-image:
+        radial-gradient(circle at 80% 20%, rgba(201, 133, 128, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 40% 75%, rgba(143, 188, 143, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(212, 120, 140, 0.18) 0%, transparent 40%);
+      mask-image: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 45%, transparent 100%);
+      -webkit-mask-image: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 45%, transparent 100%);
+      pointer-events: none;
+    }
+
+    /* Központi diffúz gaussian fényudvar, ami összeolvasztja a két világot */
+    .hero-center-ambient-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(
+        circle,
+        rgba(212, 120, 140, 0.28) 0%,
+        rgba(126, 231, 135, 0.12) 35%,
+        rgba(88, 166, 255, 0.08) 55%,
+        transparent 75%
+      );
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 2.2rem;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* BAL OLDAL: Lebegő terminál (Barna) */
+    .terminal-window {
+      background: rgba(21, 26, 38, 0.94);
+      border: 1px solid var(--dev-border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 25px rgba(126, 231, 135, 0.12);
+      backdrop-filter: blur(10px);
+      transition: var(--transition-smooth);
+      animation: floatCardLeft 6s ease-in-out infinite alternate;
+    }
+
+    .terminal-window:hover {
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(126, 231, 135, 0.25);
+      border-color: rgba(126, 231, 135, 0.5);
+    }
+
+    @keyframes floatCardLeft {
+      0% { transform: translateY(0px) rotate(-0.5deg); }
+      100% { transform: translateY(-8px) rotate(0.5deg); }
+    }
+
+    .terminal-header {
+      background: #181d2a;
+      padding: 0.7rem 1.1rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--dev-border);
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+      margin-right: 1rem;
+    }
+
+    .terminal-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #ff5f56; }
+    .dot-yellow { background: #ffbd2e; }
+    .dot-green { background: #27c93f; }
+
+    .terminal-title {
+      font-family: var(--font-dev);
+      font-size: 0.8rem;
+      color: var(--dev-text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .terminal-body {
+      padding: 1.4rem 1.5rem;
+      font-family: var(--font-dev);
+      font-size: 0.86rem;
+      line-height: 1.75;
+      color: var(--dev-text);
+      min-height: 220px;
+    }
+
+    .term-line {
+      opacity: 0;
+      animation: terminalLineFade 0.4s forwards;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-bottom: 0.35rem;
+    }
+
+    .term-line-1 { animation-delay: 0.3s; }
+    .term-line-2 { animation-delay: 1.0s; }
+    .term-line-3 { animation-delay: 1.8s; }
+    .term-line-4 { animation-delay: 2.6s; }
+    .term-line-5 { animation-delay: 3.4s; }
+    .term-line-6 { animation-delay: 4.2s; }
+
+    @keyframes terminalLineFade {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .term-prompt { color: var(--dev-green); font-weight: bold; margin-right: 0.5rem; }
+    .term-cmd { color: var(--dev-blue); }
+    .term-hash { color: var(--dev-yellow); font-weight: 600; margin-right: 0.5rem; }
+    .term-feat { color: var(--dev-green); }
+    .term-refactor { color: var(--dev-purple); }
+    .term-head { color: var(--dev-blue); font-weight: 600; }
+    .term-release { color: var(--dev-red); font-weight: 700; }
+    .term-text { color: var(--dev-text); }
+
+    .term-cursor {
+      display: inline-block;
+      width: 9px;
+      height: 1.1em;
+      background: var(--dev-green);
+      vertical-align: text-bottom;
+      margin-left: 3px;
+      animation: cursorBlink 1s infinite steps(2, start);
+    }
+
+    @keyframes cursorBlink {
+      to { visibility: hidden; }
+    }
+
+    /* KÖZÉP: Center Badge & Nevek */
+    .hero-center-badge {
+      text-align: center;
+      padding: 2.2rem 1.8rem;
+      background: rgba(26, 22, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 28px;
+      border: 1px solid rgba(212, 120, 140, 0.45);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 35px var(--love-glow);
+      position: relative;
+      min-width: 300px;
+      z-index: 10;
+    }
+
+    .hero-bridge-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.4rem;
+      display: inline-block;
+      filter: drop-shadow(0 0 10px rgba(212, 120, 140, 0.8));
+      animation: heartbeatPulse 2.2s infinite ease-in-out;
+    }
+
+    @keyframes heartbeatPulse {
+      0%, 100% { transform: scale(1); }
+      14% { transform: scale(1.22); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.18); }
+      70% { transform: scale(1); }
+    }
+
+    .couple-names {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .name-bogi {
+      font-family: var(--font-med-head);
+      color: #ffd6d1;
+      text-shadow: 0 0 22px rgba(232, 196, 192, 0.65);
+    }
+
+    .name-amp {
+      font-family: var(--font-med-head);
+      font-style: italic;
+      color: var(--love-accent);
+      padding: 0 0.15rem;
+      font-size: 3rem;
+      font-weight: 400;
+      text-shadow: 0 0 22px var(--love-glow);
+    }
+
+    .name-barna {
+      font-family: var(--font-dev);
+      color: var(--dev-green);
+      font-weight: 700;
+      text-shadow: 0 0 22px rgba(126, 231, 135, 0.55);
+    }
+
+    .wedding-date-hero {
+      font-family: var(--font-med-body);
+      font-size: 1.15rem;
+      color: #ebd0cc;
+      letter-spacing: 2px;
+      margin-top: 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .hero-tag-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 1.1rem;
+    }
+
+    .hero-pill-dev {
+      font-family: var(--font-dev);
+      font-size: 0.72rem;
+      background: rgba(126, 231, 135, 0.16);
+      border: 1px solid rgba(126, 231, 135, 0.45);
+      color: var(--dev-green);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    .hero-pill-med {
+      font-family: var(--font-med-body);
+      font-size: 0.72rem;
+      background: rgba(212, 120, 140, 0.22);
+      border: 1px solid rgba(212, 120, 140, 0.5);
+      color: #ffd8d4;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    /* JOBB OLDAL: Lebegő orvosi kártya + EKG */
+    .medical-card-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      animation: floatCardRight 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatCardRight {
+      0% { transform: translateY(0px) rotate(0.5deg); }
+      100% { transform: translateY(-8px) rotate(-0.5deg); }
+    }
+
+    .medical-card {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--med-border);
+      border-radius: 14px;
+      padding: 1.5rem 1.7rem;
+      box-shadow: 0 20px 50px rgba(201, 133, 128, 0.28);
+      backdrop-filter: blur(10px);
+      color: var(--med-text);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .medical-card:hover {
+      box-shadow: 0 25px 60px rgba(201, 133, 128, 0.38);
+      border-color: var(--med-rose);
+    }
+
+    .med-stamp-watermark {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      border: 2px dashed rgba(201, 133, 128, 0.35);
+      border-radius: 50%;
+      width: 78px;
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-med-head);
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      color: rgba(201, 133, 128, 0.55);
+      text-align: center;
+      transform: rotate(-15deg);
+      pointer-events: none;
+      line-height: 1.15;
+    }
+
+    .medical-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--med-blush);
+      padding-bottom: 0.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .med-header-title {
+      font-family: var(--font-med-head);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--med-rose);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .med-hospital-code {
+      font-family: var(--font-dev);
+      font-size: 0.72rem;
+      color: var(--med-text-muted);
+      background: var(--med-bg);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      border: 1px solid var(--med-border);
+    }
+
+    .medical-card-body {
+      font-family: var(--font-med-body);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .med-record-row {
+      display: grid;
+      grid-template-columns: 95px 1fr;
+      margin-bottom: 0.45rem;
+      align-items: baseline;
+    }
+
+    .med-record-label {
+      font-weight: 600;
+      color: var(--med-text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .med-record-value {
+      font-weight: 500;
+      color: var(--med-text);
+    }
+
+    .med-record-value.latin {
+      font-family: var(--font-med-head);
+      font-style: italic;
+      color: #9e554e;
+      font-weight: 600;
+    }
+
+    /* EKG Monitor alul */
+    .ekg-monitor-frame {
+      background: #0b0f16;
+      border: 1px solid rgba(126, 231, 135, 0.35);
+      border-radius: 14px;
+      padding: 0.8rem 1.1rem;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+      position: relative;
+    }
+
+    .ekg-monitor-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+      font-family: var(--font-dev);
+      font-size: 0.72rem;
+    }
+
+    .ekg-status-text {
+      color: var(--dev-green);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .ekg-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--dev-green);
+      box-shadow: 0 0 8px var(--dev-green);
+      animation: blinkEkg 1s infinite;
+    }
+
+    @keyframes blinkEkg {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .ekg-bpm-readout {
+      color: var(--love-accent);
+      font-weight: bold;
+    }
+
+    #ekgCanvas {
+      width: 100%;
+      height: 80px;
+      display: block;
+      background: transparent;
+      border-radius: 4px;
+    }
+
+    /* Gördítésjelző */
+    .scroll-down-hint {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      color: #ffd8d4;
+      font-family: var(--font-dev);
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      z-index: 10;
+      transition: var(--transition-smooth);
+    }
+
+    .scroll-down-hint:hover {
+      color: var(--dev-green);
+    }
+
+    .scroll-chevron-bounce {
+      animation: bounceChevron 2s infinite ease-in-out;
+      font-size: 1.2rem;
+    }
+
+    @keyframes bounceChevron {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(8px); }
+      60% { transform: translateY(4px); }
+    }
+
+    /* ==========================================================================
+       HULLÁMOS SZERVES SZEKCIÓ ELVÁLASZTÓK (ORGANIC WAVE DIVIDERS)
+       ========================================================================== */
+    .organic-wave-divider {
+      width: 100%;
+      height: 48px;
+      position: relative;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 10;
+      margin: -1px 0;
+    }
+
+    .organic-wave-divider svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* ==========================================================================
+       KÖZÖS SZEKCIÓ FORMÁZÁSOK
+       ========================================================================== */
+    .section-wrapper {
+      padding: 6.5rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-header-block {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 4rem auto;
+    }
+
+    .section-title {
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    .bridged-gradient-title {
+      background: linear-gradient(135deg, var(--dev-green) 0%, var(--dev-blue) 30%, var(--love-accent) 65%, var(--med-rose) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .title-dev-part {
+      font-family: var(--font-dev);
+      font-weight: 700;
+    }
+
+    .title-bridge-icon {
+      font-size: 2.2rem;
+      vertical-align: middle;
+      -webkit-text-fill-color: initial;
+    }
+
+    .title-med-part {
+      font-family: var(--font-med-head);
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      font-family: var(--font-med-body);
+      font-size: 1.15rem;
+      color: #aba19e;
+      letter-spacing: 0.5px;
+    }
+
+    .section-subtitle code {
+      font-family: var(--font-dev);
+      color: var(--dev-blue);
+      background: rgba(88, 166, 255, 0.12);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       SECTION 2: TIMELINE SECTION (SZINKRONIZÁLT TÖRTÉNET - EGYSÉGES KÁRTYAMÉRETEK)
+       ========================================================================== */
+    .timeline-section {
+      background: linear-gradient(
+        180deg,
+        #0e121c 0%,
+        #131826 30%,
+        #1b1728 60%,
+        #151a26 100%
+      );
+      position: relative;
+    }
+
+    .timeline-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 1rem 0 2rem 0;
+    }
+
+    .timeline-center-spine {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      background: linear-gradient(
+        180deg,
+        var(--dev-green) 0%,
+        var(--dev-blue) 25%,
+        var(--love-accent) 55%,
+        var(--med-rose) 80%,
+        var(--med-blush) 100%
+      );
+      border-radius: 4px;
+      box-shadow: 0 0 14px rgba(212, 120, 140, 0.4);
+    }
+
+    .timeline-center-spine::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -2px;
+      width: 8px;
+      height: 35%;
+      background: repeating-linear-gradient(
+        to bottom,
+        var(--dev-green) 0,
+        var(--dev-green) 8px,
+        transparent 8px,
+        transparent 16px
+      );
+      border-radius: 4px;
+    }
+
+    .timeline-center-spine::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      width: 44px;
+      height: 40%;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 120' preserveAspectRatio='none'%3E%3Cpath d='M22,0 L22,35 L16,42 L28,48 L8,56 L36,64 L14,72 L22,80 L22,120' fill='none' stroke='%23d4788c' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") repeat-y center;
+      background-size: 40px 110px;
+      opacity: 0.95;
+      filter: drop-shadow(0 0 8px rgba(212, 120, 140, 0.7));
+    }
+
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: stretch; /* AZONOS MAGASSÁG A KÉT OLDALON */
+      margin-bottom: 4.2rem;
+      position: relative;
+    }
+
+    /* Egységes kártyaméret, padding és betűméret mindkét oldalon! */
+    .timeline-card-dev,
+    .timeline-card-med {
+      padding: 1.5rem;
+      min-height: 165px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    /* Bal: Dev kártya */
+    .timeline-card-dev {
+      background: rgba(21, 26, 38, 0.95);
+      border: 1px solid var(--dev-border);
+      border-left: 4px solid var(--dev-green);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+      font-family: var(--font-dev);
+    }
+
+    .timeline-card-dev:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(126, 231, 135, 0.2);
+      border-color: var(--dev-green);
+    }
+
+    .dev-badge-hash {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      background: rgba(88, 166, 255, 0.14);
+      color: var(--dev-blue);
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid rgba(88, 166, 255, 0.25);
+      margin-bottom: 0.65rem;
+      width: fit-content;
+    }
+
+    .dev-commit-msg {
+      font-size: 0.95rem;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+
+    .dev-commit-msg .cmd-feat { color: var(--dev-green); font-weight: 600; }
+    .dev-commit-msg .cmd-refactor { color: var(--dev-purple); font-weight: 600; }
+    .dev-commit-msg .cmd-release { color: var(--dev-red); font-weight: 700; }
+
+    /* Középső csomópont */
+    .timeline-node-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1.8rem;
+      position: relative;
+      z-index: 5;
+    }
+
+    .timeline-node-dot {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #1c1828;
+      border: 3px solid var(--love-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      box-shadow: 0 0 20px var(--love-glow);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .timeline-node-wrapper:hover .timeline-node-dot {
+      transform: scale(1.18) rotate(12deg);
+      border-color: var(--dev-green);
+      box-shadow: 0 0 25px rgba(126, 231, 135, 0.6);
+    }
+
+    .timeline-date-chip {
+      margin-top: 0.5rem;
+      font-family: var(--font-dev);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #ffd8d4;
+      background: rgba(30, 24, 38, 0.92);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 120, 140, 0.45);
+      white-space: nowrap;
+    }
+
+    /* Jobb: Med kártya */
+    .timeline-card-med {
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid var(--med-border);
+      border-right: 4px solid var(--med-rose);
+      box-shadow: 0 15px 35px rgba(201, 133, 128, 0.2);
+      font-family: var(--font-med-body);
+      color: var(--med-text);
+    }
+
+    .timeline-card-med:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(201, 133, 128, 0.35);
+      border-color: var(--med-rose);
+    }
+
+    .med-record-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-family: var(--font-med-head);
+      background: var(--med-blush);
+      color: var(--med-rose);
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-bottom: 0.65rem;
+      width: fit-content;
+    }
+
+    .med-clinical-desc {
+      font-size: 0.95rem; /* PONTOSAN UGYANAZ MINT A DEV KÁRTYÁN */
+      font-style: italic;
+      color: #4a3e3c;
+      line-height: 1.6;
+    }
+
+    .med-badge-vitals {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      font-family: var(--font-dev);
+      color: var(--med-text-muted);
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    /* ==========================================================================
+       SECTION 3: DOCUMENTS SECTION (EGYSÉGES MÉRETŰ KÁRTYÁK, NINCS DŐLÉS!)
+       ========================================================================== */
+    .documents-section {
+      background: linear-gradient(
+        180deg,
+        #151a26 0%,
+        #191e2e 40%,
+        #221d2d 75%,
+        #1d192a 100%
+      );
+      position: relative;
+    }
+
+    .documents-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: stretch; /* AZONOS MAGASSÁGÚ KÁRTYÁK */
+      padding: 1rem 0;
+    }
+
+    /* Bal és Jobb kártya közös méretezése (egyenesek, nem ferdék!) */
+    .doc-card-dev,
+    .doc-card-med {
+      border-radius: 16px;
+      padding: 2.2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      transition: var(--transition-smooth);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 540px;
+      transform: none; /* NINCS FORGATÁS: EGYENES ÉS TISZTA */
+    }
+
+    .doc-card-dev {
+      background: #0f1420;
+      border: 1px solid var(--dev-border);
+      font-family: var(--font-dev);
+      color: var(--dev-text);
+    }
+
+    .doc-card-dev:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(126, 231, 135, 0.22);
+      border-color: rgba(126, 231, 135, 0.5);
+    }
+
+    .doc-card-med {
+      background: #fffefb;
+      border: 1px solid var(--med-border);
+      font-family: var(--font-med-body);
+      color: var(--med-text);
+      box-shadow: 0 20px 50px rgba(201, 133, 128, 0.25);
+    }
+
+    .doc-card-med:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 60px rgba(201, 133, 128, 0.38);
+      border-color: var(--med-rose);
+    }
+
+    .doc-dev-tab-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--dev-border);
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.75rem;
+      color: var(--dev-text-muted);
+    }
+
+    .doc-dev-title {
+      font-size: 1.35rem;
+      color: var(--dev-green);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .doc-dev-meta {
+      font-size: 0.82rem;
+      color: var(--dev-text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .doc-dev-section-h2 {
+      font-size: 0.95rem;
+      color: var(--dev-blue);
+      border-bottom: 1px solid #252c3d;
+      padding-bottom: 0.35rem;
+      margin: 1.1rem 0 0.55rem 0;
+      font-weight: 600;
+    }
+
+    .doc-dev-list {
+      list-style: none;
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+
+    .doc-dev-list li {
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+
+    .doc-dev-dependencies {
+      margin-top: 1.4rem;
+      padding: 0.75rem 1rem;
+      border-top: 1px dashed var(--dev-border);
+      font-size: 0.82rem;
+      color: var(--dev-purple);
+      background: rgba(210, 168, 255, 0.08);
+      border-radius: 6px;
+    }
+
+    .doc-med-letterhead {
+      text-align: center;
+      border-bottom: 2px solid var(--med-blush);
+      padding-bottom: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .doc-med-hospital {
+      font-family: var(--font-med-head);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--med-rose);
+      letter-spacing: 1px;
+    }
+
+    .doc-med-registry {
+      font-family: var(--font-dev);
+      font-size: 0.78rem;
+      color: var(--med-text-muted);
+      margin-top: 0.3rem;
+    }
+
+    .doc-med-section-title {
+      font-family: var(--font-med-head);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #8c5750;
+      margin: 1rem 0 0.35rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .doc-med-content {
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    .doc-med-list {
+      list-style: none;
+      margin: 0.35rem 0;
+    }
+
+    .doc-med-list li {
+      margin-bottom: 0.3rem;
+      padding-left: 0.2rem;
+    }
+
+    .doc-med-seal {
+      margin-top: 1.4rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--med-blush);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 0.8rem;
+      color: var(--med-text-muted);
+    }
+
+    .doc-med-signature {
+      font-family: var(--font-med-head);
+      font-style: italic;
+      color: var(--med-rose);
+      font-size: 1.1rem;
+    }
+
+    /* ==========================================================================
+       SECTION 4 (ÚJ!): INTERAKTÍV KOMPATIBILITÁSI TESZT / PRANK SZEKCIÓ
+       ========================================================================== */
+    .interactive-section {
+      background: linear-gradient(
+        180deg,
+        #1d192a 0%,
+        #241c30 40%,
+        #1e1828 75%,
+        #131722 100%
+      );
+      position: relative;
+    }
+
+    .interactive-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .interactive-card {
+      background: rgba(22, 27, 40, 0.92);
+      border: 1px solid rgba(212, 120, 140, 0.3);
+      border-radius: 16px;
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 120, 140, 0.1);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .interactive-card:hover {
+      border-color: var(--love-accent);
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.65), 0 0 30px var(--love-glow);
+      transform: translateY(-4px);
+    }
+
+    .interactive-card-header {
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .interactive-q-badge {
+      display: inline-block;
+      font-family: var(--font-dev);
+      font-size: 0.72rem;
+      color: var(--love-accent);
+      background: var(--love-soft);
+      border: 1px solid rgba(212, 120, 140, 0.35);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .interactive-card-title {
+      font-family: var(--font-med-head);
+      font-size: 1.25rem;
+      color: #fff2f0;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+
+    .interactive-card-subtitle {
+      font-family: var(--font-med-body);
+      font-size: 0.85rem;
+      color: var(--dev-text-muted);
+      font-style: italic;
+    }
+
+    /* 1. KÉRDÉS: MENEKÜLŐ GOMB ARÉNA */
+    .runaway-arena {
+      position: relative;
+      min-height: 310px;
+      background: rgba(13, 17, 26, 0.85);
+      border: 1px dashed rgba(212, 120, 140, 0.35);
+      border-radius: 12px;
+      padding: 1.5rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    .runaway-arena-hint {
+      font-family: var(--font-dev);
+      font-size: 0.75rem;
+      color: var(--dev-text-muted);
+      text-align: center;
+      pointer-events: none;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      right: 15px;
+    }
+
+    .btn-never {
+      background: linear-gradient(135deg, #27c93f 0%, #1ea632 100%);
+      color: #0d111a;
+      border: none;
+      font-family: var(--font-dev);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(39, 201, 63, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      z-index: 5;
+    }
+
+    .btn-never:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 25px rgba(39, 201, 63, 0.6);
+    }
+
+    .btn-runaway {
+      position: absolute;
+      background: #ff5f56;
+      color: #ffffff;
+      border: none;
+      font-family: var(--font-dev);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 95, 86, 0.35);
+      transition: top 0.12s cubic-bezier(0.18, 0.89, 0.32, 1.28), left 0.12s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      z-index: 6;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .prank-success-msg {
+      display: none;
+      background: rgba(39, 201, 63, 0.15);
+      border: 1px solid var(--dev-green);
+      color: var(--dev-green);
+      font-family: var(--font-dev);
+      font-size: 0.82rem;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 1.5;
+      animation: popIn 0.3s ease;
+      z-index: 10;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.85); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* 2. KÉRDÉS: LOVE METER & OVERFLOW */
+    .love-meter-box {
+      min-height: 310px;
+      background: rgba(13, 17, 26, 0.85);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      text-align: center;
+    }
+
+    .love-meter-track {
+      width: 100%;
+      height: 26px;
+      background: #192030;
+      border: 1px solid var(--dev-border);
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .love-meter-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #58a6ff 0%, #d2a8ff 45%, #d4788c 80%, #ff5f56 100%);
+      border-radius: 999px;
+      transition: width 0.05s linear;
+      box-shadow: 0 0 15px var(--love-glow);
+    }
+
+    .love-meter-readout {
+      font-family: var(--font-dev);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--dev-green);
+      text-shadow: 0 0 12px rgba(126, 231, 135, 0.5);
+    }
+
+    .btn-measure-love {
+      background: linear-gradient(135deg, rgba(88, 166, 255, 0.25), rgba(212, 120, 140, 0.35));
+      border: 1px solid var(--love-accent);
+      color: #fff;
+      font-family: var(--font-dev);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-measure-love:hover {
+      background: var(--love-accent);
+      box-shadow: 0 0 20px var(--love-glow);
+      transform: translateY(-2px);
+    }
+
+    .love-overflow-banner {
+      display: none;
+      background: rgba(255, 123, 114, 0.15);
+      border: 1px solid var(--dev-red);
+      color: #ff9b94;
+      font-family: var(--font-dev);
+      font-size: 0.78rem;
+      padding: 0.7rem 0.9rem;
+      border-radius: 8px;
+      line-height: 1.45;
+      animation: alertPulse 1.2s infinite alternate;
+    }
+
+    @keyframes alertPulse {
+      0% { box-shadow: 0 0 5px rgba(255, 123, 114, 0.2); }
+      100% { box-shadow: 0 0 18px rgba(255, 123, 114, 0.5); }
+    }
+
+    /* 3. KÉRDÉS: MOSOGATÁS PÖRGETŐ (SPINNER) */
+    .spinner-box {
+      min-height: 310px;
+      background: rgba(13, 17, 26, 0.85);
+      border: 1px solid rgba(201, 168, 124, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      text-align: center;
+    }
+
+    .spinner-display-frame {
+      width: 100%;
+      background: #141926;
+      border: 2px solid var(--dev-border);
+      border-radius: 14px;
+      padding: 1.2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .spinner-active-name {
+      font-family: var(--font-med-head);
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffd8d4;
+      transition: transform 0.1s ease, color 0.1s ease;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .spinner-active-name.spinning {
+      transform: scale(1.15);
+      color: var(--love-accent);
+      filter: blur(0.5px);
+    }
+
+    .spinner-subnote {
+      font-family: var(--font-dev);
+      font-size: 0.72rem;
+      color: var(--dev-text-muted);
+      margin-top: 0.3rem;
+    }
+
+    .btn-spin {
+      background: linear-gradient(135deg, rgba(201, 168, 124, 0.3), rgba(212, 120, 140, 0.3));
+      border: 1px solid var(--med-gold);
+      color: #ffd8a8;
+      font-family: var(--font-dev);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.65rem 1.6rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 15px rgba(201, 168, 124, 0.2);
+    }
+
+    .btn-spin:hover:not(:disabled) {
+      background: var(--med-gold);
+      color: #1a1612;
+      box-shadow: 0 0 22px rgba(201, 168, 124, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-spin:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .spinner-result-verdict {
+      font-family: var(--font-med-body);
+      font-size: 0.84rem;
+      font-style: italic;
+      color: #e6edf3;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       SECTION 5: GALLERY SECTION (PILLANATOK - 280px MAGAS KÁRTYÁK)
+       ========================================================================== */
+    .gallery-section {
+      background: linear-gradient(
+        180deg,
+        #131722 0%,
+        #181e2b 45%,
+        #121620 100%
+      );
+      position: relative;
+    }
+
+    .gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .photo-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      transition: var(--transition-smooth);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65);
+    }
+
+    .photo-card-dev-1 {
+      background: linear-gradient(135deg, #161b26 0%, #1f2a3a 100%);
+      border: 1px solid rgba(126, 231, 135, 0.3);
+    }
+    .photo-card-dev-1:hover { border-color: var(--dev-green); }
+
+    .photo-card-med-1 {
+      background: linear-gradient(135deg, #2c2126 0%, #3e2b32 100%);
+      border: 1px solid rgba(201, 133, 128, 0.35);
+    }
+    .photo-card-med-1:hover { border-color: var(--med-rose); }
+
+    .photo-card-dev-2 {
+      background: linear-gradient(135deg, #141f2d 0%, #1b293d 100%);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+    }
+    .photo-card-dev-2:hover { border-color: var(--dev-blue); }
+
+    .photo-card-med-2 {
+      background: linear-gradient(135deg, #212923 0%, #2e3b31 100%);
+      border: 1px solid rgba(143, 188, 143, 0.35);
+    }
+    .photo-card-med-2:hover { border-color: var(--med-sage); }
+
+    .photo-card-dev-3 {
+      background: linear-gradient(135deg, #221b2f 0%, #302444 100%);
+      border: 1px solid rgba(210, 168, 255, 0.3);
+    }
+    .photo-card-dev-3:hover { border-color: var(--dev-purple); }
+
+    .photo-card-med-3 {
+      background: linear-gradient(135deg, #30261f 0%, #463428 100%);
+      border: 1px solid rgba(201, 168, 124, 0.35);
+    }
+    .photo-card-med-3:hover { border-color: var(--med-gold); }
+
+    /* EGYSÉGES 280px MAGASSÁG A KÉRÉSNEK MEGFELELŐEN */
+    .photo-placeholder-inner {
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 1.8rem;
+      text-align: center;
+    }
+
+    .photo-camera-icon {
+      font-size: 3.8rem;
+      margin-bottom: 0.85rem;
+      filter: drop-shadow(0 6px 15px rgba(0,0,0,0.4));
+      transition: var(--transition-smooth);
+    }
+
+    .photo-card:hover .photo-camera-icon {
+      transform: scale(1.15) rotate(-5deg);
+    }
+
+    .photo-caption-title {
+      font-family: var(--font-med-head);
+      font-size: 1.2rem;
+      color: #f0f6fc;
+      margin-bottom: 0.35rem;
+    }
+
+    .photo-caption-sub {
+      font-family: var(--font-dev);
+      font-size: 0.78rem;
+      color: var(--dev-text-muted);
+    }
+
+    /* ==========================================================================
+       SECTION 6: VAULT SECTION (TITKOS SZÉF & LOVE LETTER)
+       ========================================================================== */
+    .vault-section {
+      background: radial-gradient(circle at 50% 30%, #1f1929 0%, #0e111a 65%, #090b11 100%);
+      position: relative;
+      border-top: 1px solid rgba(212, 120, 140, 0.2);
+    }
+
+    .vault-container {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .vault-box {
+      background: rgba(19, 23, 33, 0.95);
+      border: 1px solid rgba(212, 120, 140, 0.38);
+      border-radius: 20px;
+      padding: 3.2rem 2.5rem;
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 120, 140, 0.15);
+      backdrop-filter: blur(14px);
+      position: relative;
+    }
+
+    .vault-lock-display {
+      font-size: 4.2rem;
+      margin-bottom: 1.35rem;
+      display: inline-block;
+      transition: transform 0.4s ease, filter 0.4s ease;
+      filter: drop-shadow(0 0 16px rgba(212, 120, 140, 0.5));
+    }
+
+    .vault-lock-display.unlocked {
+      transform: scale(1.25) rotate(10deg);
+      filter: drop-shadow(0 0 25px rgba(126, 231, 135, 0.8));
+    }
+
+    .vault-auth-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .vault-input-group {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background: #0d111a;
+      border: 1px solid var(--dev-border);
+      border-radius: 8px;
+      padding: 0.55rem 1.1rem;
+      font-family: var(--font-dev);
+      font-size: 0.95rem;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
+      transition: var(--transition-smooth);
+    }
+
+    .vault-input-group:focus-within {
+      border-color: var(--dev-green);
+      box-shadow: 0 0 15px rgba(126, 231, 135, 0.35), inset 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .vault-input-prompt {
+      color: var(--dev-green);
+      font-weight: 600;
+      white-space: nowrap;
+      margin-right: 0.5rem;
+    }
+
+    .vault-input-field {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      font-family: var(--font-dev);
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .vault-submit-btn {
+      background: linear-gradient(135deg, rgba(126, 231, 135, 0.22), rgba(88, 166, 255, 0.22));
+      border: 1px solid var(--dev-green);
+      color: var(--dev-green);
+      font-family: var(--font-dev);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.8rem 2.4rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .vault-submit-btn:hover {
+      background: var(--dev-green);
+      color: #0d111a;
+      box-shadow: 0 0 25px rgba(126, 231, 135, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .vault-error-msg {
+      color: var(--dev-red);
+      font-family: var(--font-dev);
+      font-size: 0.85rem;
+      margin-top: 0.8rem;
+      display: none;
+      animation: shakeForm 0.45s ease;
+    }
+
+    @keyframes shakeForm {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+
+    .vault-content-revealed {
+      display: none;
+      text-align: left;
+      margin-top: 2.2rem;
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .vault-letter-card {
+      background: #0d111a;
+      border: 1px solid rgba(126, 231, 135, 0.45);
+      border-radius: 14px;
+      padding: 2.4rem;
+      font-family: var(--font-dev);
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: #e6edf3;
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.7);
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .letter-typewriter-text {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .typewriter-cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1.15em;
+      background: var(--dev-green);
+      vertical-align: text-bottom;
+      margin-left: 4px;
+      animation: cursorBlink 0.8s infinite steps(2, start);
+    }
+
+    .gift-voucher-card {
+      background: linear-gradient(135deg, #fffef9 0%, #f7ece8 100%);
+      border: 2px solid var(--med-gold);
+      border-radius: 18px;
+      padding: 2.6rem 2.2rem;
+      color: var(--med-text);
+      box-shadow: 0 22px 55px rgba(201, 168, 124, 0.38);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      display: none;
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .gift-ribbon-banner {
+      position: absolute;
+      top: 22px;
+      right: -36px;
+      transform: rotate(45deg);
+      background: var(--love-accent);
+      color: #ffffff;
+      font-family: var(--font-dev);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.35rem 3.2rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      letter-spacing: 1px;
+    }
+
+    .gift-card-title {
+      font-family: var(--font-med-head);
+      font-size: 1.85rem;
+      color: #8c5750;
+      margin-bottom: 0.65rem;
+    }
+
+    .gift-card-recipe {
+      font-family: var(--font-med-body);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #594a46;
+      max-width: 620px;
+      margin: 0 auto 1.6rem auto;
+      line-height: 1.65;
+    }
+
+    .gift-card-details-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-family: var(--font-dev);
+      font-size: 0.84rem;
+      color: var(--med-text-muted);
+      border-top: 1px dashed var(--med-border);
+      padding-top: 1.35rem;
+      flex-wrap: wrap;
+    }
+
+    .gift-card-stamp {
+      display: inline-block;
+      margin-top: 1.4rem;
+      font-family: var(--font-med-head);
+      font-size: 0.95rem;
+      color: var(--love-accent);
+      border: 2px solid var(--love-accent);
+      padding: 0.45rem 1.5rem;
+      border-radius: 6px;
+      transform: rotate(-3deg);
+    }
+
+    /* ==========================================================================
+       SECTION 7: FOOTER (COUNTDOWN & CREDITS)
+       ========================================================================== */
+    .site-footer {
+      background: linear-gradient(
+        135deg,
+        #0b0e16 0%,
+        #141824 40%,
+        #281e28 75%,
+        #121520 100%
+      );
+      border-top: 1px solid rgba(212, 120, 140, 0.25);
+      padding: 5rem 2rem 2.8rem 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-countdown-title {
+      font-family: var(--font-med-head);
+      font-size: 1.65rem;
+      color: #ffd8d4;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-countdown-subtitle {
+      font-family: var(--font-dev);
+      font-size: 0.85rem;
+      color: var(--dev-blue);
+      margin-bottom: 2.2rem;
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 1.3rem;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+    }
+
+    .countdown-box {
+      background: rgba(13, 17, 26, 0.88);
+      border: 1px solid var(--dev-border);
+      border-radius: 14px;
+      padding: 1.3rem 1.7rem;
+      min-width: 115px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transition: var(--transition-smooth);
+    }
+
+    .countdown-box:hover {
+      transform: translateY(-4px);
+      border-color: var(--love-accent);
+      box-shadow: 0 15px 35px var(--love-glow);
+    }
+
+    .countdown-number {
+      font-family: var(--font-dev);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--dev-green);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+      text-shadow: 0 0 15px rgba(126, 231, 135, 0.4);
+    }
+
+    .countdown-label {
+      font-family: var(--font-med-body);
+      font-size: 0.85rem;
+      color: #ebd0cc;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .countdown-passed-message {
+      display: none;
+      font-family: var(--font-med-head);
+      font-size: 2rem;
+      color: var(--dev-green);
+      text-shadow: 0 0 25px rgba(126, 231, 135, 0.5);
+      margin-bottom: 3rem;
+    }
+
+    .footer-credit-line {
+      font-family: var(--font-dev);
+      font-size: 0.85rem;
+      color: var(--dev-text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 2rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .footer-credit-line span {
+      color: var(--dev-purple);
+    }
+
+    /* Konfetti vászon */
+    .confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (MOBIL & TABLET)
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .documents-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .interactive-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .timeline-center-spine {
+        left: 30px;
+      }
+      .timeline-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-left: 65px;
+      }
+      .timeline-node-wrapper {
+        position: absolute;
+        left: 6px;
+        top: 0;
+        padding: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .site-nav {
+        padding: 0.65rem 1rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .couple-names {
+        font-size: 2.1rem;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .vault-box {
+        padding: 2rem 1.25rem;
+      }
+      .countdown-box {
+        min-width: 80px;
+        padding: 0.8rem 1rem;
+      }
+      .countdown-number {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Finom lebegő háttérelemek rétege (csökkentett 0.15 opacitással) -->
+  <div class="floating-particles-bg" id="floatingBg" aria-hidden="true"></div>
+
+  <!-- Konfetti vászon -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <!-- ==========================================================================
+       NAVIGÁCIÓS SÁV
+       ========================================================================== -->
+  <header>
+    <nav class="site-nav">
+      <a href="#hero" class="nav-brand">
+        <span class="nav-logo-badge"><code>{ }</code> &amp; ⚕️</span>
+        <span class="nav-brand-title">Bogi &amp; Barna</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link dev-link">~/home</a></li>
+        <li><a href="#timeline" class="nav-link med-link">Szinkronizáció</a></li>
+        <li><a href="#documents" class="nav-link dev-link">Dokumentumok</a></li>
+        <li><a href="#interactive" class="nav-link accent-link">Teszt 🧪</a></li>
+        <li><a href="#gallery" class="nav-link med-link">Pillanatok</a></li>
+      </ul>
+
+      <a href="#vault" class="nav-vault-btn">
+        <span>🔐</span>
+        <span>Titkos Széf</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 1: HERO SECTION (SZERVES ÉS LÁGY GAUSSIAN BLEND)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-split-bg">
+        <div class="hero-bg-left-mesh" aria-hidden="true"></div>
+        <div class="hero-bg-right-aurora" aria-hidden="true"></div>
+        <div class="hero-center-ambient-glow" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-container">
+        <!-- BAL OLDAL: Lebegő terminál (Barna) -->
+        <div class="terminal-window" aria-label="Barna terminál ablaka">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-title">barna@love:~</div>
+          </div>
+          <div class="terminal-body">
+            <div class="term-line term-line-1">
+              <span class="term-prompt">$</span><span class="term-cmd">git log --oneline --all</span>
+            </div>
+            <div class="term-line term-line-2">
+              <span class="term-hash">a1b2c3d</span><span class="term-feat">feat:</span> <span class="term-text">megismertem az életem szerelmét</span>
+            </div>
+            <div class="term-line term-line-3">
+              <span class="term-hash">d4e5f6g</span><span class="term-feat">feat:</span> <span class="term-text">első randi</span>
+            </div>
+            <div class="term-line term-line-4">
+              <span class="term-hash">g7h8i9j</span><span class="term-refactor">refactor:</span> <span class="term-text">összeköltözés</span>
+            </div>
+            <div class="term-line term-line-5">
+              <span class="term-hash">k0l1m2n</span> <span class="term-head">(HEAD -&gt; main)</span> <span class="term-release">release:</span> <span class="term-text">esküvő v1.0.0 🎉</span>
+            </div>
+            <div class="term-line term-line-6">
+              <span class="term-prompt">$</span><span class="term-cursor"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- KÖZÉP: Center Blend Zóna (Nevek és dátum) -->
+        <div class="hero-center-badge">
+          <div class="hero-bridge-icon">💍</div>
+          <h1 class="couple-names">
+            <span class="name-bogi">Bogi</span>
+            <span class="name-amp">&amp;</span>
+            <span class="name-barna">Barna</span>
+          </h1>
+          <div class="wedding-date-hero">
+            <span>2026. október 22.</span>
+          </div>
+          <div class="hero-tag-pills">
+            <span class="hero-pill-dev">git: synchronized</span>
+            <span class="hero-pill-med">ritmus: 100% sinus</span>
+          </div>
+        </div>
+
+        <!-- JOBB OLDAL: Lebegő orvosi kártya és animált EKG (Bogi) -->
+        <div class="medical-card-wrapper" aria-label="Bogi klinikai kártyája">
+          <div class="medical-card">
+            <div class="med-stamp-watermark">
+              Klinikai<br>Jóváhagyva<br>2026
+            </div>
+            <div class="medical-card-header">
+              <div class="med-header-title">
+                <span>⚕️</span>
+                <span>Kardiológiai Ambulancia</span>
+              </div>
+              <div class="med-hospital-code">SOTE-KLIN-BB</div>
+            </div>
+            <div class="medical-card-body">
+              <div class="med-record-row">
+                <span class="med-record-label">Páciens:</span>
+                <span class="med-record-value"><strong>Bogi &amp; Barna</strong></span>
+              </div>
+              <div class="med-record-row">
+                <span class="med-record-label">Diagnózis:</span>
+                <span class="med-record-value latin">Amor chronicus progressivus</span>
+              </div>
+              <div class="med-record-row">
+                <span class="med-record-label">Prognózis:</span>
+                <span class="med-record-value">Élethosszig tartó boldogság</span>
+              </div>
+              <div class="med-record-row">
+                <span class="med-record-label">Terápia:</span>
+                <span class="med-record-value">Házasság — napi 1× ∞</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HTML5 Canvas: Valósághű PQRST EKG hullámforma -->
+          <div class="ekg-monitor-frame">
+            <div class="ekg-monitor-bar">
+              <span class="ekg-status-text">
+                <span class="ekg-status-dot"></span>
+                <span>ELVEZETÉS II • MONITOR AKTÍV</span>
+              </span>
+              <span class="ekg-bpm-readout" id="bpmDisplay">HR: 78 bpm 💚</span>
+            </div>
+            <canvas id="ekgCanvas" width="460" height="80"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lefelé mutató animált görgetésjelző -->
+      <a href="#timeline" class="scroll-down-hint">
+        <span>GÖRGESS LEFELÉ</span>
+        <span class="scroll-chevron-bounce">↓</span>
+      </a>
+    </section>
+
+    <!-- HULLÁMOS ÁTMENET 1: Hero -> Timeline -->
+    <div class="organic-wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24 L1440,48 L0,48 Z" fill="#0e121c" opacity="0.95"/>
+        <path d="M0,28 C300,50 600,10 900,34 C1150,50 1320,12 1440,28" fill="none" stroke="url(#heroWaveStroke)" stroke-width="2" opacity="0.6"/>
+        <defs>
+          <linearGradient id="heroWaveStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#7ee787"/>
+            <stop offset="50%" stop-color="#d4788c"/>
+            <stop offset="100%" stop-color="#c98580"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- ==========================================================================
+         SECTION 2: TIMELINE SECTION (SZINKRONIZÁLT TÖRTÉNET)
+         ========================================================================== -->
+    <section class="section-wrapper timeline-section" id="timeline">
+      <div class="section-header-block reveal-item">
+        <h2 class="section-title bridged-gradient-title">
+          <span class="title-dev-part">Szinkronizált</span>
+          <span class="title-bridge-icon">⚡</span>
+          <span class="title-med-part">Történet</span>
+        </h2>
+        <p class="section-subtitle"><code>git log</code> meets kórrajz — mérföldkövek két szemszögből</p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-center-spine" aria-hidden="true"></div>
+
+        <!-- 1. Mérföldkő: Megismerkedés -->
+        <div class="timeline-row reveal-item">
+          <div class="timeline-card-dev">
+            <div>
+              <div class="dev-badge-hash">
+                <span>commit abc1234</span>
+              </div>
+              <div class="dev-commit-msg">
+                <span class="cmd-feat">feat:</span> initial connection established
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--dev-text-muted);">
+              status: tcp_handshake_ok
+            </div>
+          </div>
+
+          <div class="timeline-node-wrapper">
+            <div class="timeline-node-dot" title="Kezdetek">✨</div>
+            <span class="timeline-date-chip">~2021</span>
+          </div>
+
+          <div class="timeline-card-med">
+            <div>
+              <div class="med-record-tag">
+                <span>Kórelőzmény #01</span>
+              </div>
+              <p class="med-clinical-desc">
+                Tünetmentes inkubációs időszak. Első kontaktus regisztrálva.
+              </p>
+            </div>
+            <div class="med-badge-vitals">
+              <span>Státusz: Receptív</span>
+              <span>Anamnézis: Pozitív</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Mérföldkő: Első randi -->
+        <div class="timeline-row reveal-item">
+          <div class="timeline-card-dev">
+            <div>
+              <div class="dev-badge-hash">
+                <span>commit def5678</span>
+              </div>
+              <div class="dev-commit-msg">
+                <span class="cmd-feat">feat:</span> first_date.exe executed successfully
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--dev-text-muted);">
+              latency: 0ms • chemistry: 100%
+            </div>
+          </div>
+
+          <div class="timeline-node-wrapper">
+            <div class="timeline-node-dot" title="Első randi">☕</div>
+            <span class="timeline-date-chip">~2021</span>
+          </div>
+
+          <div class="timeline-card-med">
+            <div>
+              <div class="med-record-tag">
+                <span>Kórelőzmény #02</span>
+              </div>
+              <p class="med-clinical-desc">
+                Palpitáció, pupillatágulat, eufória. Ismételt vizit javasolt.
+              </p>
+            </div>
+            <div class="med-badge-vitals">
+              <span>Pulzus: 115/min</span>
+              <span>Eufória: Akut</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Mérföldkő: Összeköltözés -->
+        <div class="timeline-row reveal-item">
+          <div class="timeline-card-dev">
+            <div>
+              <div class="dev-badge-hash">
+                <span>commit ghi9012</span>
+              </div>
+              <div class="dev-commit-msg">
+                <span class="cmd-refactor">refactor:</span> merged living_spaces into shared_repo
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--dev-text-muted);">
+              conflicts: 0 • key_status: shared
+            </div>
+          </div>
+
+          <div class="timeline-node-wrapper">
+            <div class="timeline-node-dot" title="Összeköltözés">🔑</div>
+            <span class="timeline-date-chip">~2023</span>
+          </div>
+
+          <div class="timeline-card-med">
+            <div>
+              <div class="med-record-tag">
+                <span>Kórelőzmény #03</span>
+              </div>
+              <p class="med-clinical-desc">
+                Krónikus kohabitációs szindróma. Stabil állapot, közös háztartási egyensúly.
+              </p>
+            </div>
+            <div class="med-badge-vitals">
+              <span>Környezet: Közös</span>
+              <span>Adaptáció: 100%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Mérföldkő: Eljegyzés -->
+        <div class="timeline-row reveal-item">
+          <div class="timeline-card-dev">
+            <div>
+              <div class="dev-badge-hash">
+                <span>commit jkl3456</span>
+              </div>
+              <div class="dev-commit-msg">
+                <span class="cmd-feat">feat:</span> proposal.py — return True ✓
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--dev-text-muted);">
+              promise: fulfilled • ring_id: locked
+            </div>
+          </div>
+
+          <div class="timeline-node-wrapper">
+            <div class="timeline-node-dot" title="Eljegyzés">💍</div>
+            <span class="timeline-date-chip">~2025</span>
+          </div>
+
+          <div class="timeline-card-med">
+            <div>
+              <div class="med-record-tag">
+                <span>Kórelőzmény #04</span>
+              </div>
+              <p class="med-clinical-desc">
+                Akut boldogságroham. Gyűrű-dependencia kialakult, visszafordíthatatlanul.
+              </p>
+            </div>
+            <div class="med-badge-vitals">
+              <span>Válasz: IGEN</span>
+              <span>Endorfin: Maximális</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Mérföldkő: Esküvő -->
+        <div class="timeline-row reveal-item">
+          <div class="timeline-card-dev">
+            <div>
+              <div class="dev-badge-hash">
+                <span>commit mno7890</span>
+              </div>
+              <div class="dev-commit-msg">
+                <span class="cmd-release">release:</span> v1.0.0 — deployed to production (Lifetime Support)
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--dev-green);">
+              status: permanent • uptime: 100%
+            </div>
+          </div>
+
+          <div class="timeline-node-wrapper">
+            <div class="timeline-node-dot" title="Esküvő" style="border-color: var(--dev-green); box-shadow: 0 0 25px rgba(126, 231, 135, 0.7);">💒</div>
+            <span class="timeline-date-chip" style="background: var(--love-accent); color: #fff;">2026. 10. 22.</span>
+          </div>
+
+          <div class="timeline-card-med">
+            <div>
+              <div class="med-record-tag">
+                <span>Zárójelentés</span>
+              </div>
+              <p class="med-clinical-desc">
+                Szívritmus szinkronizálva. Élethosszig tartó terápia megkezdve.
+              </p>
+            </div>
+            <div class="med-badge-vitals">
+              <span>Kötelék: Örök</span>
+              <span>Prognózis: Végtelen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HULLÁMOS ÁTMENET 2: Timeline -> Documents -->
+    <div class="organic-wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path d="M0,20 C320,45 640,0 960,35 C1200,10 1360,40 1440,20 L1440,48 L0,48 Z" fill="#151a26" opacity="0.95"/>
+        <path d="M0,20 C320,45 640,0 960,35 C1200,10 1360,40 1440,20" fill="none" stroke="url(#tlDocStroke)" stroke-width="2" opacity="0.6"/>
+        <defs>
+          <linearGradient id="tlDocStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#58a6ff"/>
+            <stop offset="50%" stop-color="#d4788c"/>
+            <stop offset="100%" stop-color="#7ee787"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- ==========================================================================
+         SECTION 3: DOCUMENTS SECTION (HIVATALOS IRATOK - EGYSÉGES ÉS EGYENES)
+         ========================================================================== -->
+    <section class="section-wrapper documents-section" id="documents">
+      <div class="section-header-block reveal-item">
+        <h2 class="section-title bridged-gradient-title">
+          <span class="title-dev-part">Hivatalos</span>
+          <span class="title-bridge-icon">📜</span>
+          <span class="title-med-part">Iratok</span>
+        </h2>
+        <p class="section-subtitle">Kiadási jegyzék a terminálból &amp; orvosi zárólelet a rendelőből</p>
+      </div>
+
+      <div class="documents-grid">
+        <!-- BAL KÁRTYA: Release Notes — Házasság v1.0.0 (Dev) -->
+        <article class="doc-card-dev reveal-item" aria-label="Release Notes — Házasság v1.0.0">
+          <div>
+            <div class="doc-dev-tab-bar">
+              <span>CHANGELOG.md</span>
+              <span>branch: main</span>
+            </div>
+            <h3 class="doc-dev-title">Release Notes — Marriage v1.0.0</h3>
+            <div class="doc-dev-meta">
+              Release Date: 2026-10-22<br>
+              Maintainers: Bogi &amp; Barna
+            </div>
+
+            <h4 class="doc-dev-section-h2">## New Features</h4>
+            <ul class="doc-dev-list">
+              <li><span>• 💍 Lifetime partnership module activated</span></li>
+              <li><span>• 🏠 Shared living space optimization complete</span></li>
+              <li><span>• ❤️ Love.exe promoted to system service</span></li>
+              <li><span>• 📅 Anniversary reminder cron job: <code>0 8 22 10 *</code></span></li>
+            </ul>
+
+            <h4 class="doc-dev-section-h2">## Bug Fixes</h4>
+            <ul class="doc-dev-list">
+              <li><span>• Fixed: "Ki főz ma?" conflict resolution algorithm</span></li>
+              <li><span>• Fixed: Blanket distribution now uses fair-share scheduling</span></li>
+              <li><span>• Resolved: Távkapcsoló priority queue race condition</span></li>
+            </ul>
+
+            <h4 class="doc-dev-section-h2">## Known Issues</h4>
+            <ul class="doc-dev-list">
+              <li><span>• Morning coffee dependency — critical, wontfix ☕</span></li>
+              <li><span>• Horkolás modul — severity: low, status: wontfix 😴</span></li>
+            </ul>
+          </div>
+
+          <div class="doc-dev-dependencies">
+            <strong>## Dependencies:</strong><br>
+            <code>trust@latest | humor@^2.0 | patience@infinity</code>
+          </div>
+        </article>
+
+        <!-- JOBB KÁRTYA: Klinikai Zárójelentés (Med) -->
+        <article class="doc-card-med reveal-item" aria-label="Klinikai Zárójelentés">
+          <div>
+            <div class="doc-med-letterhead">
+              <h3 class="doc-med-hospital">KLINIKAI ZÁRÓJELENTÉS</h3>
+              <div class="doc-med-registry">
+                Ambulancia: Szerelem-kardiológia | Iktatószám: BB-20261022
+              </div>
+            </div>
+
+            <div class="doc-med-content">
+              <p><strong>Páciens:</strong> Bogi &amp; Barna<br>
+              <strong>Felvétel oka:</strong> Akut szerelemszindróma</p>
+
+              <h4 class="doc-med-section-title">ANAMNÉZIS:</h4>
+              <p>A páciensek több éves tünetegyüttest mutatnak, melyek progresszív boldogságra utalnak.</p>
+
+              <h4 class="doc-med-section-title">FIZIKÁLIS VIZSGÁLAT:</h4>
+              <ul class="doc-med-list">
+                <li>• Tachycardia: egymás közelében fokozódó</li>
+                <li>• Pupillatágulat: krónikus, bilaterális</li>
+                <li>• "Pillangók a gyomorban" szindróma: kezelésrezisztens</li>
+                <li>• Mosoly-reflex: kóros mértékben fokozott</li>
+              </ul>
+
+              <h4 class="doc-med-section-title">DIAGNÓZIS:</h4>
+              <p><em>Amor chronicus progressivus</em> (BNO: Z99.♥)</p>
+
+              <h4 class="doc-med-section-title">TERÁPIA &amp; PROGNÓZIS:</h4>
+              <p>Házasság — napi 1×, étkezéstől függetlenül, élethosszig. Prognózis: tartós boldogság.</p>
+            </div>
+          </div>
+
+          <div class="doc-med-seal">
+            <span>Pecsét: [SOTE-AMOR-PHD]</span>
+            <span class="doc-med-signature">Dr. Amor s.k.</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HULLÁMOS ÁTMENET 3: Documents -> Interactive Test -->
+    <div class="organic-wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path d="M0,28 C260,8 520,44 780,18 C1040,44 1300,8 1440,28 L1440,48 L0,48 Z" fill="#1d192a" opacity="0.95"/>
+        <path d="M0,28 C260,8 520,44 780,18 C1040,44 1300,8 1440,28" fill="none" stroke="url(#docInterStroke)" stroke-width="2" opacity="0.6"/>
+        <defs>
+          <linearGradient id="docInterStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#d4788c"/>
+            <stop offset="50%" stop-color="#e3b341"/>
+            <stop offset="100%" stop-color="#58a6ff"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- ==========================================================================
+         SECTION 4 (ÚJ!): INTERAKTÍV TESZT / KOMPATIBILITÁS TESZT
+         ========================================================================== -->
+    <section class="section-wrapper interactive-section" id="interactive">
+      <div class="section-header-block reveal-item">
+        <h2 class="section-title bridged-gradient-title">
+          <span class="title-dev-part">Kompatibilitás</span>
+          <span class="title-bridge-icon">🧪</span>
+          <span class="title-med-part">Teszt</span>
+        </h2>
+        <p class="section-subtitle">Szigorúan tudományos és algoritmikus vizsgálat a közös jövőről</p>
+      </div>
+
+      <div class="interactive-grid">
+        <!-- 1. KÉRDÉS: Megbánjátok valaha az esküvőt? (Menekülő "Igen" gomb) -->
+        <div class="interactive-card reveal-item" id="prankCard">
+          <div class="interactive-card-header">
+            <span class="interactive-q-badge">Teszt #01 • Valószínűségszámítás</span>
+            <h3 class="interactive-card-title">Megbánjátok valaha az esküvőt?</h3>
+            <p class="interactive-card-subtitle">Válasszatok őszintén a gombok közül!</p>
+          </div>
+
+          <div class="runaway-arena" id="runawayArena">
+            <div class="runaway-arena-hint">⚠️ A rendszer érzékeli a kézremegést és a habozást!</div>
+            
+            <!-- Nem / Soha gomb: stabil -->
+            <button type="button" class="btn-never" id="btnNever">
+              Nem / Soha! 💖
+            </button>
+
+            <!-- Igen gomb: Menekül a kurzor elől -->
+            <button type="button" class="btn-runaway" id="btnRunaway">
+              Igen 😅
+            </button>
+
+            <!-- Megjelenő dicséret / jóváhagyás -->
+            <div class="prank-success-msg" id="prankSuccessMsg">
+              🎉 <strong>Helyes válasz! 💚</strong><br>
+              Merge request approved forever.<br>
+              Nincs kétség, ez a legjobb döntés!
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. KÉRDÉS: Szeretitek egymást? (Love Meter + Overflow Error) -->
+        <div class="interactive-card reveal-item">
+          <div class="interactive-card-header">
+            <span class="interactive-q-badge">Teszt #02 • Bio-telemetria</span>
+            <h3 class="interactive-card-title">Mennyire szeretitek egymást?</h3>
+            <p class="interactive-card-subtitle">Kattints a klinikai benchmark futtatásához!</p>
+          </div>
+
+          <div class="love-meter-box">
+            <div class="love-meter-readout" id="loveMeterReadout">0%</div>
+
+            <div class="love-meter-track">
+              <div class="love-meter-fill" id="loveMeterFill"></div>
+            </div>
+
+            <button type="button" class="btn-measure-love" id="btnMeasureLove">
+              Mérés indítása 💓
+            </button>
+
+            <div class="love-overflow-banner" id="loveOverflowBanner">
+              ⚠️ <strong>MÉRÉSI TARTOMÁNYON KÍVÜL</strong><br>
+              OVERFLOW ERROR 💕<br>
+              Hibaüzenet: HeartBufferOverflowException!
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. KÉRDÉS: Ki mosogat holnap? (Véletlenszerű pörgető) -->
+        <div class="interactive-card reveal-item">
+          <div class="interactive-card-header">
+            <span class="interactive-q-badge">Teszt #03 • Erőforrás-ütemezés</span>
+            <h3 class="interactive-card-title">Ki mosogat holnap?</h3>
+            <p class="interactive-card-subtitle">A viták elkerülésére kialakított döntéshozó</p>
+          </div>
+
+          <div class="spinner-box">
+            <div class="spinner-display-frame">
+              <div class="spinner-active-name" id="spinnerActiveName">🩺 Bogi</div>
+              <div class="spinner-subnote">Fair-share háztartási process scheduling</div>
+            </div>
+
+            <button type="button" class="btn-spin" id="btnSpin">
+              Pörgetés! 🎲
+            </button>
+
+            <div class="spinner-result-verdict" id="spinnerVerdict">
+              Kattints a pörgetésre a feladat kiosztásához!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HULLÁMOS ÁTMENET 4: Interactive Test -> Gallery -->
+    <div class="organic-wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path d="M0,20 C360,45 720,0 1080,35 C1240,15 1360,40 1440,20 L1440,48 L0,48 Z" fill="#131722" opacity="0.95"/>
+        <path d="M0,20 C360,45 720,0 1080,35 C1240,15 1360,40 1440,20" fill="none" stroke="url(#interGalStroke)" stroke-width="2" opacity="0.6"/>
+        <defs>
+          <linearGradient id="interGalStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#58a6ff"/>
+            <stop offset="50%" stop-color="#7ee787"/>
+            <stop offset="100%" stop-color="#d4788c"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- ==========================================================================
+         SECTION 5: GALLERY SECTION (PILLANATOK - 280px MAGAS KÁRTYÁK)
+         ========================================================================== -->
+    <section class="section-wrapper gallery-section" id="gallery">
+      <div class="section-header-block reveal-item">
+        <h2 class="section-title bridged-gradient-title">
+          <span class="title-dev-part">Pillanatok</span>
+          <span class="title-bridge-icon">📸</span>
+          <span class="title-med-part">Galériája</span>
+        </h2>
+        <p class="section-subtitle">A legjobb renderek / A legszebb felvételek</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1. Képkártya (Dev stílusú háttér) -->
+        <div class="photo-card photo-card-dev-1 reveal-item">
+          <div class="photo-placeholder-inner">
+            <span class="photo-camera-icon">📸</span>
+            <div class="photo-caption-title">Közös pillanat #1</div>
+            <div class="photo-caption-sub">render_01.raw • 2021</div>
+          </div>
+        </div>
+
+        <!-- 2. Képkártya (Med stílusú háttér) -->
+        <div class="photo-card photo-card-med-1 reveal-item">
+          <div class="photo-placeholder-inner">
+            <span class="photo-camera-icon">📸</span>
+            <div class="photo-caption-title">Közös pillanat #2</div>
+            <div class="photo-caption-sub">anamnezis_foto_02.jpg • 2022</div>
+          </div>
+        </div>
+
+        <!-- 3. Képkártya (Dev stílusú háttér) -->
+        <div class="photo-card photo-card-dev-2 reveal-item">
+          <div class="photo-placeholder-inner">
+            <span class="photo-camera-icon">📸</span>
+            <div class="photo-caption-title">Közös pillanat #3</div>
+            <div class="photo-caption-sub">shared_memory_03.png • 2023</div>
+          </div>
+        </div>
+
+        <!-- 4. Képkártya (Med stílusú háttér) -->
+        <div class="photo-card photo-card-med-2 reveal-item">
+          <div class="photo-placeholder-inner">
+            <span class="photo-camera-icon">📸</span>
+            <div class="photo-caption-title">Közös pillanat #4</div>
+            <div class="photo-caption-sub">vital_snapshot_04.jpg • 2024</div>
+          </div>
+        </div>
+
+        <!-- 5. Képkártya (Dev stílusú háttér) -->
+        <div class="photo-card photo-card-dev-3 reveal-item">
+          <div class="photo-placeholder-inner">
+            <span class="photo-camera-icon">📸</span>
+            <div class="photo-caption-title">Közös pillanat #5</div>
+            <div class="photo-caption-sub">engagement_render_05.png • 2025</div>
+          </div>
+        </div>
+
+        <!-- 6. Képkártya (Med stílusú háttér) -->
+        <div class="photo-card photo-card-med-3 reveal-item">
+          <div class="photo-placeholder-inner">
+            <span class="photo-camera-icon">📸</span>
+            <div class="photo-caption-title">Közös pillanat #6</div>
+            <div class="photo-caption-sub">wedding_preview_06.jpg • 2026</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HULLÁMOS ÁTMENET 5: Gallery -> Vault -->
+    <div class="organic-wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path d="M0,25 C300,5 600,45 900,18 C1200,45 1350,10 1440,25 L1440,48 L0,48 Z" fill="#0e111a" opacity="0.95"/>
+        <path d="M0,25 C300,5 600,45 900,18 C1200,45 1350,10 1440,25" fill="none" stroke="url(#galVaultStroke)" stroke-width="2" opacity="0.6"/>
+        <defs>
+          <linearGradient id="galVaultStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#c98580"/>
+            <stop offset="50%" stop-color="#d4788c"/>
+            <stop offset="100%" stop-color="#7ee787"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- ==========================================================================
+         SECTION 6: VAULT SECTION (TITKOS SZÉF & LOVE LETTER)
+         ========================================================================== -->
+    <section class="section-wrapper vault-section" id="vault">
+      <div class="section-header-block reveal-item">
+        <h2 class="section-title bridged-gradient-title">
+          <span class="title-dev-part">Titkos</span>
+          <span class="title-bridge-icon">🔐</span>
+          <span class="title-med-part">Széf</span>
+        </h2>
+        <p class="section-subtitle">Zárt anyag — Hozzáférés engedélyezés szükséges</p>
+      </div>
+
+      <div class="vault-container reveal-item">
+        <div class="vault-box" id="vaultBox">
+          <div class="vault-lock-display" id="vaultLockIcon">🔒</div>
+
+          <!-- Jelszó Űrlap -->
+          <div class="vault-auth-form" id="vaultAuthForm">
+            <div class="vault-input-group">
+              <span class="vault-input-prompt">Biztonsági kód: &gt;</span>
+              <input 
+                type="password" 
+                id="vaultPasswordInput" 
+                class="vault-input-field" 
+                placeholder="ÉÉÉÉHHNN" 
+                maxlength="12"
+                autocomplete="off"
+              >
+            </div>
+            <button type="button" id="vaultSubmitBtn" class="vault-submit-btn">[Dekódolás]</button>
+            <div class="vault-error-msg" id="vaultErrorMsg">❌ Hozzáférés megtagadva. Próbáld újra.</div>
+          </div>
+
+          <!-- Feltárt tartalom: Írógép levél és Élmény ajándékkártya -->
+          <div class="vault-content-revealed" id="vaultRevealed">
+            <div class="vault-letter-card">
+              <div class="letter-typewriter-text" id="typewriterText"></div>
+              <span class="typewriter-cursor" id="typewriterCursor"></span>
+            </div>
+
+            <!-- Élmény Ajándékkártya (Voucher) -->
+            <div class="gift-voucher-card" id="giftVoucherCard">
+              <div class="gift-ribbon-banner">AJÁNDÉK UTALVÁNY</div>
+              <h3 class="gift-card-title">🎁 EGY KÖZÖS ÉLMÉNY VÁR RÁTOK! 🎁</h3>
+              <p class="gift-card-recipe">
+                Receptre felírva: 60 perc relaxáció a monitor előtt görnyedő kódolónak és a 24 órázó medikának.
+              </p>
+              <div class="gift-card-details-grid">
+                <div><strong>Beváltandó:</strong> 2027. 06. 30-ig</div>
+                <div><strong>Részletek:</strong> Személyesen! 😉</div>
+                <div><strong>Kibocsátó:</strong> Virginia ❤️</div>
+              </div>
+              <div class="gift-card-stamp">★ HITELTELESÍTVE: BB-2026 ★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- HULLÁMOS ÁTMENET 6: Vault -> Footer -->
+  <div class="organic-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+      <path d="M0,20 C280,45 560,5 840,30 C1120,48 1320,8 1440,20 L1440,48 L0,48 Z" fill="#0b0e16" opacity="0.95"/>
+      <path d="M0,20 C280,45 560,5 840,30 C1120,48 1320,8 1440,20" fill="none" stroke="url(#vaultFootStroke)" stroke-width="2" opacity="0.6"/>
+      <defs>
+        <linearGradient id="vaultFootStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7ee787"/>
+          <stop offset="50%" stop-color="#58a6ff"/>
+          <stop offset="100%" stop-color="#d4788c"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 7: FOOTER (COUNTDOWN & CREDITS)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="reveal-item">
+      <h3 class="footer-countdown-title">Visszaszámlálás a Nagy Napig</h3>
+      <div class="footer-countdown-subtitle">2026. október 22. 14:00:00 (Budapest)</div>
+
+      <div class="countdown-grid" id="countdownGrid">
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdDays">00</div>
+          <div class="countdown-label">Nap</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdHours">00</div>
+          <div class="countdown-label">Óra</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdMinutes">00</div>
+          <div class="countdown-label">Perc</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdSeconds">00</div>
+          <div class="countdown-label">Másodperc</div>
+        </div>
+      </div>
+
+      <div class="countdown-passed-message" id="countdownPassed">
+        🎉 Boldogan éltek, amíg meg nem haltak! 💖
+      </div>
+
+      <div class="footer-credit-line">
+        Készítette: Virginia 💜 | Forráskód megtekintése: <span>F12 😏</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT FUNKCIÓK ÉS INTERAKCIÓK
+       ========================================================================== */ -->
+  <script>
+    /* ==========================================================================
+       1. CONSOLE EASTER EGG (Barnának)
+       ========================================================================== */
+    console.log('%c\n    💚💚💚   💚💚💚\n  💚💚💚💚💚 💚💚💚💚💚\n 💚💚💚💚💚💚💚💚💚💚💚💚💚\n  💚💚💚💚💚💚💚💚💚💚💚\n    💚💚💚💚💚💚💚\n      💚💚💚💚💚\n        💚💚💚\n          💚\n', 'color: #7ee787; font-size: 8px; line-height: 1.1;');
+    console.log('%c Szia Barna! 👋', 'font-size: 24px; color: #7ee787; font-weight: bold;');
+    console.log('%c Tudtam, hogy megnézed a konzolt... 😏', 'font-size: 16px; color: #58a6ff;');
+    console.log('%c Írd be: claimGift() a titkos bónuszért!', 'font-size: 14px; color: #d2a8ff; font-family: monospace;');
+
+    window.claimGift = function() {
+      const vaultElement = document.getElementById('vault');
+      if (vaultElement) {
+        vaultElement.scrollIntoView({ behavior: 'smooth' });
+      }
+      console.log('%c 🎁 Görgess le a Titkos Széfhez!', 'font-size: 16px; color: #7ee787;');
+      console.log('%c 🔑 A jelszó... na azt már neked kell kitalálnod! (Tipp: a dátum)', 'font-size: 14px; color: #e3b341;');
+      return '🔐 Vault located. Access code required.';
+    };
+
+    /* ==========================================================================
+       2. EKG CANVAS ANIMÁCIÓ (Valósághű PQRST hullámforma)
+       ========================================================================== */
+    const ekgCanvas = document.getElementById('ekgCanvas');
+    const bpmDisplay = document.getElementById('bpmDisplay');
+    const ekgCtx = ekgCanvas.getContext('2d');
+
+    function getPQRSTValue(phase) {
+      if (phase >= 0.10 && phase < 0.20) {
+        const pPhase = (phase - 0.10) / 0.10;
+        return 0.18 * Math.sin(pPhase * Math.PI);
+      } else if (phase >= 0.32 && phase < 0.35) {
+        const qPhase = (phase - 0.32) / 0.03;
+        return -0.22 * Math.sin(qPhase * Math.PI);
+      } else if (phase >= 0.35 && phase < 0.40) {
+        const rPhase = (phase - 0.35) / 0.05;
+        return 1.15 * Math.sin(rPhase * Math.PI);
+      } else if (phase >= 0.40 && phase < 0.44) {
+        const sPhase = (phase - 0.40) / 0.04;
+        return -0.45 * Math.sin(sPhase * Math.PI);
+      } else if (phase >= 0.52 && phase < 0.70) {
+        const tPhase = (phase - 0.52) / 0.18;
+        return 0.32 * Math.sin(tPhase * Math.PI);
+      }
+      return 0.0;
+    }
+
+    let ekgOffset = 0;
+    const ekgSpeed = 1.35;
+    const cycleLength = 220;
+
+    function resizeEkg() {
+      if (ekgCanvas && ekgCanvas.parentElement) {
+        const displayWidth = ekgCanvas.parentElement.clientWidth - 32;
+        if (displayWidth > 100 && ekgCanvas.width !== displayWidth) {
+          ekgCanvas.width = displayWidth;
+          ekgCanvas.height = 80;
+        }
+      }
+    }
+    window.addEventListener('resize', resizeEkg);
+    resizeEkg();
+
+    function drawEKG() {
+      const width = ekgCanvas.width;
+      const height = ekgCanvas.height;
+      const baseline = height * 0.58;
+      const amplitude = height * 0.42;
+
+      ekgCtx.clearRect(0, 0, width, height);
+
+      ekgCtx.lineWidth = 1;
+      ekgCtx.strokeStyle = 'rgba(126, 231, 135, 0.06)';
+      const gridSize = 20;
+      for (let x = 0; x < width; x += gridSize) {
+        ekgCtx.beginPath();
+        ekgCtx.moveTo(x, 0);
+        ekgCtx.lineTo(x, height);
+        ekgCtx.stroke();
+      }
+      for (let y = 0; y < height; y += gridSize) {
+        ekgCtx.beginPath();
+        ekgCtx.moveTo(0, y);
+        ekgCtx.lineTo(width, y);
+        ekgCtx.stroke();
+      }
+
+      ekgCtx.beginPath();
+      ekgCtx.lineWidth = 2.2;
+      ekgCtx.strokeStyle = '#7ee787';
+      ekgCtx.shadowColor = '#7ee787';
+      ekgCtx.shadowBlur = 8;
+
+      let prevY = baseline;
+      for (let x = 0; x < width; x++) {
+        const waveX = (x + ekgOffset) % cycleLength;
+        const phase = waveX / cycleLength;
+        const val = getPQRSTValue(phase);
+        const y = baseline - val * amplitude;
+
+        if (x === 0) {
+          ekgCtx.moveTo(x, y);
+        } else {
+          ekgCtx.lineTo(x, y);
+        }
+        prevY = y;
+      }
+      ekgCtx.stroke();
+      ekgCtx.shadowBlur = 0;
+
+      ekgCtx.beginPath();
+      ekgCtx.arc(width - 4, prevY, 3, 0, Math.PI * 2);
+      ekgCtx.fillStyle = '#7ee787';
+      ekgCtx.shadowColor = '#7ee787';
+      ekgCtx.shadowBlur = 10;
+      ekgCtx.fill();
+      ekgCtx.shadowBlur = 0;
+
+      ekgOffset += ekgSpeed;
+      requestAnimationFrame(drawEKG);
+    }
+    requestAnimationFrame(drawEKG);
+
+    setInterval(() => {
+      const currentBpm = 76 + Math.floor(Math.random() * 5);
+      if (bpmDisplay) {
+        bpmDisplay.textContent = `HR: ${currentBpm} bpm 💚`;
+      }
+    }, 3000);
+
+    /* ==========================================================================
+       3. GÖRDÍTÉSI MEGJELENÉS (INTERSECTION OBSERVER)
+       ========================================================================== */
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.reveal-item').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    /* ==========================================================================
+       4. INTERAKTÍV TESZT / PRANK LOGIKA
+       ========================================================================== */
+    // --- Kérdés 1: Menekülő "Igen" gomb ---
+    const btnRunaway = document.getElementById('btnRunaway');
+    const btnNever = document.getElementById('btnNever');
+    const runawayArena = document.getElementById('runawayArena');
+    const prankSuccessMsg = document.getElementById('prankSuccessMsg');
+
+    function positionRunawayButtonInitially() {
+      if (!btnRunaway || !runawayArena) return;
+      const arenaRect = runawayArena.getBoundingClientRect();
+      const btnRect = btnRunaway.getBoundingClientRect();
+      
+      // Kezdetben a Nem gomb mellett/alatt helyezkedik el biztonságosan
+      btnRunaway.style.top = `${arenaRect.height - 75}px`;
+      btnRunaway.style.left = `${arenaRect.width / 2 + 35}px`;
+    }
+
+    setTimeout(positionRunawayButtonInitially, 300);
+    window.addEventListener('resize', positionRunawayButtonInitially);
+
+    function jumpRunawayButton() {
+      if (!btnRunaway || !runawayArena) return;
+      const arenaWidth = runawayArena.clientWidth;
+      const arenaHeight = runawayArena.clientHeight;
+      const btnWidth = btnRunaway.offsetWidth;
+      const btnHeight = btnRunaway.offsetHeight;
+
+      const padding = 20;
+      const maxLeft = arenaWidth - btnWidth - padding;
+      const maxTop = arenaHeight - btnHeight - padding;
+
+      const randomLeft = Math.max(padding, Math.floor(Math.random() * maxLeft));
+      const randomTop = Math.max(padding + 25, Math.floor(Math.random() * maxTop));
+
+      btnRunaway.style.left = `${randomLeft}px`;
+      btnRunaway.style.top = `${randomTop}px`;
+
+      const taunts = ['Igen 😅', 'Nem ér utol! 🏃‍♂️', 'Hoppá! 💨', 'Meg se próbáld! 😉', '404: Not Found 🙈'];
+      btnRunaway.textContent = taunts[Math.floor(Math.random() * taunts.length)];
+    }
+
+    if (btnRunaway) {
+      btnRunaway.addEventListener('mouseenter', jumpRunawayButton);
+      btnRunaway.addEventListener('mouseover', jumpRunawayButton);
+      btnRunaway.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        jumpRunawayButton();
+      });
+      btnRunaway.addEventListener('click', (e) => {
+        e.preventDefault();
+        jumpRunawayButton();
+      });
+    }
+
+    if (btnNever) {
+      btnNever.addEventListener('click', () => {
+        launchConfetti();
+        if (prankSuccessMsg) prankSuccessMsg.style.display = 'block';
+        btnRunaway.style.display = 'none';
+        btnNever.textContent = 'Helyes válasz! 💚';
+        btnNever.style.transform = 'scale(1.05)';
+      });
+    }
+
+    // --- Kérdés 2: Love Meter (9999% Overflow Error) ---
+    const btnMeasureLove = document.getElementById('btnMeasureLove');
+    const loveMeterFill = document.getElementById('loveMeterFill');
+    const loveMeterReadout = document.getElementById('loveMeterReadout');
+    const loveOverflowBanner = document.getElementById('loveOverflowBanner');
+    let isLoveMeasuring = false;
+
+    if (btnMeasureLove) {
+      btnMeasureLove.addEventListener('click', () => {
+        if (isLoveMeasuring) return;
+        isLoveMeasuring = true;
+        btnMeasureLove.disabled = true;
+        loveOverflowBanner.style.display = 'none';
+
+        let currentPercent = 0;
+        const interval = setInterval(() => {
+          if (currentPercent < 100) {
+            currentPercent += 2;
+            loveMeterFill.style.width = `${currentPercent}%`;
+            loveMeterReadout.textContent = `${currentPercent}%`;
+          } else if (currentPercent < 350) {
+            currentPercent += 15;
+            loveMeterFill.style.width = '100%';
+            loveMeterReadout.textContent = `${currentPercent}%`;
+            loveMeterReadout.style.color = '#ff7b72';
+          } else {
+            clearInterval(interval);
+            loveMeterReadout.textContent = '9999% 💕';
+            loveOverflowBanner.style.display = 'block';
+            launchConfetti();
+            btnMeasureLove.textContent = 'Újramérés 🔄';
+            btnMeasureLove.disabled = false;
+            isLoveMeasuring = false;
+          }
+        }, 35);
+      });
+    }
+
+    // --- Kérdés 3: Mosogatás Pörgető (Spinner) ---
+    const btnSpin = document.getElementById('btnSpin');
+    const spinnerActiveName = document.getElementById('spinnerActiveName');
+    const spinnerVerdict = document.getElementById('spinnerVerdict');
+    let isSpinning = false;
+
+    if (btnSpin) {
+      btnSpin.addEventListener('click', () => {
+        if (isSpinning) return;
+        isSpinning = true;
+        btnSpin.disabled = true;
+        spinnerVerdict.textContent = 'Döntési algoritmus futtatása...';
+        spinnerActiveName.classList.add('spinning');
+
+        const candidates = ['🩺 Bogi', '💻 Barna'];
+        let currentIndex = 0;
+        let speed = 60;
+        let elapsed = 0;
+        const totalDuration = 2400;
+
+        function stepSpin() {
+          currentIndex = 1 - currentIndex;
+          spinnerActiveName.textContent = candidates[currentIndex];
+          elapsed += speed;
+
+          if (elapsed < totalDuration) {
+            if (elapsed > 1600) speed += 25; // Lassul a végén
+            setTimeout(stepSpin, speed);
+          } else {
+            // Végleges döntés véletlenszerűen
+            const finalChoice = Math.random() < 0.5 ? 0 : 1;
+            spinnerActiveName.textContent = candidates[finalChoice];
+            spinnerActiveName.classList.remove('spinning');
+
+            if (finalChoice === 0) {
+              spinnerVerdict.innerHTML = '🎉 <strong>A sors döntött: Bogi mosogat!</strong><br>(De Barna főzi a reggeli kávét cserébe ☕)';
+            } else {
+              spinnerVerdict.innerHTML = '🎉 <strong>A sors döntött: Barna mosogat!</strong><br><code>git commit -m "chore: dishes washed"</code> 🧽';
+            }
+
+            btnSpin.disabled = false;
+            btnSpin.textContent = 'Újrapörgetés! 🎲';
+            isSpinning = false;
+          }
+        }
+
+        stepSpin();
+      });
+    }
+
+    /* ==========================================================================
+       5. TITKOS SZÉF LOGIKA ÉS ÍRÓGÉP EFFEKT
+       ========================================================================== */
+    const correctPassword = '20261022';
+    const vaultPasswordInput = document.getElementById('vaultPasswordInput');
+    const vaultSubmitBtn = document.getElementById('vaultSubmitBtn');
+    const vaultErrorMsg = document.getElementById('vaultErrorMsg');
+    const vaultAuthForm = document.getElementById('vaultAuthForm');
+    const vaultLockIcon = document.getElementById('vaultLockIcon');
+    const vaultRevealed = document.getElementById('vaultRevealed');
+    const typewriterTextEl = document.getElementById('typewriterText');
+    const typewriterCursor = document.getElementById('typewriterCursor');
+    const giftVoucherCard = document.getElementById('giftVoucherCard');
+
+    const loveLetterString = `Drága Bogi és Barna! 💕
+
+Először is: ha ezt olvassátok, gratulálok – sikeresen feltörtétek a széfet!
+(Barna, fogadok, hogy te jöttél rá a jelszóra 3 mp alatt. 😄)
+
+Nem is tudom, hol kezdjem... Talán ott, hogy ritkán találkozik
+az ember olyan párossal, akik ennyire kiegészítik egymást.
+Ti vagytok az a "merge request", amit az élet azonnal
+approve-olt — zero conflicts, all tests passing. 💚
+
+Bogi, te vagy az, aki meggyógyítja a világot.
+Barna, te meg az, aki újraírja.
+Együtt? Unstoppable.
+
+Sok boldogságot, nevetést és közös kalandot kívánok Nektek!
+Ez az oldal a mi kis digitális ajándékunk — de ne aggódjatok,
+analóg meglepetés is jár hozzá:
+
+🎁 EGY KÖZÖS ÉLMÉNY VÁR RÁTOK! 🎁
+Receptre felírva: 60 perc relaxáció
+a monitor előtt görnyedő kódolónak
+és a 24 órázó medikának.
+
+Beváltandó: 2027. 06. 30-ig.
+Részletek: személyesen! 😉
+
+Szeretettel,
+Virginia ❤️`;
+
+    let isUnlocked = false;
+
+    function handleVaultUnlock() {
+      if (isUnlocked) return;
+      const enteredValue = vaultPasswordInput.value.trim();
+
+      if (enteredValue === correctPassword) {
+        isUnlocked = true;
+        vaultErrorMsg.style.display = 'none';
+
+        vaultLockIcon.textContent = '🔓';
+        vaultLockIcon.classList.add('unlocked');
+        vaultAuthForm.style.display = 'none';
+
+        vaultRevealed.style.display = 'block';
+
+        startTypewriterEffect();
+        launchConfetti();
+      } else {
+        vaultErrorMsg.style.display = 'block';
+        vaultAuthForm.classList.remove('shake');
+        void vaultAuthForm.offsetWidth;
+        vaultAuthForm.classList.add('shake');
+        vaultPasswordInput.select();
+      }
+    }
+
+    vaultSubmitBtn.addEventListener('click', handleVaultUnlock);
+    vaultPasswordInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        handleVaultUnlock();
+      }
+    });
+
+    function startTypewriterEffect() {
+      let charIndex = 0;
+      typewriterTextEl.textContent = '';
+
+      const typingInterval = setInterval(() => {
+        if (charIndex < loveLetterString.length) {
+          typewriterTextEl.textContent += loveLetterString.charAt(charIndex);
+          charIndex++;
+        } else {
+          clearInterval(typingInterval);
+          if (typewriterCursor) {
+            typewriterCursor.style.display = 'inline-block';
+          }
+          if (giftVoucherCard) {
+            giftVoucherCard.style.display = 'block';
+            giftVoucherCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        }
+      }, 30);
+    }
+
+    /* ==========================================================================
+       6. VISSZASZÁMLÁLÓ (2026. OKTÓBER 22. 14:00)
+       ========================================================================== */
+    const weddingDate = new Date(2026, 9, 22, 14, 0, 0).getTime();
+
+    const cdDaysEl = document.getElementById('cdDays');
+    const cdHoursEl = document.getElementById('cdHours');
+    const cdMinutesEl = document.getElementById('cdMinutes');
+    const cdSecondsEl = document.getElementById('cdSeconds');
+    const countdownGridEl = document.getElementById('countdownGrid');
+    const countdownPassedEl = document.getElementById('countdownPassed');
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = weddingDate - now;
+
+      if (difference <= 0) {
+        if (countdownGridEl) countdownGridEl.style.display = 'none';
+        if (countdownPassedEl) countdownPassedEl.style.display = 'block';
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      if (cdDaysEl) cdDaysEl.textContent = String(days).padStart(2, '0');
+      if (cdHoursEl) cdHoursEl.textContent = String(hours).padStart(2, '0');
+      if (cdMinutesEl) cdMinutesEl.textContent = String(minutes).padStart(2, '0');
+      if (cdSecondsEl) cdSecondsEl.textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* ==========================================================================
+       7. LEBEGŐ HÁTTÉRELEMEK GENERÁLÁSA (CSÖKKENTETT 0.15 OPACITÁS)
+       ========================================================================== */
+    const floatingBg = document.getElementById('floatingBg');
+    const devSymbols = ['{ }', '</>', 'git commit', 'const love = true;', '=>', '0101', '===', 'npm i love', '&&', 'async/await', 'return ❤️;'];
+    const medSymbols = ['♥', '⚕️', '🌸', '🌿', '🩺', '💊', '♡', '✨', '🌹', 'Stetho', 'Rx'];
+
+    if (floatingBg) {
+      const particleCount = 28;
+      for (let i = 0; i < particleCount; i++) {
+        const span = document.createElement('span');
+        span.className = 'floating-symbol';
+
+        const isLeftSide = Math.random() < 0.5;
+        let leftPercent = isLeftSide 
+          ? Math.random() * 45 
+          : 55 + Math.random() * 42;
+
+        const symbolText = isLeftSide
+          ? devSymbols[Math.floor(Math.random() * devSymbols.length)]
+          : medSymbols[Math.floor(Math.random() * medSymbols.length)];
+
+        span.textContent = symbolText;
+        span.style.left = `${leftPercent}%`;
+        span.style.fontSize = `${12 + Math.random() * 16}px`;
+        span.style.fontFamily = isLeftSide ? 'var(--font-dev)' : 'var(--font-med-head)';
+        span.style.color = isLeftSide ? 'var(--dev-green)' : 'var(--med-rose)';
+        span.style.animationDuration = `${16 + Math.random() * 18}s`;
+        span.style.animationDelay = `${Math.random() * 14}s`;
+
+        floatingBg.appendChild(span);
+      }
+    }
+
+    /* ==========================================================================
+       8. KONFETTI HATÁS (Vanilla JS)
+       ========================================================================== */
+    const confettiCanvas = document.getElementById('confettiCanvas');
+    const confettiCtx = confettiCanvas ? confettiCanvas.getContext('2d') : null;
+
+    let confettis = [];
+    let confettiActive = false;
+
+    function resizeConfetti() {
+      if (confettiCanvas) {
+        confettiCanvas.width = window.innerWidth;
+        confettiCanvas.height = window.innerHeight;
+      }
+    }
+    window.addEventListener('resize', resizeConfetti);
+    resizeConfetti();
+
+    function launchConfetti() {
+      if (!confettiCanvas || !confettiCtx) return;
+      confettiActive = true;
+      confettis = [];
+      const colors = ['#7ee787', '#58a6ff', '#d2a8ff', '#ff7b72', '#c98580', '#c9a87c', '#d4788c', '#ffd8d4'];
+
+      for (let i = 0; i < 140; i++) {
+        confettis.push({
+          x: confettiCanvas.width / 2 + (Math.random() - 0.5) * 260,
+          y: confettiCanvas.height / 2 + (Math.random() - 0.5) * 120,
+          w: 8 + Math.random() * 6,
+          h: 6 + Math.random() * 6,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 16,
+          vy: -6 - Math.random() * 13,
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 12,
+          opacity: 1
+        });
+      }
+
+      function updateConfettiFrame() {
+        if (!confettiActive) return;
+        confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+
+        let activeCount = 0;
+        confettis.forEach(c => {
+          c.x += c.vx;
+          c.y += c.vy;
+          c.vy += 0.35;
+          c.rotation += c.rotationSpeed;
+          c.opacity -= 0.007;
+
+          if (c.opacity > 0) {
+            activeCount++;
+            confettiCtx.save();
+            confettiCtx.translate(c.x, c.y);
+            confettiCtx.rotate((c.rotation * Math.PI) / 180);
+            confettiCtx.globalAlpha = Math.max(0, c.opacity);
+            confettiCtx.fillStyle = c.color;
+            confettiCtx.fillRect(-c.w / 2, -c.h / 2, c.w, c.h);
+            confettiCtx.restore();
+          }
+        });
+
+        if (activeCount > 0) {
+          requestAnimationFrame(updateConfettiFrame);
+        } else {
+          confettiActive = false;
+          confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+        }
+      }
+      requestAnimationFrame(updateConfettiFrame);
+    }
+  </script>
+</body>
+</html>
