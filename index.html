@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bogi & Barna — 2026.10.22 💍</title>
+  <title>Bogi &amp; Barna — 2026.10.22 💍</title>
   
   <!-- Favicon (Gyűrű emoji) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
@@ -15,40 +15,40 @@
 
   <style>
     /* ==========================================================================
-       CSS VÁLTOZÓK ÉS FINOMÍTOTT SZÍNHARMÓNIA (DEV + MED + LOVE ACCENT)
+       CSS VÁLTOZÓK ÉS FINOMÍTOTT SZÍNHARMÓNIA (SZEMKÍMÉLŐ, MELEG ÁRNYALATOK)
        ========================================================================== */
     :root {
-      /* Fejlesztői téma (Barna) - Melegebb, lágyabb tónusú sötétkék-lila alappal */
-      --dev-bg: #0d111a;
-      --dev-surface: #151a26;
-      --dev-surface-hover: #1e2536;
-      --dev-border: #2d3648;
-      --dev-green: #7ee787;
-      --dev-blue: #58a6ff;
-      --dev-purple: #d2a8ff;
-      --dev-red: #ff7b72;
-      --dev-yellow: #e3b341;
+      /* Fejlesztői téma (Barna) - Visszafogott matt pala és lágy pasztellek */
+      --dev-bg: #10141d;
+      --dev-surface: #161b26;
+      --dev-surface-hover: #1e2433;
+      --dev-border: #293142;
+      --dev-green: #62b575;       /* Kellemes tompa zsályazöld, nem vakító neon! */
+      --dev-blue: #5d95cf;        /* Lágy farmer kékesszürke */
+      --dev-purple: #aa8fd1;      /* Lágy levendula */
+      --dev-red: #d9706b;         /* Meleg korall */
+      --dev-yellow: #d6a247;      /* Meleg borostyán */
       --dev-text: #cdd5df;
       --dev-text-muted: #8b95a5;
       --font-dev: 'JetBrains Mono', monospace;
 
-      /* Orvosi / Florális téma (Bogi) - Hűvösebb rózsaszín és lágy krém tónusokkal */
-      --med-bg: #faf7f5;
+      /* Orvosi / Florális téma (Bogi) - Meleg lenvászon és puha porrózsaszín */
+      --med-bg: #f8f5f1;          /* Meleg lágy krém/len, nem vakító fehér */
       --med-surface: #ffffff;
-      --med-border: #e8c6c2;
-      --med-rose: #c98580;
-      --med-sage: #8fbc8f;
-      --med-gold: #c9a87c;
-      --med-blush: #f6e1de;
+      --med-border: #dfcbcf;
+      --med-rose: #b56f6b;        /* Lágy porózus terrakotta/rózsa */
+      --med-sage: #82a882;
+      --med-gold: #bfa074;
+      --med-blush: #f2dedb;
       --med-text: #38302e;
       --med-text-muted: #786e6b;
       --font-med-head: 'Playfair Display', serif;
       --font-med-body: 'Lora', serif;
 
-      /* Átívelő központi szerelem akcentus */
-      --love-accent: #d4788c;
-      --love-glow: rgba(212, 120, 140, 0.45);
-      --love-soft: rgba(212, 120, 140, 0.15);
+      /* Átívelő központi szerelem akcentus - Elegáns rózsafa tónusok */
+      --love-accent: #b85d72;     /* Elegáns porrózsafa */
+      --love-glow: rgba(184, 93, 114, 0.2); /* Nagyon lágy, visszafogott fény */
+      --love-soft: rgba(184, 93, 114, 0.12);
       --font-ui: 'Inter', sans-serif;
       --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
@@ -72,7 +72,7 @@
       position: relative;
     }
 
-    /* Finom lebegő háttérelemek rétege (csökkentett 0.15 opacitás a finomabb hatáshoz) */
+    /* Finom lebegő háttérelemek rétege (csökkentett 0.14 opacitás) */
     .floating-particles-bg {
       position: fixed;
       inset: 0;
@@ -83,10 +83,10 @@
 
     .floating-symbol {
       position: absolute;
-      opacity: 0.15;
+      opacity: 0.14;
       user-select: none;
       transition: transform 0.2s ease-out;
-      animation: floatSymbol 20s infinite linear;
+      animation: floatSymbol 22s infinite linear;
     }
 
     @keyframes floatSymbol {
@@ -95,10 +95,10 @@
         opacity: 0;
       }
       10% {
-        opacity: 0.15;
+        opacity: 0.14;
       }
       90% {
-        opacity: 0.15;
+        opacity: 0.14;
       }
       100% {
         transform: translateY(-10vh) rotate(360deg);
@@ -119,18 +119,18 @@
       -webkit-backdrop-filter: blur(14px);
       background: linear-gradient(
         90deg,
-        rgba(13, 17, 26, 0.94) 0%,
-        rgba(21, 26, 38, 0.90) 35%,
-        rgba(35, 28, 38, 0.88) 55%,
-        rgba(250, 247, 245, 0.92) 85%,
-        rgba(250, 247, 245, 0.96) 100%
+        rgba(16, 20, 29, 0.95) 0%,
+        rgba(22, 27, 38, 0.92) 35%,
+        rgba(35, 28, 36, 0.90) 55%,
+        rgba(248, 245, 241, 0.92) 85%,
+        rgba(248, 245, 241, 0.97) 100%
       );
-      border-bottom: 1px solid rgba(212, 120, 140, 0.3);
+      border-bottom: 1px solid rgba(184, 93, 114, 0.25);
       padding: 0.75rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
     }
 
     .nav-brand {
@@ -148,8 +148,8 @@
       border-radius: 999px;
       font-size: 0.8rem;
       font-family: var(--font-dev);
-      background: rgba(126, 231, 135, 0.12);
-      border: 1px solid rgba(126, 231, 135, 0.35);
+      background: rgba(98, 181, 117, 0.12);
+      border: 1px solid rgba(98, 181, 117, 0.3);
       color: var(--dev-green);
     }
 
@@ -208,7 +208,7 @@
       height: 2px;
       background: var(--love-accent);
       transition: width 0.3s ease;
-      box-shadow: 0 0 8px var(--love-glow);
+      box-shadow: 0 0 6px var(--love-glow);
     }
 
     .nav-link:hover::after {
@@ -216,7 +216,7 @@
     }
 
     .nav-vault-btn {
-      background: linear-gradient(135deg, rgba(212, 120, 140, 0.25), rgba(126, 231, 135, 0.2));
+      background: linear-gradient(135deg, rgba(184, 93, 114, 0.18), rgba(98, 181, 117, 0.15));
       border: 1px solid var(--love-accent);
       color: #38302e;
       font-family: var(--font-dev);
@@ -229,18 +229,18 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      box-shadow: 0 2px 10px rgba(212, 120, 140, 0.15);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
     .nav-vault-btn:hover {
       background: var(--love-accent);
       color: #ffffff;
-      box-shadow: 0 0 18px var(--love-glow);
+      box-shadow: 0 3px 14px var(--love-glow);
       transform: translateY(-1px);
     }
 
     /* ==========================================================================
-       SECTION 1: HERO SECTION (ORGANIC, SOFT GAUSSIAN BLEND)
+       SECTION 1: HERO SECTION (LÁGY GAUSSIAN BLEND)
        ========================================================================== */
     .hero-section {
       min-height: 100vh;
@@ -253,7 +253,6 @@
       z-index: 2;
     }
 
-    /* Szerves, lágy és összefolyó háttér (nincs éles határvonal!) */
     .hero-split-bg {
       position: absolute;
       inset: 0;
@@ -262,17 +261,16 @@
       z-index: -1;
       background: linear-gradient(
         110deg,
-        #0d111a 0%,
-        #131826 30%,
-        #1c1828 48%,
-        #3b2636 54%,
-        #ecd3d1 66%,
-        #f5e8e5 80%,
-        #faf7f5 100%
+        #10141d 0%,
+        #151b26 30%,
+        #1c1a27 48%,
+        #352632 54%,
+        #ead7d5 66%,
+        #f3e8e5 80%,
+        #f8f5f1 100%
       );
     }
 
-    /* Bal oldali finom rács és dev fényréteg, lágy 60%-os maszkolással */
     .hero-bg-left-mesh {
       position: absolute;
       top: 0;
@@ -280,8 +278,8 @@
       width: 65%;
       height: 100%;
       background-image: 
-        radial-gradient(rgba(126, 231, 135, 0.1) 1px, transparent 1px),
-        radial-gradient(rgba(88, 166, 255, 0.08) 1px, transparent 1px);
+        radial-gradient(rgba(98, 181, 117, 0.08) 1px, transparent 1px),
+        radial-gradient(rgba(93, 149, 207, 0.06) 1px, transparent 1px);
       background-size: 32px 32px, 64px 64px;
       background-position: 0 0, 16px 16px;
       mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 45%, transparent 100%);
@@ -289,7 +287,6 @@
       pointer-events: none;
     }
 
-    /* Jobb oldali lágy med-virágos aurák és színfoltok */
     .hero-bg-right-aurora {
       position: absolute;
       top: 0;
@@ -297,27 +294,26 @@
       width: 65%;
       height: 100%;
       background-image:
-        radial-gradient(circle at 80% 20%, rgba(201, 133, 128, 0.18) 0%, transparent 45%),
-        radial-gradient(circle at 40% 75%, rgba(143, 188, 143, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 70% 70%, rgba(212, 120, 140, 0.18) 0%, transparent 40%);
+        radial-gradient(circle at 80% 20%, rgba(181, 111, 107, 0.14) 0%, transparent 45%),
+        radial-gradient(circle at 40% 75%, rgba(130, 168, 130, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(184, 93, 114, 0.14) 0%, transparent 40%);
       mask-image: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 45%, transparent 100%);
       -webkit-mask-image: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 45%, transparent 100%);
       pointer-events: none;
     }
 
-    /* Központi diffúz gaussian fényudvar, ami összeolvasztja a két világot */
     .hero-center-ambient-glow {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 650px;
-      height: 650px;
+      width: 620px;
+      height: 620px;
       background: radial-gradient(
         circle,
-        rgba(212, 120, 140, 0.28) 0%,
-        rgba(126, 231, 135, 0.12) 35%,
-        rgba(88, 166, 255, 0.08) 55%,
+        rgba(184, 93, 114, 0.18) 0%,
+        rgba(98, 181, 117, 0.08) 35%,
+        rgba(93, 149, 207, 0.06) 55%,
         transparent 75%
       );
       filter: blur(60px);
@@ -340,28 +336,28 @@
 
     /* BAL OLDAL: Lebegő terminál (Barna) */
     .terminal-window {
-      background: rgba(21, 26, 38, 0.94);
+      background: rgba(22, 27, 38, 0.95);
       border: 1px solid var(--dev-border);
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 25px rgba(126, 231, 135, 0.12);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55), 0 0 18px rgba(98, 181, 117, 0.08);
       backdrop-filter: blur(10px);
       transition: var(--transition-smooth);
       animation: floatCardLeft 6s ease-in-out infinite alternate;
     }
 
     .terminal-window:hover {
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(126, 231, 135, 0.25);
-      border-color: rgba(126, 231, 135, 0.5);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.65), 0 0 22px rgba(98, 181, 117, 0.18);
+      border-color: rgba(98, 181, 117, 0.4);
     }
 
     @keyframes floatCardLeft {
       0% { transform: translateY(0px) rotate(-0.5deg); }
-      100% { transform: translateY(-8px) rotate(0.5deg); }
+      100% { transform: translateY(-7px) rotate(0.5deg); }
     }
 
     .terminal-header {
-      background: #181d2a;
+      background: #171d29;
       padding: 0.7rem 1.1rem;
       display: flex;
       align-items: center;
@@ -379,9 +375,9 @@
       height: 11px;
       border-radius: 50%;
     }
-    .dot-red { background: #ff5f56; }
-    .dot-yellow { background: #ffbd2e; }
-    .dot-green { background: #27c93f; }
+    .dot-red { background: #d9706b; }
+    .dot-yellow { background: #d6a247; }
+    .dot-green { background: #62b575; }
 
     .terminal-title {
       font-family: var(--font-dev);
@@ -446,12 +442,12 @@
     .hero-center-badge {
       text-align: center;
       padding: 2.2rem 1.8rem;
-      background: rgba(26, 22, 33, 0.72);
+      background: rgba(26, 22, 31, 0.76);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-radius: 28px;
-      border: 1px solid rgba(212, 120, 140, 0.45);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 35px var(--love-glow);
+      border: 1px solid rgba(184, 93, 114, 0.35);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4), 0 0 25px var(--love-glow);
       position: relative;
       min-width: 300px;
       z-index: 10;
@@ -461,15 +457,15 @@
       font-size: 1.8rem;
       margin-bottom: 0.4rem;
       display: inline-block;
-      filter: drop-shadow(0 0 10px rgba(212, 120, 140, 0.8));
+      filter: drop-shadow(0 2px 6px rgba(184, 93, 114, 0.4));
       animation: heartbeatPulse 2.2s infinite ease-in-out;
     }
 
     @keyframes heartbeatPulse {
       0%, 100% { transform: scale(1); }
-      14% { transform: scale(1.22); }
+      14% { transform: scale(1.18); }
       28% { transform: scale(1); }
-      42% { transform: scale(1.18); }
+      42% { transform: scale(1.14); }
       70% { transform: scale(1); }
     }
 
@@ -487,8 +483,8 @@
 
     .name-bogi {
       font-family: var(--font-med-head);
-      color: #ffd6d1;
-      text-shadow: 0 0 22px rgba(232, 196, 192, 0.65);
+      color: #f5d6d3;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     }
 
     .name-amp {
@@ -498,14 +494,14 @@
       padding: 0 0.15rem;
       font-size: 3rem;
       font-weight: 400;
-      text-shadow: 0 0 22px var(--love-glow);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     }
 
     .name-barna {
       font-family: var(--font-dev);
       color: var(--dev-green);
       font-weight: 700;
-      text-shadow: 0 0 22px rgba(126, 231, 135, 0.55);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     }
 
     .wedding-date-hero {
@@ -530,8 +526,8 @@
     .hero-pill-dev {
       font-family: var(--font-dev);
       font-size: 0.72rem;
-      background: rgba(126, 231, 135, 0.16);
-      border: 1px solid rgba(126, 231, 135, 0.45);
+      background: rgba(98, 181, 117, 0.14);
+      border: 1px solid rgba(98, 181, 117, 0.35);
       color: var(--dev-green);
       padding: 0.25rem 0.65rem;
       border-radius: 999px;
@@ -540,9 +536,9 @@
     .hero-pill-med {
       font-family: var(--font-med-body);
       font-size: 0.72rem;
-      background: rgba(212, 120, 140, 0.22);
-      border: 1px solid rgba(212, 120, 140, 0.5);
-      color: #ffd8d4;
+      background: rgba(184, 93, 114, 0.16);
+      border: 1px solid rgba(184, 93, 114, 0.4);
+      color: #f4d3cf;
       padding: 0.25rem 0.65rem;
       border-radius: 999px;
     }
@@ -557,15 +553,15 @@
 
     @keyframes floatCardRight {
       0% { transform: translateY(0px) rotate(0.5deg); }
-      100% { transform: translateY(-8px) rotate(-0.5deg); }
+      100% { transform: translateY(-7px) rotate(-0.5deg); }
     }
 
     .medical-card {
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       border: 1px solid var(--med-border);
       border-radius: 14px;
       padding: 1.5rem 1.7rem;
-      box-shadow: 0 20px 50px rgba(201, 133, 128, 0.28);
+      box-shadow: 0 18px 45px rgba(181, 111, 107, 0.18);
       backdrop-filter: blur(10px);
       color: var(--med-text);
       position: relative;
@@ -574,7 +570,7 @@
     }
 
     .medical-card:hover {
-      box-shadow: 0 25px 60px rgba(201, 133, 128, 0.38);
+      box-shadow: 0 22px 50px rgba(181, 111, 107, 0.28);
       border-color: var(--med-rose);
     }
 
@@ -582,7 +578,7 @@
       position: absolute;
       right: 15px;
       bottom: 15px;
-      border: 2px dashed rgba(201, 133, 128, 0.35);
+      border: 2px dashed rgba(181, 111, 107, 0.3);
       border-radius: 50%;
       width: 78px;
       height: 78px;
@@ -592,7 +588,7 @@
       font-family: var(--font-med-head);
       font-size: 0.62rem;
       text-transform: uppercase;
-      color: rgba(201, 133, 128, 0.55);
+      color: rgba(181, 111, 107, 0.45);
       text-align: center;
       transform: rotate(-15deg);
       pointer-events: none;
@@ -657,17 +653,17 @@
     .med-record-value.latin {
       font-family: var(--font-med-head);
       font-style: italic;
-      color: #9e554e;
+      color: #9c5550;
       font-weight: 600;
     }
 
     /* EKG Monitor alul */
     .ekg-monitor-frame {
-      background: #0b0f16;
-      border: 1px solid rgba(126, 231, 135, 0.35);
+      background: #0f131c;
+      border: 1px solid rgba(98, 181, 117, 0.25);
       border-radius: 14px;
       padding: 0.8rem 1.1rem;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
       position: relative;
     }
 
@@ -692,7 +688,7 @@
       height: 7px;
       border-radius: 50%;
       background: var(--dev-green);
-      box-shadow: 0 0 8px var(--dev-green);
+      box-shadow: 0 0 5px var(--dev-green);
       animation: blinkEkg 1s infinite;
     }
 
@@ -725,7 +721,7 @@
       align-items: center;
       gap: 0.4rem;
       text-decoration: none;
-      color: #ffd8d4;
+      color: #f2dedb;
       font-family: var(--font-dev);
       font-size: 0.75rem;
       letter-spacing: 1px;
@@ -828,7 +824,7 @@
     .section-subtitle code {
       font-family: var(--font-dev);
       color: var(--dev-blue);
-      background: rgba(88, 166, 255, 0.12);
+      background: rgba(93, 149, 207, 0.12);
       padding: 0.15rem 0.45rem;
       border-radius: 4px;
       font-size: 0.95em;
@@ -846,15 +842,15 @@
     }
 
     /* ==========================================================================
-       SECTION 2: TIMELINE SECTION (SZINKRONIZÁLT TÖRTÉNET - EGYSÉGES KÁRTYAMÉRETEK)
+       SECTION 2: TIMELINE SECTION (SZINKRONIZÁLT TÖRTÉNET - ÉVEK NÉLKÜL)
        ========================================================================== */
     .timeline-section {
       background: linear-gradient(
         180deg,
-        #0e121c 0%,
-        #131826 30%,
-        #1b1728 60%,
-        #151a26 100%
+        #10141d 0%,
+        #141924 30%,
+        #1a1626 60%,
+        #161b26 100%
       );
       position: relative;
     }
@@ -882,7 +878,7 @@
         var(--med-blush) 100%
       );
       border-radius: 4px;
-      box-shadow: 0 0 14px rgba(212, 120, 140, 0.4);
+      box-shadow: 0 0 10px rgba(184, 93, 114, 0.25);
     }
 
     .timeline-center-spine::before {
@@ -909,21 +905,20 @@
       left: -20px;
       width: 44px;
       height: 40%;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 120' preserveAspectRatio='none'%3E%3Cpath d='M22,0 L22,35 L16,42 L28,48 L8,56 L36,64 L14,72 L22,80 L22,120' fill='none' stroke='%23d4788c' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") repeat-y center;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 120' preserveAspectRatio='none'%3E%3Cpath d='M22,0 L22,35 L16,42 L28,48 L8,56 L36,64 L14,72 L22,80 L22,120' fill='none' stroke='%23b85d72' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") repeat-y center;
       background-size: 40px 110px;
       opacity: 0.95;
-      filter: drop-shadow(0 0 8px rgba(212, 120, 140, 0.7));
+      filter: drop-shadow(0 0 6px rgba(184, 93, 114, 0.4));
     }
 
     .timeline-row {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
-      align-items: stretch; /* AZONOS MAGASSÁG A KÉT OLDALON */
+      align-items: stretch;
       margin-bottom: 4.2rem;
       position: relative;
     }
 
-    /* Egységes kártyaméret, padding és betűméret mindkét oldalon! */
     .timeline-card-dev,
     .timeline-card-med {
       padding: 1.5rem;
@@ -938,16 +933,16 @@
 
     /* Bal: Dev kártya */
     .timeline-card-dev {
-      background: rgba(21, 26, 38, 0.95);
+      background: rgba(22, 27, 38, 0.95);
       border: 1px solid var(--dev-border);
       border-left: 4px solid var(--dev-green);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
       font-family: var(--font-dev);
     }
 
     .timeline-card-dev:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 45px rgba(126, 231, 135, 0.2);
+      box-shadow: 0 16px 35px rgba(98, 181, 117, 0.15);
       border-color: var(--dev-green);
     }
 
@@ -956,11 +951,11 @@
       align-items: center;
       gap: 0.4rem;
       font-size: 0.78rem;
-      background: rgba(88, 166, 255, 0.14);
+      background: rgba(93, 149, 207, 0.14);
       color: var(--dev-blue);
       padding: 0.25rem 0.65rem;
       border-radius: 6px;
-      border: 1px solid rgba(88, 166, 255, 0.25);
+      border: 1px solid rgba(93, 149, 207, 0.25);
       margin-bottom: 0.65rem;
       width: fit-content;
     }
@@ -990,21 +985,21 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: #1c1828;
+      background: #191624;
       border: 3px solid var(--love-accent);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.3rem;
-      box-shadow: 0 0 20px var(--love-glow);
+      box-shadow: 0 0 14px var(--love-glow);
       transition: var(--transition-smooth);
       cursor: pointer;
     }
 
     .timeline-node-wrapper:hover .timeline-node-dot {
-      transform: scale(1.18) rotate(12deg);
+      transform: scale(1.15) rotate(10deg);
       border-color: var(--dev-green);
-      box-shadow: 0 0 25px rgba(126, 231, 135, 0.6);
+      box-shadow: 0 0 18px rgba(98, 181, 117, 0.35);
     }
 
     .timeline-date-chip {
@@ -1012,11 +1007,11 @@
       font-family: var(--font-dev);
       font-size: 0.75rem;
       font-weight: 600;
-      color: #ffd8d4;
-      background: rgba(30, 24, 38, 0.92);
-      padding: 0.25rem 0.65rem;
+      color: #f2dedb;
+      background: rgba(28, 23, 35, 0.94);
+      padding: 0.3rem 0.75rem;
       border-radius: 999px;
-      border: 1px solid rgba(212, 120, 140, 0.45);
+      border: 1px solid rgba(184, 93, 114, 0.4);
       white-space: nowrap;
     }
 
@@ -1025,14 +1020,14 @@
       background: rgba(255, 255, 255, 0.97);
       border: 1px solid var(--med-border);
       border-right: 4px solid var(--med-rose);
-      box-shadow: 0 15px 35px rgba(201, 133, 128, 0.2);
+      box-shadow: 0 12px 30px rgba(181, 111, 107, 0.15);
       font-family: var(--font-med-body);
       color: var(--med-text);
     }
 
     .timeline-card-med:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 45px rgba(201, 133, 128, 0.35);
+      box-shadow: 0 16px 35px rgba(181, 111, 107, 0.25);
       border-color: var(--med-rose);
     }
 
@@ -1052,7 +1047,7 @@
     }
 
     .med-clinical-desc {
-      font-size: 0.95rem; /* PONTOSAN UGYANAZ MINT A DEV KÁRTYÁN */
+      font-size: 0.95rem;
       font-style: italic;
       color: #4a3e3c;
       line-height: 1.6;
@@ -1068,15 +1063,15 @@
     }
 
     /* ==========================================================================
-       SECTION 3: DOCUMENTS SECTION (EGYSÉGES MÉRETŰ KÁRTYÁK, NINCS DŐLÉS!)
+       SECTION 3: DOCUMENTS SECTION (HIVATALOS IRATOK)
        ========================================================================== */
     .documents-section {
       background: linear-gradient(
         180deg,
-        #151a26 0%,
-        #191e2e 40%,
-        #221d2d 75%,
-        #1d192a 100%
+        #161b26 0%,
+        #181e2b 40%,
+        #201c29 75%,
+        #1a1727 100%
       );
       position: relative;
     }
@@ -1087,36 +1082,35 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
-      align-items: stretch; /* AZONOS MAGASSÁGÚ KÁRTYÁK */
+      align-items: stretch;
       padding: 1rem 0;
     }
 
-    /* Bal és Jobb kártya közös méretezése (egyenesek, nem ferdék!) */
     .doc-card-dev,
     .doc-card-med {
       border-radius: 16px;
       padding: 2.2rem;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
       transition: var(--transition-smooth);
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       min-height: 540px;
-      transform: none; /* NINCS FORGATÁS: EGYENES ÉS TISZTA */
+      transform: none;
     }
 
     .doc-card-dev {
-      background: #0f1420;
+      background: #11151f;
       border: 1px solid var(--dev-border);
       font-family: var(--font-dev);
       color: var(--dev-text);
     }
 
     .doc-card-dev:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(126, 231, 135, 0.22);
-      border-color: rgba(126, 231, 135, 0.5);
+      transform: translateY(-5px);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.65), 0 0 20px rgba(98, 181, 117, 0.15);
+      border-color: rgba(98, 181, 117, 0.4);
     }
 
     .doc-card-med {
@@ -1124,12 +1118,12 @@
       border: 1px solid var(--med-border);
       font-family: var(--font-med-body);
       color: var(--med-text);
-      box-shadow: 0 20px 50px rgba(201, 133, 128, 0.25);
+      box-shadow: 0 18px 45px rgba(181, 111, 107, 0.2);
     }
 
     .doc-card-med:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 28px 60px rgba(201, 133, 128, 0.38);
+      transform: translateY(-5px);
+      box-shadow: 0 24px 50px rgba(181, 111, 107, 0.3);
       border-color: var(--med-rose);
     }
 
@@ -1161,7 +1155,7 @@
     .doc-dev-section-h2 {
       font-size: 0.95rem;
       color: var(--dev-blue);
-      border-bottom: 1px solid #252c3d;
+      border-bottom: 1px solid #232b3b;
       padding-bottom: 0.35rem;
       margin: 1.1rem 0 0.55rem 0;
       font-weight: 600;
@@ -1186,7 +1180,7 @@
       border-top: 1px dashed var(--dev-border);
       font-size: 0.82rem;
       color: var(--dev-purple);
-      background: rgba(210, 168, 255, 0.08);
+      background: rgba(170, 143, 209, 0.08);
       border-radius: 6px;
     }
 
@@ -1256,15 +1250,15 @@
     }
 
     /* ==========================================================================
-       SECTION 4 (ÚJ!): INTERAKTÍV KOMPATIBILITÁSI TESZT / PRANK SZEKCIÓ
+       SECTION 4: INTERAKTÍV TESZTEK & PRANK SZEKCIÓ
        ========================================================================== */
     .interactive-section {
       background: linear-gradient(
         180deg,
-        #1d192a 0%,
-        #241c30 40%,
-        #1e1828 75%,
-        #131722 100%
+        #1a1727 0%,
+        #211a2c 40%,
+        #1c1726 75%,
+        #12151f 100%
       );
       position: relative;
     }
@@ -1279,14 +1273,14 @@
     }
 
     .interactive-card {
-      background: rgba(22, 27, 40, 0.92);
-      border: 1px solid rgba(212, 120, 140, 0.3);
+      background: rgba(22, 27, 38, 0.92);
+      border: 1px solid rgba(184, 93, 114, 0.25);
       border-radius: 16px;
       padding: 1.8rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 120, 140, 0.1);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45), 0 0 15px rgba(184, 93, 114, 0.08);
       transition: var(--transition-smooth);
       position: relative;
       overflow: hidden;
@@ -1294,7 +1288,7 @@
 
     .interactive-card:hover {
       border-color: var(--love-accent);
-      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.65), 0 0 30px var(--love-glow);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), 0 0 20px var(--love-glow);
       transform: translateY(-4px);
     }
 
@@ -1309,7 +1303,7 @@
       font-size: 0.72rem;
       color: var(--love-accent);
       background: var(--love-soft);
-      border: 1px solid rgba(212, 120, 140, 0.35);
+      border: 1px solid rgba(184, 93, 114, 0.35);
       padding: 0.25rem 0.65rem;
       border-radius: 999px;
       margin-bottom: 0.6rem;
@@ -1332,12 +1326,12 @@
       font-style: italic;
     }
 
-    /* 1. KÉRDÉS: MENEKÜLŐ GOMB ARÉNA */
+    /* 1. KÉRDÉS: Menekülő "Igen" gomb */
     .runaway-arena {
       position: relative;
       min-height: 310px;
-      background: rgba(13, 17, 26, 0.85);
-      border: 1px dashed rgba(212, 120, 140, 0.35);
+      background: rgba(16, 20, 29, 0.85);
+      border: 1px dashed rgba(184, 93, 114, 0.35);
       border-radius: 12px;
       padding: 1.5rem;
       overflow: hidden;
@@ -1361,8 +1355,8 @@
     }
 
     .btn-never {
-      background: linear-gradient(135deg, #27c93f 0%, #1ea632 100%);
-      color: #0d111a;
+      background: linear-gradient(135deg, #58aa6a 0%, #468c55 100%);
+      color: #ffffff;
       border: none;
       font-family: var(--font-dev);
       font-weight: 700;
@@ -1370,19 +1364,19 @@
       padding: 0.8rem 1.6rem;
       border-radius: 10px;
       cursor: pointer;
-      box-shadow: 0 4px 18px rgba(39, 201, 63, 0.4);
+      box-shadow: 0 4px 14px rgba(88, 170, 106, 0.3);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       z-index: 5;
     }
 
     .btn-never:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 25px rgba(39, 201, 63, 0.6);
+      transform: scale(1.06);
+      box-shadow: 0 6px 18px rgba(88, 170, 106, 0.45);
     }
 
     .btn-runaway {
       position: absolute;
-      background: #ff5f56;
+      background: var(--dev-red);
       color: #ffffff;
       border: none;
       font-family: var(--font-dev);
@@ -1391,7 +1385,7 @@
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(255, 95, 86, 0.35);
+      box-shadow: 0 4px 12px rgba(217, 112, 107, 0.3);
       transition: top 0.12s cubic-bezier(0.18, 0.89, 0.32, 1.28), left 0.12s cubic-bezier(0.18, 0.89, 0.32, 1.28);
       z-index: 6;
       white-space: nowrap;
@@ -1400,7 +1394,7 @@
 
     .prank-success-msg {
       display: none;
-      background: rgba(39, 201, 63, 0.15);
+      background: rgba(98, 181, 117, 0.15);
       border: 1px solid var(--dev-green);
       color: var(--dev-green);
       font-family: var(--font-dev);
@@ -1418,11 +1412,11 @@
       to { transform: scale(1); opacity: 1; }
     }
 
-    /* 2. KÉRDÉS: LOVE METER & OVERFLOW */
+    /* 2. KÉRDÉS: Love Meter */
     .love-meter-box {
       min-height: 310px;
-      background: rgba(13, 17, 26, 0.85);
-      border: 1px solid rgba(88, 166, 255, 0.3);
+      background: rgba(16, 20, 29, 0.85);
+      border: 1px solid rgba(93, 149, 207, 0.25);
       border-radius: 12px;
       padding: 1.5rem 1.2rem;
       display: flex;
@@ -1436,7 +1430,7 @@
     .love-meter-track {
       width: 100%;
       height: 26px;
-      background: #192030;
+      background: #182030;
       border: 1px solid var(--dev-border);
       border-radius: 999px;
       overflow: hidden;
@@ -1447,10 +1441,10 @@
     .love-meter-fill {
       height: 100%;
       width: 0%;
-      background: linear-gradient(90deg, #58a6ff 0%, #d2a8ff 45%, #d4788c 80%, #ff5f56 100%);
+      background: linear-gradient(90deg, #5d95cf 0%, #aa8fd1 45%, #b85d72 80%, #d9706b 100%);
       border-radius: 999px;
       transition: width 0.05s linear;
-      box-shadow: 0 0 15px var(--love-glow);
+      box-shadow: 0 0 10px var(--love-glow);
     }
 
     .love-meter-readout {
@@ -1458,11 +1452,11 @@
       font-size: 1.6rem;
       font-weight: 700;
       color: var(--dev-green);
-      text-shadow: 0 0 12px rgba(126, 231, 135, 0.5);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     }
 
     .btn-measure-love {
-      background: linear-gradient(135deg, rgba(88, 166, 255, 0.25), rgba(212, 120, 140, 0.35));
+      background: linear-gradient(135deg, rgba(93, 149, 207, 0.2), rgba(184, 93, 114, 0.25));
       border: 1px solid var(--love-accent);
       color: #fff;
       font-family: var(--font-dev);
@@ -1476,33 +1470,33 @@
 
     .btn-measure-love:hover {
       background: var(--love-accent);
-      box-shadow: 0 0 20px var(--love-glow);
+      box-shadow: 0 3px 15px var(--love-glow);
       transform: translateY(-2px);
     }
 
     .love-overflow-banner {
       display: none;
-      background: rgba(255, 123, 114, 0.15);
+      background: rgba(217, 112, 107, 0.15);
       border: 1px solid var(--dev-red);
-      color: #ff9b94;
+      color: #ea9b97;
       font-family: var(--font-dev);
       font-size: 0.78rem;
       padding: 0.7rem 0.9rem;
       border-radius: 8px;
       line-height: 1.45;
-      animation: alertPulse 1.2s infinite alternate;
+      animation: alertPulse 1.4s infinite alternate;
     }
 
     @keyframes alertPulse {
-      0% { box-shadow: 0 0 5px rgba(255, 123, 114, 0.2); }
-      100% { box-shadow: 0 0 18px rgba(255, 123, 114, 0.5); }
+      0% { box-shadow: 0 0 4px rgba(217, 112, 107, 0.15); }
+      100% { box-shadow: 0 0 14px rgba(217, 112, 107, 0.35); }
     }
 
-    /* 3. KÉRDÉS: MOSOGATÁS PÖRGETŐ (SPINNER) */
+    /* 3. KÉRDÉS: Mosogatás pörgető */
     .spinner-box {
       min-height: 310px;
-      background: rgba(13, 17, 26, 0.85);
-      border: 1px solid rgba(201, 168, 124, 0.3);
+      background: rgba(16, 20, 29, 0.85);
+      border: 1px solid rgba(191, 160, 116, 0.25);
       border-radius: 12px;
       padding: 1.5rem 1.2rem;
       display: flex;
@@ -1515,13 +1509,13 @@
 
     .spinner-display-frame {
       width: 100%;
-      background: #141926;
+      background: #141824;
       border: 2px solid var(--dev-border);
       border-radius: 14px;
       padding: 1.2rem;
       position: relative;
       overflow: hidden;
-      box-shadow: inset 0 2px 10px rgba(0,0,0,0.6);
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
     }
 
     .spinner-active-name {
@@ -1537,7 +1531,7 @@
     }
 
     .spinner-active-name.spinning {
-      transform: scale(1.15);
+      transform: scale(1.12);
       color: var(--love-accent);
       filter: blur(0.5px);
     }
@@ -1550,9 +1544,9 @@
     }
 
     .btn-spin {
-      background: linear-gradient(135deg, rgba(201, 168, 124, 0.3), rgba(212, 120, 140, 0.3));
+      background: linear-gradient(135deg, rgba(191, 160, 116, 0.25), rgba(184, 93, 114, 0.25));
       border: 1px solid var(--med-gold);
-      color: #ffd8a8;
+      color: #f0d5b5;
       font-family: var(--font-dev);
       font-size: 0.88rem;
       font-weight: 700;
@@ -1560,13 +1554,13 @@
       border-radius: 8px;
       cursor: pointer;
       transition: var(--transition-smooth);
-      box-shadow: 0 4px 15px rgba(201, 168, 124, 0.2);
+      box-shadow: 0 3px 12px rgba(191, 160, 116, 0.15);
     }
 
     .btn-spin:hover:not(:disabled) {
       background: var(--med-gold);
       color: #1a1612;
-      box-shadow: 0 0 22px rgba(201, 168, 124, 0.5);
+      box-shadow: 0 4px 18px rgba(191, 160, 116, 0.35);
       transform: translateY(-2px);
     }
 
@@ -1587,14 +1581,14 @@
     }
 
     /* ==========================================================================
-       SECTION 5: GALLERY SECTION (PILLANATOK - 280px MAGAS KÁRTYÁK)
+       SECTION 5: GALLERY SECTION (PILLANATOK - ÉVEK NÉLKÜL)
        ========================================================================== */
     .gallery-section {
       background: linear-gradient(
         180deg,
-        #131722 0%,
-        #181e2b 45%,
-        #121620 100%
+        #12151f 0%,
+        #171c27 45%,
+        #11141e 100%
       );
       position: relative;
     }
@@ -1610,54 +1604,53 @@
     .photo-card {
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
       transition: var(--transition-smooth);
       position: relative;
       cursor: pointer;
     }
 
     .photo-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
     }
 
     .photo-card-dev-1 {
-      background: linear-gradient(135deg, #161b26 0%, #1f2a3a 100%);
-      border: 1px solid rgba(126, 231, 135, 0.3);
+      background: linear-gradient(135deg, #151a24 0%, #1e2634 100%);
+      border: 1px solid rgba(98, 181, 117, 0.25);
     }
     .photo-card-dev-1:hover { border-color: var(--dev-green); }
 
     .photo-card-med-1 {
-      background: linear-gradient(135deg, #2c2126 0%, #3e2b32 100%);
-      border: 1px solid rgba(201, 133, 128, 0.35);
+      background: linear-gradient(135deg, #271e22 0%, #35252b 100%);
+      border: 1px solid rgba(181, 111, 107, 0.25);
     }
     .photo-card-med-1:hover { border-color: var(--med-rose); }
 
     .photo-card-dev-2 {
-      background: linear-gradient(135deg, #141f2d 0%, #1b293d 100%);
-      border: 1px solid rgba(88, 166, 255, 0.3);
+      background: linear-gradient(135deg, #131c28 0%, #1a2536 100%);
+      border: 1px solid rgba(93, 149, 207, 0.25);
     }
     .photo-card-dev-2:hover { border-color: var(--dev-blue); }
 
     .photo-card-med-2 {
-      background: linear-gradient(135deg, #212923 0%, #2e3b31 100%);
-      border: 1px solid rgba(143, 188, 143, 0.35);
+      background: linear-gradient(135deg, #1e2520 0%, #29342b 100%);
+      border: 1px solid rgba(130, 168, 130, 0.25);
     }
     .photo-card-med-2:hover { border-color: var(--med-sage); }
 
     .photo-card-dev-3 {
-      background: linear-gradient(135deg, #221b2f 0%, #302444 100%);
-      border: 1px solid rgba(210, 168, 255, 0.3);
+      background: linear-gradient(135deg, #1f182a 0%, #2b203c 100%);
+      border: 1px solid rgba(170, 143, 209, 0.25);
     }
     .photo-card-dev-3:hover { border-color: var(--dev-purple); }
 
     .photo-card-med-3 {
-      background: linear-gradient(135deg, #30261f 0%, #463428 100%);
-      border: 1px solid rgba(201, 168, 124, 0.35);
+      background: linear-gradient(135deg, #2a221b 0%, #3b2c21 100%);
+      border: 1px solid rgba(191, 160, 116, 0.25);
     }
     .photo-card-med-3:hover { border-color: var(--med-gold); }
 
-    /* EGYSÉGES 280px MAGASSÁG A KÉRÉSNEK MEGFELELŐEN */
     .photo-placeholder-inner {
       height: 280px;
       display: flex;
@@ -1670,14 +1663,14 @@
     }
 
     .photo-camera-icon {
-      font-size: 3.8rem;
+      font-size: 3.6rem;
       margin-bottom: 0.85rem;
-      filter: drop-shadow(0 6px 15px rgba(0,0,0,0.4));
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
       transition: var(--transition-smooth);
     }
 
     .photo-card:hover .photo-camera-icon {
-      transform: scale(1.15) rotate(-5deg);
+      transform: scale(1.12) rotate(-4deg);
     }
 
     .photo-caption-title {
@@ -1694,41 +1687,41 @@
     }
 
     /* ==========================================================================
-       SECTION 6: VAULT SECTION (TITKOS SZÉF & LOVE LETTER)
+       SECTION 6: VAULT SECTION (TITKOS SZÉF & ÉRZÉKI KALANDOK AJÁNDÉKKÁRTYA)
        ========================================================================== */
     .vault-section {
-      background: radial-gradient(circle at 50% 30%, #1f1929 0%, #0e111a 65%, #090b11 100%);
+      background: radial-gradient(circle at 50% 30%, #1a1523 0%, #10131c 65%, #0b0d13 100%);
       position: relative;
-      border-top: 1px solid rgba(212, 120, 140, 0.2);
+      border-top: 1px solid rgba(184, 93, 114, 0.2);
     }
 
     .vault-container {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
       text-align: center;
     }
 
     .vault-box {
-      background: rgba(19, 23, 33, 0.95);
-      border: 1px solid rgba(212, 120, 140, 0.38);
+      background: rgba(20, 24, 34, 0.95);
+      border: 1px solid rgba(184, 93, 114, 0.32);
       border-radius: 20px;
       padding: 3.2rem 2.5rem;
-      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 120, 140, 0.15);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.7), 0 0 25px var(--love-glow);
       backdrop-filter: blur(14px);
       position: relative;
     }
 
     .vault-lock-display {
-      font-size: 4.2rem;
+      font-size: 4rem;
       margin-bottom: 1.35rem;
       display: inline-block;
       transition: transform 0.4s ease, filter 0.4s ease;
-      filter: drop-shadow(0 0 16px rgba(212, 120, 140, 0.5));
+      filter: drop-shadow(0 2px 8px rgba(184, 93, 114, 0.4));
     }
 
     .vault-lock-display.unlocked {
-      transform: scale(1.25) rotate(10deg);
-      filter: drop-shadow(0 0 25px rgba(126, 231, 135, 0.8));
+      transform: scale(1.22) rotate(8deg);
+      filter: drop-shadow(0 2px 14px rgba(98, 181, 117, 0.5));
     }
 
     .vault-auth-form {
@@ -1744,7 +1737,7 @@
       width: 100%;
       display: flex;
       align-items: center;
-      background: #0d111a;
+      background: #0f131c;
       border: 1px solid var(--dev-border);
       border-radius: 8px;
       padding: 0.55rem 1.1rem;
@@ -1756,7 +1749,7 @@
 
     .vault-input-group:focus-within {
       border-color: var(--dev-green);
-      box-shadow: 0 0 15px rgba(126, 231, 135, 0.35), inset 0 2px 6px rgba(0,0,0,0.5);
+      box-shadow: 0 0 12px rgba(98, 181, 117, 0.25), inset 0 2px 6px rgba(0,0,0,0.5);
     }
 
     .vault-input-prompt {
@@ -1778,7 +1771,7 @@
     }
 
     .vault-submit-btn {
-      background: linear-gradient(135deg, rgba(126, 231, 135, 0.22), rgba(88, 166, 255, 0.22));
+      background: linear-gradient(135deg, rgba(98, 181, 117, 0.18), rgba(93, 149, 207, 0.18));
       border: 1px solid var(--dev-green);
       color: var(--dev-green);
       font-family: var(--font-dev);
@@ -1788,13 +1781,13 @@
       border-radius: 8px;
       cursor: pointer;
       transition: var(--transition-smooth);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
     }
 
     .vault-submit-btn:hover {
       background: var(--dev-green);
-      color: #0d111a;
-      box-shadow: 0 0 25px rgba(126, 231, 135, 0.5);
+      color: #10141d;
+      box-shadow: 0 4px 18px rgba(98, 181, 117, 0.35);
       transform: translateY(-2px);
     }
 
@@ -1826,15 +1819,15 @@
     }
 
     .vault-letter-card {
-      background: #0d111a;
-      border: 1px solid rgba(126, 231, 135, 0.45);
+      background: #10141d;
+      border: 1px solid rgba(98, 181, 117, 0.35);
       border-radius: 14px;
       padding: 2.4rem;
       font-family: var(--font-dev);
       font-size: 0.95rem;
       line-height: 1.85;
       color: #e6edf3;
-      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 14px 45px rgba(0, 0, 0, 0.6);
       position: relative;
       margin-bottom: 2.5rem;
     }
@@ -1854,13 +1847,14 @@
       animation: cursorBlink 0.8s infinite steps(2, start);
     }
 
+    /* Frissített Ajándékutalvány Kártya (Érzéki Kalandok) */
     .gift-voucher-card {
-      background: linear-gradient(135deg, #fffef9 0%, #f7ece8 100%);
+      background: linear-gradient(135deg, #fffefb 0%, #f9f0ed 100%);
       border: 2px solid var(--med-gold);
       border-radius: 18px;
       padding: 2.6rem 2.2rem;
       color: var(--med-text);
-      box-shadow: 0 22px 55px rgba(201, 168, 124, 0.38);
+      box-shadow: 0 18px 45px rgba(191, 160, 116, 0.28);
       position: relative;
       overflow: hidden;
       text-align: center;
@@ -1879,63 +1873,173 @@
       font-size: 0.72rem;
       font-weight: 700;
       padding: 0.35rem 3.2rem;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       letter-spacing: 1px;
     }
 
     .gift-card-title {
       font-family: var(--font-med-head);
-      font-size: 1.85rem;
+      font-size: 1.75rem;
       color: #8c5750;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .gift-preview-img {
+      max-width: 320px;
+      width: 88%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      margin: 1.2rem auto 1.6rem auto;
+      display: block;
+      border: 1px solid var(--med-border);
+      transition: transform 0.3s ease;
+    }
+
+    .gift-preview-img:hover {
+      transform: scale(1.02);
+    }
+
+    .gift-info-section,
+    .gift-order-steps {
+      text-align: left;
+      max-width: 660px;
+      margin: 1.4rem auto;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 1.3rem 1.6rem;
+      border-radius: 12px;
+      border: 1px solid var(--med-border);
+    }
+
+    .gift-section-heading {
+      font-family: var(--font-med-head);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--med-rose);
       margin-bottom: 0.65rem;
     }
 
-    .gift-card-recipe {
+    .gift-info-list,
+    .gift-order-list {
+      list-style: none;
       font-family: var(--font-med-body);
-      font-size: 1.1rem;
-      font-style: italic;
-      color: #594a46;
-      max-width: 620px;
-      margin: 0 auto 1.6rem auto;
-      line-height: 1.65;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: #4a3e3c;
     }
 
-    .gift-card-details-grid {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
+    .gift-info-list li,
+    .gift-order-list li {
+      margin-bottom: 0.45rem;
+    }
+
+    .gift-validity-badge {
       font-family: var(--font-dev);
-      font-size: 0.84rem;
-      color: var(--med-text-muted);
-      border-top: 1px dashed var(--med-border);
-      padding-top: 1.35rem;
+      font-size: 0.88rem;
+      color: var(--med-text);
+      background: #f2dedb;
+      display: inline-block;
+      padding: 0.4rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--med-border);
+      margin: 1rem auto;
+    }
+
+    /* Bónuszkód highlight doboz */
+    .bonus-code-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      background: #141824;
+      border: 1.5px dashed var(--dev-green);
+      border-radius: 10px;
+      padding: 0.75rem 1.4rem;
+      margin: 1.2rem auto;
       flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+    }
+
+    .bonus-code-label {
+      font-family: var(--font-dev);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #cdd5df;
+      letter-spacing: 1px;
+    }
+
+    .bonus-code-val {
+      font-family: var(--font-dev);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--dev-green);
+      letter-spacing: 2px;
+      padding: 0.25rem 0.65rem;
+      background: rgba(98, 181, 117, 0.12);
+      border-radius: 6px;
+      border: 1px solid rgba(98, 181, 117, 0.3);
+      user-select: all;
+    }
+
+    .btn-copy-code {
+      background: var(--dev-green);
+      color: #10141d;
+      border: none;
+      font-family: var(--font-dev);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.45rem 0.95rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-copy-code:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 3px 12px rgba(98, 181, 117, 0.35);
+    }
+
+    .btn-copy-code.copied {
+      background: var(--dev-blue);
+      color: #ffffff;
+    }
+
+    .gift-mail-link {
+      color: var(--love-accent);
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    .gift-mail-link:hover {
+      color: var(--med-rose);
     }
 
     .gift-card-stamp {
       display: inline-block;
-      margin-top: 1.4rem;
+      margin-top: 1.6rem;
       font-family: var(--font-med-head);
       font-size: 0.95rem;
       color: var(--love-accent);
       border: 2px solid var(--love-accent);
-      padding: 0.45rem 1.5rem;
+      padding: 0.45rem 1.6rem;
       border-radius: 6px;
-      transform: rotate(-3deg);
+      transform: rotate(-2deg);
     }
 
     /* ==========================================================================
-       SECTION 7: FOOTER (COUNTDOWN & CREDITS)
+       SECTION 7: FOOTER (HÁZASSÁGBAN ELTÖLTÖTT IDŐ SZÁMLÁLÓ & CREDITS)
        ========================================================================== */
     .site-footer {
       background: linear-gradient(
         135deg,
-        #0b0e16 0%,
+        #0e111a 0%,
         #141824 40%,
-        #281e28 75%,
-        #121520 100%
+        #211a24 75%,
+        #0e111a 100%
       );
-      border-top: 1px solid rgba(212, 120, 140, 0.25);
+      border-top: 1px solid rgba(184, 93, 114, 0.22);
       padding: 5rem 2rem 2.8rem 2rem;
       text-align: center;
       position: relative;
@@ -1945,7 +2049,7 @@
     .footer-countdown-title {
       font-family: var(--font-med-head);
       font-size: 1.65rem;
-      color: #ffd8d4;
+      color: #f2dedb;
       margin-bottom: 0.4rem;
     }
 
@@ -1960,24 +2064,24 @@
       display: flex;
       justify-content: center;
       gap: 1.3rem;
-      margin-bottom: 3.5rem;
+      margin-bottom: 2rem;
       flex-wrap: wrap;
     }
 
     .countdown-box {
-      background: rgba(13, 17, 26, 0.88);
+      background: rgba(16, 20, 29, 0.9);
       border: 1px solid var(--dev-border);
       border-radius: 14px;
       padding: 1.3rem 1.7rem;
       min-width: 115px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
       transition: var(--transition-smooth);
     }
 
     .countdown-box:hover {
       transform: translateY(-4px);
       border-color: var(--love-accent);
-      box-shadow: 0 15px 35px var(--love-glow);
+      box-shadow: 0 12px 25px var(--love-glow);
     }
 
     .countdown-number {
@@ -1987,7 +2091,7 @@
       color: var(--dev-green);
       line-height: 1;
       margin-bottom: 0.35rem;
-      text-shadow: 0 0 15px rgba(126, 231, 135, 0.4);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     }
 
     .countdown-label {
@@ -1998,13 +2102,31 @@
       letter-spacing: 1px;
     }
 
-    .countdown-passed-message {
-      display: none;
-      font-family: var(--font-med-head);
-      font-size: 2rem;
-      color: var(--dev-green);
-      text-shadow: 0 0 25px rgba(126, 231, 135, 0.5);
-      margin-bottom: 3rem;
+    .btn-preview-timer {
+      background: rgba(93, 149, 207, 0.12);
+      border: 1px solid var(--dev-blue);
+      color: var(--dev-blue);
+      font-family: var(--font-dev);
+      font-size: 0.82rem;
+      padding: 0.55rem 1.35rem;
+      border-radius: 999px;
+      cursor: pointer;
+      margin-top: 1rem;
+      margin-bottom: 2.5rem;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-preview-timer:hover {
+      background: var(--dev-blue);
+      color: #10141d;
+      box-shadow: 0 3px 12px rgba(93, 149, 207, 0.3);
+    }
+
+    .btn-preview-timer.active {
+      background: var(--love-accent);
+      border-color: var(--love-accent);
+      color: #ffffff;
+      box-shadow: 0 3px 15px rgba(184, 93, 114, 0.35);
     }
 
     .footer-credit-line {
@@ -2093,12 +2215,16 @@
       .countdown-number {
         font-size: 1.8rem;
       }
+      .bonus-code-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Finom lebegő háttérelemek rétege (csökkentett 0.15 opacitással) -->
+  <!-- Finom lebegő háttérelemek rétege (csökkentett opacitással) -->
   <div class="floating-particles-bg" id="floatingBg" aria-hidden="true"></div>
 
   <!-- Konfetti vászon -->
@@ -2223,7 +2349,7 @@
             </div>
           </div>
 
-          <!-- HTML5 Canvas: Valósághű PQRST EKG hullámforma -->
+          <!-- HTML5 Canvas: Valósághű PQRST EKG hullámforma (finomított színekkel) -->
           <div class="ekg-monitor-frame">
             <div class="ekg-monitor-bar">
               <span class="ekg-status-text">
@@ -2247,20 +2373,20 @@
     <!-- HULLÁMOS ÁTMENET 1: Hero -> Timeline -->
     <div class="organic-wave-divider" aria-hidden="true">
       <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
-        <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24 L1440,48 L0,48 Z" fill="#0e121c" opacity="0.95"/>
-        <path d="M0,28 C300,50 600,10 900,34 C1150,50 1320,12 1440,28" fill="none" stroke="url(#heroWaveStroke)" stroke-width="2" opacity="0.6"/>
+        <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24 L1440,48 L0,48 Z" fill="#10141d" opacity="0.95"/>
+        <path d="M0,28 C300,50 600,10 900,34 C1150,50 1320,12 1440,28" fill="none" stroke="url(#heroWaveStroke)" stroke-width="2" opacity="0.5"/>
         <defs>
           <linearGradient id="heroWaveStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#7ee787"/>
-            <stop offset="50%" stop-color="#d4788c"/>
-            <stop offset="100%" stop-color="#c98580"/>
+            <stop offset="0%" stop-color="#62b575"/>
+            <stop offset="50%" stop-color="#b85d72"/>
+            <stop offset="100%" stop-color="#b56f6b"/>
           </linearGradient>
         </defs>
       </svg>
     </div>
 
     <!-- ==========================================================================
-         SECTION 2: TIMELINE SECTION (SZINKRONIZÁLT TÖRTÉNET)
+         SECTION 2: TIMELINE SECTION (SZINKRONIZÁLT TÖRTÉNET - ÉVSZÁMOK NÉLKÜL)
          ========================================================================== -->
     <section class="section-wrapper timeline-section" id="timeline">
       <div class="section-header-block reveal-item">
@@ -2275,7 +2401,7 @@
       <div class="timeline-container">
         <div class="timeline-center-spine" aria-hidden="true"></div>
 
-        <!-- 1. Mérföldkő: Megismerkedés -->
+        <!-- 1. Mérföldkő: Kezdetek -->
         <div class="timeline-row reveal-item">
           <div class="timeline-card-dev">
             <div>
@@ -2293,7 +2419,7 @@
 
           <div class="timeline-node-wrapper">
             <div class="timeline-node-dot" title="Kezdetek">✨</div>
-            <span class="timeline-date-chip">~2021</span>
+            <span class="timeline-date-chip">01. fejezet • Kezdetek</span>
           </div>
 
           <div class="timeline-card-med">
@@ -2312,7 +2438,7 @@
           </div>
         </div>
 
-        <!-- 2. Mérföldkő: Első randi -->
+        <!-- 2. Mérföldkő: Első szikra -->
         <div class="timeline-row reveal-item">
           <div class="timeline-card-dev">
             <div>
@@ -2329,8 +2455,8 @@
           </div>
 
           <div class="timeline-node-wrapper">
-            <div class="timeline-node-dot" title="Első randi">☕</div>
-            <span class="timeline-date-chip">~2021</span>
+            <div class="timeline-node-dot" title="Első szikra">☕</div>
+            <span class="timeline-date-chip">02. fejezet • Első szikra</span>
           </div>
 
           <div class="timeline-card-med">
@@ -2367,7 +2493,7 @@
 
           <div class="timeline-node-wrapper">
             <div class="timeline-node-dot" title="Összeköltözés">🔑</div>
-            <span class="timeline-date-chip">~2023</span>
+            <span class="timeline-date-chip">03. fejezet • Összeköltözés</span>
           </div>
 
           <div class="timeline-card-med">
@@ -2404,7 +2530,7 @@
 
           <div class="timeline-node-wrapper">
             <div class="timeline-node-dot" title="Eljegyzés">💍</div>
-            <span class="timeline-date-chip">~2025</span>
+            <span class="timeline-date-chip">04. fejezet • Eljegyzés</span>
           </div>
 
           <div class="timeline-card-med">
@@ -2423,7 +2549,7 @@
           </div>
         </div>
 
-        <!-- 5. Mérföldkő: Esküvő -->
+        <!-- 5. Mérföldkő: A Nagy Nap -->
         <div class="timeline-row reveal-item">
           <div class="timeline-card-dev">
             <div>
@@ -2440,8 +2566,8 @@
           </div>
 
           <div class="timeline-node-wrapper">
-            <div class="timeline-node-dot" title="Esküvő" style="border-color: var(--dev-green); box-shadow: 0 0 25px rgba(126, 231, 135, 0.7);">💒</div>
-            <span class="timeline-date-chip" style="background: var(--love-accent); color: #fff;">2026. 10. 22.</span>
+            <div class="timeline-node-dot" title="A Nagy Nap" style="border-color: var(--dev-green); box-shadow: 0 0 16px rgba(98, 181, 117, 0.4);">💒</div>
+            <span class="timeline-date-chip" style="background: var(--love-accent); color: #fff;">05. fejezet • A Nagy Nap 💍</span>
           </div>
 
           <div class="timeline-card-med">
@@ -2465,20 +2591,20 @@
     <!-- HULLÁMOS ÁTMENET 2: Timeline -> Documents -->
     <div class="organic-wave-divider" aria-hidden="true">
       <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
-        <path d="M0,20 C320,45 640,0 960,35 C1200,10 1360,40 1440,20 L1440,48 L0,48 Z" fill="#151a26" opacity="0.95"/>
-        <path d="M0,20 C320,45 640,0 960,35 C1200,10 1360,40 1440,20" fill="none" stroke="url(#tlDocStroke)" stroke-width="2" opacity="0.6"/>
+        <path d="M0,20 C320,45 640,0 960,35 C1200,10 1360,40 1440,20 L1440,48 L0,48 Z" fill="#161b26" opacity="0.95"/>
+        <path d="M0,20 C320,45 640,0 960,35 C1200,10 1360,40 1440,20" fill="none" stroke="url(#tlDocStroke)" stroke-width="2" opacity="0.5"/>
         <defs>
           <linearGradient id="tlDocStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#58a6ff"/>
-            <stop offset="50%" stop-color="#d4788c"/>
-            <stop offset="100%" stop-color="#7ee787"/>
+            <stop offset="0%" stop-color="#5d95cf"/>
+            <stop offset="50%" stop-color="#b85d72"/>
+            <stop offset="100%" stop-color="#62b575"/>
           </linearGradient>
         </defs>
       </svg>
     </div>
 
     <!-- ==========================================================================
-         SECTION 3: DOCUMENTS SECTION (HIVATALOS IRATOK - EGYSÉGES ÉS EGYENES)
+         SECTION 3: DOCUMENTS SECTION (HIVATALOS IRATOK)
          ========================================================================== -->
     <section class="section-wrapper documents-section" id="documents">
       <div class="section-header-block reveal-item">
@@ -2576,20 +2702,20 @@
     <!-- HULLÁMOS ÁTMENET 3: Documents -> Interactive Test -->
     <div class="organic-wave-divider" aria-hidden="true">
       <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
-        <path d="M0,28 C260,8 520,44 780,18 C1040,44 1300,8 1440,28 L1440,48 L0,48 Z" fill="#1d192a" opacity="0.95"/>
-        <path d="M0,28 C260,8 520,44 780,18 C1040,44 1300,8 1440,28" fill="none" stroke="url(#docInterStroke)" stroke-width="2" opacity="0.6"/>
+        <path d="M0,28 C260,8 520,44 780,18 C1040,44 1300,8 1440,28 L1440,48 L0,48 Z" fill="#1a1727" opacity="0.95"/>
+        <path d="M0,28 C260,8 520,44 780,18 C1040,44 1300,8 1440,28" fill="none" stroke="url(#docInterStroke)" stroke-width="2" opacity="0.5"/>
         <defs>
           <linearGradient id="docInterStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#d4788c"/>
-            <stop offset="50%" stop-color="#e3b341"/>
-            <stop offset="100%" stop-color="#58a6ff"/>
+            <stop offset="0%" stop-color="#b85d72"/>
+            <stop offset="50%" stop-color="#d6a247"/>
+            <stop offset="100%" stop-color="#5d95cf"/>
           </linearGradient>
         </defs>
       </svg>
     </div>
 
     <!-- ==========================================================================
-         SECTION 4 (ÚJ!): INTERAKTÍV TESZT / KOMPATIBILITÁS TESZT
+         SECTION 4: INTERAKTÍV TESZT / KOMPATIBILITÁS TESZT
          ========================================================================== -->
     <section class="section-wrapper interactive-section" id="interactive">
       <div class="section-header-block reveal-item">
@@ -2623,7 +2749,7 @@
               Igen 😅
             </button>
 
-            <!-- Megjelenő dicséret / jóváhagyás -->
+            <!-- Megjelenő jóváhagyás -->
             <div class="prank-success-msg" id="prankSuccessMsg">
               🎉 <strong>Helyes válasz! 💚</strong><br>
               Merge request approved forever.<br>
@@ -2632,7 +2758,7 @@
           </div>
         </div>
 
-        <!-- 2. KÉRDÉS: Szeretitek egymást? (Love Meter + Overflow Error) -->
+        <!-- 2. KÉRDÉS: Mennyire szeretitek egymást? (Love Meter + Overflow Error) -->
         <div class="interactive-card reveal-item">
           <div class="interactive-card-header">
             <span class="interactive-q-badge">Teszt #02 • Bio-telemetria</span>
@@ -2688,20 +2814,20 @@
     <!-- HULLÁMOS ÁTMENET 4: Interactive Test -> Gallery -->
     <div class="organic-wave-divider" aria-hidden="true">
       <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
-        <path d="M0,20 C360,45 720,0 1080,35 C1240,15 1360,40 1440,20 L1440,48 L0,48 Z" fill="#131722" opacity="0.95"/>
-        <path d="M0,20 C360,45 720,0 1080,35 C1240,15 1360,40 1440,20" fill="none" stroke="url(#interGalStroke)" stroke-width="2" opacity="0.6"/>
+        <path d="M0,20 C360,45 720,0 1080,35 C1240,15 1360,40 1440,20 L1440,48 L0,48 Z" fill="#12151f" opacity="0.95"/>
+        <path d="M0,20 C360,45 720,0 1080,35 C1240,15 1360,40 1440,20" fill="none" stroke="url(#interGalStroke)" stroke-width="2" opacity="0.5"/>
         <defs>
           <linearGradient id="interGalStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#58a6ff"/>
-            <stop offset="50%" stop-color="#7ee787"/>
-            <stop offset="100%" stop-color="#d4788c"/>
+            <stop offset="0%" stop-color="#5d95cf"/>
+            <stop offset="50%" stop-color="#62b575"/>
+            <stop offset="100%" stop-color="#b85d72"/>
           </linearGradient>
         </defs>
       </svg>
     </div>
 
     <!-- ==========================================================================
-         SECTION 5: GALLERY SECTION (PILLANATOK - 280px MAGAS KÁRTYÁK)
+         SECTION 5: GALLERY SECTION (PILLANATOK - ÉVEK NÉLKÜL)
          ========================================================================== -->
     <section class="section-wrapper gallery-section" id="gallery">
       <div class="section-header-block reveal-item">
@@ -2714,57 +2840,57 @@
       </div>
 
       <div class="gallery-grid">
-        <!-- 1. Képkártya (Dev stílusú háttér) -->
+        <!-- 1. Képkártya -->
         <div class="photo-card photo-card-dev-1 reveal-item">
           <div class="photo-placeholder-inner">
             <span class="photo-camera-icon">📸</span>
             <div class="photo-caption-title">Közös pillanat #1</div>
-            <div class="photo-caption-sub">render_01.raw • 2021</div>
+            <div class="photo-caption-sub">render_01.raw • Kezdetek</div>
           </div>
         </div>
 
-        <!-- 2. Képkártya (Med stílusú háttér) -->
+        <!-- 2. Képkártya -->
         <div class="photo-card photo-card-med-1 reveal-item">
           <div class="photo-placeholder-inner">
             <span class="photo-camera-icon">📸</span>
             <div class="photo-caption-title">Közös pillanat #2</div>
-            <div class="photo-caption-sub">anamnezis_foto_02.jpg • 2022</div>
+            <div class="photo-caption-sub">anamnezis_foto_02.jpg • Első randi</div>
           </div>
         </div>
 
-        <!-- 3. Képkártya (Dev stílusú háttér) -->
+        <!-- 3. Képkártya -->
         <div class="photo-card photo-card-dev-2 reveal-item">
           <div class="photo-placeholder-inner">
             <span class="photo-camera-icon">📸</span>
             <div class="photo-caption-title">Közös pillanat #3</div>
-            <div class="photo-caption-sub">shared_memory_03.png • 2023</div>
+            <div class="photo-caption-sub">shared_memory_03.png • Összeköltözés</div>
           </div>
         </div>
 
-        <!-- 4. Képkártya (Med stílusú háttér) -->
+        <!-- 4. Képkártya -->
         <div class="photo-card photo-card-med-2 reveal-item">
           <div class="photo-placeholder-inner">
             <span class="photo-camera-icon">📸</span>
             <div class="photo-caption-title">Közös pillanat #4</div>
-            <div class="photo-caption-sub">vital_snapshot_04.jpg • 2024</div>
+            <div class="photo-caption-sub">vital_snapshot_04.jpg • Közös emlék</div>
           </div>
         </div>
 
-        <!-- 5. Képkártya (Dev stílusú háttér) -->
+        <!-- 5. Képkártya -->
         <div class="photo-card photo-card-dev-3 reveal-item">
           <div class="photo-placeholder-inner">
             <span class="photo-camera-icon">📸</span>
             <div class="photo-caption-title">Közös pillanat #5</div>
-            <div class="photo-caption-sub">engagement_render_05.png • 2025</div>
+            <div class="photo-caption-sub">engagement_render_05.png • Eljegyzés</div>
           </div>
         </div>
 
-        <!-- 6. Képkártya (Med stílusú háttér) -->
+        <!-- 6. Képkártya -->
         <div class="photo-card photo-card-med-3 reveal-item">
           <div class="photo-placeholder-inner">
             <span class="photo-camera-icon">📸</span>
             <div class="photo-caption-title">Közös pillanat #6</div>
-            <div class="photo-caption-sub">wedding_preview_06.jpg • 2026</div>
+            <div class="photo-caption-sub">wedding_preview_06.jpg • Esküvő</div>
           </div>
         </div>
       </div>
@@ -2773,13 +2899,13 @@
     <!-- HULLÁMOS ÁTMENET 5: Gallery -> Vault -->
     <div class="organic-wave-divider" aria-hidden="true">
       <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
-        <path d="M0,25 C300,5 600,45 900,18 C1200,45 1350,10 1440,25 L1440,48 L0,48 Z" fill="#0e111a" opacity="0.95"/>
-        <path d="M0,25 C300,5 600,45 900,18 C1200,45 1350,10 1440,25" fill="none" stroke="url(#galVaultStroke)" stroke-width="2" opacity="0.6"/>
+        <path d="M0,25 C300,5 600,45 900,18 C1200,45 1350,10 1440,25 L1440,48 L0,48 Z" fill="#10131c" opacity="0.95"/>
+        <path d="M0,25 C300,5 600,45 900,18 C1200,45 1350,10 1440,25" fill="none" stroke="url(#galVaultStroke)" stroke-width="2" opacity="0.5"/>
         <defs>
           <linearGradient id="galVaultStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#c98580"/>
-            <stop offset="50%" stop-color="#d4788c"/>
-            <stop offset="100%" stop-color="#7ee787"/>
+            <stop offset="0%" stop-color="#b56f6b"/>
+            <stop offset="50%" stop-color="#b85d72"/>
+            <stop offset="100%" stop-color="#62b575"/>
           </linearGradient>
         </defs>
       </svg>
@@ -2819,26 +2945,51 @@
             <div class="vault-error-msg" id="vaultErrorMsg">❌ Hozzáférés megtagadva. Próbáld újra.</div>
           </div>
 
-          <!-- Feltárt tartalom: Írógép levél és Élmény ajándékkártya -->
+          <!-- Feltárt tartalom: Írógép levél és Érzéki Kalandok Ajándékkártya -->
           <div class="vault-content-revealed" id="vaultRevealed">
             <div class="vault-letter-card">
               <div class="letter-typewriter-text" id="typewriterText"></div>
               <span class="typewriter-cursor" id="typewriterCursor"></span>
             </div>
 
-            <!-- Élmény Ajándékkártya (Voucher) -->
+            <!-- Érzéki Kalandok Ajándékkártya (Voucher) -->
             <div class="gift-voucher-card" id="giftVoucherCard">
               <div class="gift-ribbon-banner">AJÁNDÉK UTALVÁNY</div>
-              <h3 class="gift-card-title">🎁 EGY KÖZÖS ÉLMÉNY VÁR RÁTOK! 🎁</h3>
-              <p class="gift-card-recipe">
-                Receptre felírva: 60 perc relaxáció a monitor előtt görnyedő kódolónak és a 24 órázó medikának.
-              </p>
-              <div class="gift-card-details-grid">
-                <div><strong>Beváltandó:</strong> 2027. 06. 30-ig</div>
-                <div><strong>Részletek:</strong> Személyesen! 😉</div>
-                <div><strong>Kibocsátó:</strong> Virginia ❤️</div>
+              <h3 class="gift-card-title">✨ Érzéki Kalandok Pároknak kártyacsomag ✨</h3>
+              
+              <img src="erzeki-kalandok.png" alt="Érzéki Kalandok Pároknak" class="gift-preview-img">
+
+              <div class="gift-info-section">
+                <h4 class="gift-section-heading">Jó, ha tudtok róla:</h4>
+                <ul class="gift-info-list">
+                  <li>✨ Segít mélyebb kapcsolatot építeni és izgalmas pillanatokat teremteni</li>
+                  <li>🔥 30 lekaparható kártya erotikus kihívásokkal, amelyek újdonságot és érzékiséget visznek a kapcsolatba</li>
+                  <li>💭 További 30 kártya alatt összesen 120 gondolatébresztő kérdés 4 témakörben (múltbéli emlékek, gondolkodós felvetések, párkapcsolati témák, pikáns kérdések)</li>
+                  <li>🃏 Önállóan vagy a feladatok kiegészítéseként is használható</li>
+                  <li>💖 Garantálja, hogy minden közös pillanat különleges és emlékezetes legyen</li>
+                </ul>
               </div>
-              <div class="gift-card-stamp">★ HITELTELESÍTVE: BB-2026 ★</div>
+
+              <div class="gift-validity-badge">
+                <strong>Beváltható:</strong> 2026. 08. 31. - 2027. 05. 31.
+              </div>
+
+              <div class="bonus-code-container">
+                <span class="bonus-code-label">BÓNUSZKÓDOD:</span>
+                <span class="bonus-code-val" id="bonusCodeVal">[BÓNUSZKÓD HELYE]</span>
+                <button type="button" class="btn-copy-code" id="btnCopyCode" onclick="copyBonusCode()">Másolás 📋</button>
+              </div>
+
+              <div class="gift-order-steps">
+                <h4 class="gift-section-heading">Fontos tudnivalók / Rendelés menete:</h4>
+                <ul class="gift-order-list">
+                  <li>📧 Rendelés e-mailben: <a href="mailto:info@kalandkonyv.hu?subject=Érzéki Kalandok bónuszkód beváltás - Bogi és Barna" class="gift-mail-link">info@kalandkonyv.hu</a></li>
+                  <li>📍 Az üzenetben meg kell adni a bónuszkódot és a pontos szállítási címet.</li>
+                  <li>💳 Szállítási díj: 1.890 Ft előreutalással (vagy 390 Ft utánvét díj).</li>
+                </ul>
+              </div>
+
+              <div class="gift-card-stamp">★ Szeretettel: Virginia ❤️ ★</div>
             </div>
           </div>
         </div>
@@ -2849,25 +3000,25 @@
   <!-- HULLÁMOS ÁTMENET 6: Vault -> Footer -->
   <div class="organic-wave-divider" aria-hidden="true">
     <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
-      <path d="M0,20 C280,45 560,5 840,30 C1120,48 1320,8 1440,20 L1440,48 L0,48 Z" fill="#0b0e16" opacity="0.95"/>
-      <path d="M0,20 C280,45 560,5 840,30 C1120,48 1320,8 1440,20" fill="none" stroke="url(#vaultFootStroke)" stroke-width="2" opacity="0.6"/>
+      <path d="M0,20 C280,45 560,5 840,30 C1120,48 1320,8 1440,20 L1440,48 L0,48 Z" fill="#0e111a" opacity="0.95"/>
+      <path d="M0,20 C280,45 560,5 840,30 C1120,48 1320,8 1440,20" fill="none" stroke="url(#vaultFootStroke)" stroke-width="2" opacity="0.5"/>
       <defs>
         <linearGradient id="vaultFootStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#7ee787"/>
-          <stop offset="50%" stop-color="#58a6ff"/>
-          <stop offset="100%" stop-color="#d4788c"/>
+          <stop offset="0%" stop-color="#62b575"/>
+          <stop offset="50%" stop-color="#5d95cf"/>
+          <stop offset="100%" stop-color="#b85d72"/>
         </linearGradient>
       </defs>
     </svg>
   </div>
 
   <!-- ==========================================================================
-       SECTION 7: FOOTER (COUNTDOWN & CREDITS)
+       SECTION 7: FOOTER (HÁZASSÁGBAN ELTÖLTÖTT IDŐ & CREDITS)
        ========================================================================== -->
   <footer class="site-footer">
     <div class="reveal-item">
-      <h3 class="footer-countdown-title">Visszaszámlálás a Nagy Napig</h3>
-      <div class="footer-countdown-subtitle">2026. október 22. 14:00:00 (Budapest)</div>
+      <h3 class="footer-countdown-title" id="marriageTimerTitle">Házasságban eltöltött idő</h3>
+      <div class="footer-countdown-subtitle" id="marriageTimerSub">2026. október 22. óta szinkronizált szívritmus 💍</div>
 
       <div class="countdown-grid" id="countdownGrid">
         <div class="countdown-box">
@@ -2888,8 +3039,8 @@
         </div>
       </div>
 
-      <div class="countdown-passed-message" id="countdownPassed">
-        🎉 Boldogan éltek, amíg meg nem haltak! 💖
+      <div>
+        <button type="button" class="btn-preview-timer" id="btnPreviewTimer">Előnézet: Mi lesz 100 nappal az esküvő után? ✨</button>
       </div>
 
       <div class="footer-credit-line">
@@ -2900,28 +3051,28 @@
 
   <!-- ==========================================================================
        JAVASCRIPT FUNKCIÓK ÉS INTERAKCIÓK
-       ========================================================================== */ -->
+       ========================================================================== -->
   <script>
     /* ==========================================================================
        1. CONSOLE EASTER EGG (Barnának)
        ========================================================================== */
-    console.log('%c\n    💚💚💚   💚💚💚\n  💚💚💚💚💚 💚💚💚💚💚\n 💚💚💚💚💚💚💚💚💚💚💚💚💚\n  💚💚💚💚💚💚💚💚💚💚💚\n    💚💚💚💚💚💚💚\n      💚💚💚💚💚\n        💚💚💚\n          💚\n', 'color: #7ee787; font-size: 8px; line-height: 1.1;');
-    console.log('%c Szia Barna! 👋', 'font-size: 24px; color: #7ee787; font-weight: bold;');
-    console.log('%c Tudtam, hogy megnézed a konzolt... 😏', 'font-size: 16px; color: #58a6ff;');
-    console.log('%c Írd be: claimGift() a titkos bónuszért!', 'font-size: 14px; color: #d2a8ff; font-family: monospace;');
+    console.log('%c\n    💚💚💚   💚💚💚\n  💚💚💚💚💚 💚💚💚💚💚\n 💚💚💚💚💚💚💚💚💚💚💚💚💚\n  💚💚💚💚💚💚💚💚💚💚💚\n    💚💚💚💚💚💚💚\n      💚💚💚💚💚\n        💚💚💚\n          💚\n', 'color: #62b575; font-size: 8px; line-height: 1.1;');
+    console.log('%c Szia Barna! 👋', 'font-size: 24px; color: #62b575; font-weight: bold;');
+    console.log('%c Tudtam, hogy megnézed a konzolt... 😏', 'font-size: 16px; color: #5d95cf;');
+    console.log('%c Írd be: claimGift() a titkos bónuszért!', 'font-size: 14px; color: #aa8fd1; font-family: monospace;');
 
     window.claimGift = function() {
       const vaultElement = document.getElementById('vault');
       if (vaultElement) {
         vaultElement.scrollIntoView({ behavior: 'smooth' });
       }
-      console.log('%c 🎁 Görgess le a Titkos Széfhez!', 'font-size: 16px; color: #7ee787;');
-      console.log('%c 🔑 A jelszó... na azt már neked kell kitalálnod! (Tipp: a dátum)', 'font-size: 14px; color: #e3b341;');
+      console.log('%c 🎁 Görgess le a Titkos Széfhez!', 'font-size: 16px; color: #62b575;');
+      console.log('%c 🔑 A jelszó... na azt már neked kell kitalálnod! (Tipp: a dátum)', 'font-size: 14px; color: #d6a247;');
       return '🔐 Vault located. Access code required.';
     };
 
     /* ==========================================================================
-       2. EKG CANVAS ANIMÁCIÓ (Valósághű PQRST hullámforma)
+       2. EKG CANVAS ANIMÁCIÓ (PQRST hullámforma - lágyabb színharmónia)
        ========================================================================== */
     const ekgCanvas = document.getElementById('ekgCanvas');
     const bpmDisplay = document.getElementById('bpmDisplay');
@@ -2972,7 +3123,7 @@
       ekgCtx.clearRect(0, 0, width, height);
 
       ekgCtx.lineWidth = 1;
-      ekgCtx.strokeStyle = 'rgba(126, 231, 135, 0.06)';
+      ekgCtx.strokeStyle = 'rgba(98, 181, 117, 0.06)';
       const gridSize = 20;
       for (let x = 0; x < width; x += gridSize) {
         ekgCtx.beginPath();
@@ -2989,9 +3140,9 @@
 
       ekgCtx.beginPath();
       ekgCtx.lineWidth = 2.2;
-      ekgCtx.strokeStyle = '#7ee787';
-      ekgCtx.shadowColor = '#7ee787';
-      ekgCtx.shadowBlur = 8;
+      ekgCtx.strokeStyle = '#62b575';
+      ekgCtx.shadowColor = '#62b575';
+      ekgCtx.shadowBlur = 3; // Finomított, csökkentett glow
 
       let prevY = baseline;
       for (let x = 0; x < width; x++) {
@@ -3012,9 +3163,9 @@
 
       ekgCtx.beginPath();
       ekgCtx.arc(width - 4, prevY, 3, 0, Math.PI * 2);
-      ekgCtx.fillStyle = '#7ee787';
-      ekgCtx.shadowColor = '#7ee787';
-      ekgCtx.shadowBlur = 10;
+      ekgCtx.fillStyle = '#62b575';
+      ekgCtx.shadowColor = '#62b575';
+      ekgCtx.shadowBlur = 4;
       ekgCtx.fill();
       ekgCtx.shadowBlur = 0;
 
@@ -3061,9 +3212,6 @@
     function positionRunawayButtonInitially() {
       if (!btnRunaway || !runawayArena) return;
       const arenaRect = runawayArena.getBoundingClientRect();
-      const btnRect = btnRunaway.getBoundingClientRect();
-      
-      // Kezdetben a Nem gomb mellett/alatt helyezkedik el biztonságosan
       btnRunaway.style.top = `${arenaRect.height - 75}px`;
       btnRunaway.style.left = `${arenaRect.width / 2 + 35}px`;
     }
@@ -3139,7 +3287,7 @@
             currentPercent += 15;
             loveMeterFill.style.width = '100%';
             loveMeterReadout.textContent = `${currentPercent}%`;
-            loveMeterReadout.style.color = '#ff7b72';
+            loveMeterReadout.style.color = '#d9706b';
           } else {
             clearInterval(interval);
             loveMeterReadout.textContent = '9999% 💕';
@@ -3179,10 +3327,9 @@
           elapsed += speed;
 
           if (elapsed < totalDuration) {
-            if (elapsed > 1600) speed += 25; // Lassul a végén
+            if (elapsed > 1600) speed += 25;
             setTimeout(stepSpin, speed);
           } else {
-            // Végleges döntés véletlenszerűen
             const finalChoice = Math.random() < 0.5 ? 0 : 1;
             spinnerActiveName.textContent = candidates[finalChoice];
             spinnerActiveName.classList.remove('spinning');
@@ -3204,7 +3351,7 @@
     }
 
     /* ==========================================================================
-       5. TITKOS SZÉF LOGIKA ÉS ÍRÓGÉP EFFEKT
+       5. TITKOS SZÉF LOGIKA ÉS ÍRÓGÉP EFFEKT (ÉRZÉKI KALANDOK AJÁNDÉKKÁRTYA)
        ========================================================================== */
     const correctPassword = '20261022';
     const vaultPasswordInput = document.getElementById('vaultPasswordInput');
@@ -3222,26 +3369,18 @@
 Először is: ha ezt olvassátok, gratulálok – sikeresen feltörtétek a széfet!
 (Barna, fogadok, hogy te jöttél rá a jelszóra 3 mp alatt. 😄)
 
-Nem is tudom, hol kezdjem... Talán ott, hogy ritkán találkozik
-az ember olyan párossal, akik ennyire kiegészítik egymást.
-Ti vagytok az a "merge request", amit az élet azonnal
-approve-olt — zero conflicts, all tests passing. 💚
+Ti ketten vagytok a tökéletes "merge request" – zero conflicts, all tests passing,
+és a világ legszebb szimbiózisa a kódok és a gyógyítás között.
 
-Bogi, te vagy az, aki meggyógyítja a világot.
-Barna, te meg az, aki újraírja.
-Együtt? Unstoppable.
+Nagyon sok boldogságot, végtelen nevetést és felejthetetlen közös éveket kívánok Nektek!
+A társasjáték mellé pedig szeretnék még egy igazán különleges meglepetést adni:
 
-Sok boldogságot, nevetést és közös kalandot kívánok Nektek!
-Ez az oldal a mi kis digitális ajándékunk — de ne aggódjatok,
-analóg meglepetés is jár hozzá:
+🎁 AZ ÉRZÉKI KALANDOK PÁROKNAK KÁRTYACSOMAGOT! 🎁
+Hogy a fárasztó kórházi ügyeletek és a hosszú debuggolások után
+mindig legyen időtök az igazi, mély és izgalmas közös pillanatokra.
 
-🎁 EGY KÖZÖS ÉLMÉNY VÁR RÁTOK! 🎁
-Receptre felírva: 60 perc relaxáció
-a monitor előtt görnyedő kódolónak
-és a 24 órázó medikának.
-
-Beváltandó: 2027. 06. 30-ig.
-Részletek: személyesen! 😉
+A beváltáshoz szükséges részleteket és a bónuszkódot
+lentebb, az ajándékkártyán találjátok!
 
 Szeretettel,
 Virginia ❤️`;
@@ -3301,44 +3440,127 @@ Virginia ❤️`;
       }, 30);
     }
 
+    // Bónuszkód másolása vágólapra
+    function copyBonusCode() {
+      const bonusCodeEl = document.getElementById('bonusCodeVal');
+      const btn = document.getElementById('btnCopyCode');
+      const textToCopy = bonusCodeEl ? bonusCodeEl.innerText.trim() : '';
+
+      const onCopied = () => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = 'Másolva! ✓';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.classList.remove('copied');
+        }, 2500);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).then(onCopied).catch(() => {
+          fallbackClipboardCopy(textToCopy, onCopied);
+        });
+      } else {
+        fallbackClipboardCopy(textToCopy, onCopied);
+      }
+    }
+
+    function fallbackClipboardCopy(text, callback) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        callback();
+      } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
     /* ==========================================================================
-       6. VISSZASZÁMLÁLÓ (2026. OKTÓBER 22. 14:00)
+       6. HÁZASSÁGBAN ELTÖLTÖTT IDŐ SZÁMLÁLÓJA (2026. OKTÓBER 22. 14:00)
        ========================================================================== */
-    const weddingDate = new Date(2026, 9, 22, 14, 0, 0).getTime();
+    const weddingDate = new Date(2026, 9, 22, 14, 0, 0).getTime(); // Hónap index 9 = Október
 
     const cdDaysEl = document.getElementById('cdDays');
     const cdHoursEl = document.getElementById('cdHours');
     const cdMinutesEl = document.getElementById('cdMinutes');
     const cdSecondsEl = document.getElementById('cdSeconds');
-    const countdownGridEl = document.getElementById('countdownGrid');
-    const countdownPassedEl = document.getElementById('countdownPassed');
+    const marriageTimerTitle = document.getElementById('marriageTimerTitle');
+    const marriageTimerSub = document.getElementById('marriageTimerSub');
+    const btnPreviewTimer = document.getElementById('btnPreviewTimer');
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const difference = weddingDate - now;
+    let isPreviewSimulation = false;
 
-      if (difference <= 0) {
-        if (countdownGridEl) countdownGridEl.style.display = 'none';
-        if (countdownPassedEl) countdownPassedEl.style.display = 'block';
-        return;
-      }
-
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-      if (cdDaysEl) cdDaysEl.textContent = String(days).padStart(2, '0');
-      if (cdHoursEl) cdHoursEl.textContent = String(hours).padStart(2, '0');
-      if (cdMinutesEl) cdMinutesEl.textContent = String(minutes).padStart(2, '0');
-      if (cdSecondsEl) cdSecondsEl.textContent = String(seconds).padStart(2, '0');
+    if (btnPreviewTimer) {
+      btnPreviewTimer.addEventListener('click', () => {
+        isPreviewSimulation = !isPreviewSimulation;
+        if (isPreviewSimulation) {
+          btnPreviewTimer.textContent = 'Vissza a valós dátumhoz ⏱️';
+          btnPreviewTimer.classList.add('active');
+        } else {
+          btnPreviewTimer.textContent = 'Előnézet: Mi lesz 100 nappal az esküvő után? ✨';
+          btnPreviewTimer.classList.remove('active');
+        }
+        updateMarriageTimer();
+      });
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    function updateMarriageTimer() {
+      const realNow = new Date().getTime();
+      let effectiveNow = realNow;
+
+      if (isPreviewSimulation) {
+        // Szimuláció: 100 nappal az esküvő után + a futó másodpercek
+        const offset100Days = 100 * 24 * 60 * 60 * 1000 + (realNow % (24 * 60 * 60 * 1000));
+        effectiveNow = weddingDate + offset100Days;
+      }
+
+      const diff = effectiveNow - weddingDate;
+
+      if (diff >= 0) {
+        // Esküvő napján vagy utána: FELFELÉ számol folyamatosan!
+        marriageTimerTitle.textContent = 'Házasságban eltöltött boldog idő';
+        if (isPreviewSimulation) {
+          marriageTimerSub.innerHTML = '✨ <em>[Szimuláció: 100 nappal az esküvő után]</em> — 2026. október 22. óta szüntelenül növekszik 💕';
+        } else {
+          marriageTimerSub.textContent = '2026. október 22. óta szüntelenül növekszik 💕';
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (cdDaysEl) cdDaysEl.textContent = String(days).padStart(2, '0');
+        if (cdHoursEl) cdHoursEl.textContent = String(hours).padStart(2, '0');
+        if (cdMinutesEl) cdMinutesEl.textContent = String(minutes).padStart(2, '0');
+        if (cdSecondsEl) cdSecondsEl.textContent = String(seconds).padStart(2, '0');
+      } else {
+        // Esküvő előtt: Pozitív visszaszámlálás, negatív számok nélkül
+        const untilDiff = Math.abs(diff);
+        const daysUntil = Math.floor(untilDiff / (1000 * 60 * 60 * 24));
+        const hoursUntil = Math.floor((untilDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutesUntil = Math.floor((untilDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const secondsUntil = Math.floor((untilDiff % (1000 * 60)) / 1000);
+
+        marriageTimerTitle.textContent = 'Házasságban eltöltött napok számlálója';
+        marriageTimerSub.innerHTML = `Még <strong>${daysUntil} nap</strong> az esküvőig — 2026. 10. 22-kor aktiválódik a közös élet számlálója! 💍`;
+
+        if (cdDaysEl) cdDaysEl.textContent = String(daysUntil).padStart(2, '0');
+        if (cdHoursEl) cdHoursEl.textContent = String(hoursUntil).padStart(2, '0');
+        if (cdMinutesEl) cdMinutesEl.textContent = String(minutesUntil).padStart(2, '0');
+        if (cdSecondsEl) cdSecondsEl.textContent = String(secondsUntil).padStart(2, '0');
+      }
+    }
+
+    updateMarriageTimer();
+    setInterval(updateMarriageTimer, 1000);
 
     /* ==========================================================================
-       7. LEBEGŐ HÁTTÉRELEMEK GENERÁLÁSA (CSÖKKENTETT 0.15 OPACITÁS)
+       7. LEBEGŐ HÁTTÉRELEMEK GENERÁLÁSA (CSÖKKENTETT 0.14 OPACITÁS)
        ========================================================================== */
     const floatingBg = document.getElementById('floatingBg');
     const devSymbols = ['{ }', '</>', 'git commit', 'const love = true;', '=>', '0101', '===', 'npm i love', '&&', 'async/await', 'return ❤️;'];
@@ -3393,7 +3615,7 @@ Virginia ❤️`;
       if (!confettiCanvas || !confettiCtx) return;
       confettiActive = true;
       confettis = [];
-      const colors = ['#7ee787', '#58a6ff', '#d2a8ff', '#ff7b72', '#c98580', '#c9a87c', '#d4788c', '#ffd8d4'];
+      const colors = ['#62b575', '#5d95cf', '#aa8fd1', '#d9706b', '#b56f6b', '#bfa074', '#b85d72', '#f2dedb'];
 
       for (let i = 0; i < 140; i++) {
         confettis.push({
