@@ -1410,52 +1410,105 @@
       to { transform: scale(1); opacity: 1; }
     }
 
-    /* 2. KÉRDÉS: Love Meter */
-    .love-meter-box {
-      min-height: 310px;
-      background: rgba(16, 20, 29, 0.85);
-      border: 1px solid rgba(93, 149, 207, 0.25);
+    /* 2. KÉRDÉS: Biometrikus Szkenner (Ki a főnök otthon?) */
+    .bio-scanner-box {
+      min-height: 330px;
+      background: rgba(16, 20, 29, 0.88);
+      border: 1px solid rgba(93, 149, 207, 0.28);
       border-radius: 12px;
-      padding: 1.5rem 1.2rem;
+      padding: 1.4rem 1.2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 1.2rem;
+      gap: 1.1rem;
       text-align: center;
-    }
-
-    .love-meter-track {
-      width: 100%;
-      height: 26px;
-      background: #182030;
-      border: 1px solid var(--dev-border);
-      border-radius: 999px;
-      overflow: hidden;
       position: relative;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
     }
 
-    .love-meter-fill {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, #5d95cf 0%, #aa8fd1 45%, #b85d72 80%, #d9706b 100%);
-      border-radius: 999px;
-      transition: width 0.05s linear;
-      box-shadow: 0 0 10px var(--love-glow);
+    .bio-touchpad {
+      width: 130px;
+      height: 130px;
+      background: linear-gradient(145deg, #131826, #0e121d);
+      border: 2px solid var(--dev-blue);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(93, 149, 207, 0.15);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .love-meter-readout {
+    .bio-touchpad:hover {
+      transform: translateY(-2px) scale(1.03);
+      border-color: var(--dev-green);
+      box-shadow: 0 12px 28px rgba(98, 181, 117, 0.25), inset 0 0 20px rgba(98, 181, 117, 0.2);
+    }
+
+    .bio-fingerprint-svg {
+      width: 58px;
+      height: 58px;
+      stroke: var(--dev-blue);
+      transition: stroke 0.3s ease;
+    }
+
+    .bio-touchpad:hover .bio-fingerprint-svg {
+      stroke: var(--dev-green);
+    }
+
+    .bio-touchpad-label {
+      margin-top: 0.4rem;
       font-family: var(--font-dev);
-      font-size: 1.6rem;
+      font-size: 0.62rem;
       font-weight: 700;
-      color: var(--dev-green);
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+      color: var(--dev-text-muted);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
     }
 
-    .btn-measure-love {
-      background: linear-gradient(135deg, rgba(93, 149, 207, 0.2), rgba(184, 93, 114, 0.25));
-      border: 1px solid var(--love-accent);
+    /* Lézersugár animáció szkenneléskor */
+    .bio-scanner-laser {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -10px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #62b575, #7ee787, transparent);
+      box-shadow: 0 0 12px #62b575, 0 0 4px #fff;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .bio-touchpad.scanning .bio-scanner-laser {
+      opacity: 1;
+      animation: laserSweep 1.2s ease-in-out infinite alternate;
+    }
+
+    .bio-touchpad.scanning .bio-fingerprint-svg {
+      stroke: var(--dev-green);
+      filter: drop-shadow(0 0 8px var(--dev-green));
+    }
+
+    @keyframes laserSweep {
+      0% { top: 6px; }
+      100% { top: 120px; }
+    }
+
+    .bio-status-text {
+      font-family: var(--font-dev);
+      font-size: 0.76rem;
+      color: var(--dev-text-muted);
+      min-height: 22px;
+      line-height: 1.4;
+    }
+
+    .btn-bio-scan {
+      background: linear-gradient(135deg, rgba(93, 149, 207, 0.2), rgba(98, 181, 117, 0.25));
+      border: 1px solid var(--dev-green);
       color: #fff;
       font-family: var(--font-dev);
       font-size: 0.85rem;
@@ -1466,116 +1519,176 @@
       transition: var(--transition-smooth);
     }
 
-    .btn-measure-love:hover {
-      background: var(--love-accent);
-      box-shadow: 0 3px 15px var(--love-glow);
+    .btn-bio-scan:hover {
+      background: var(--dev-green);
+      color: #0b120c;
+      box-shadow: 0 4px 16px rgba(98, 181, 117, 0.4);
       transform: translateY(-2px);
     }
 
-    .love-overflow-banner {
+    .bio-verdict-box {
       display: none;
-      background: rgba(217, 112, 107, 0.15);
-      border: 1px solid var(--dev-red);
-      color: #ea9b97;
-      font-family: var(--font-dev);
-      font-size: 0.78rem;
-      padding: 0.7rem 0.9rem;
-      border-radius: 8px;
+      width: 100%;
+      background: rgba(184, 93, 114, 0.12);
+      border: 1.5px solid var(--love-accent);
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+      text-align: left;
+      animation: popIn 0.35s ease;
+    }
+
+    .bio-verdict-head {
+      font-family: var(--font-med-head);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffd8d4;
+      margin-bottom: 0.45rem;
+      text-align: center;
+    }
+
+    .bio-verdict-med {
+      font-size: 0.82rem;
+      color: #f7dedd;
+      margin-bottom: 0.4rem;
       line-height: 1.45;
-      animation: alertPulse 1.4s infinite alternate;
     }
 
-    @keyframes alertPulse {
-      0% { box-shadow: 0 0 4px rgba(217, 112, 107, 0.15); }
-      100% { box-shadow: 0 0 14px rgba(217, 112, 107, 0.35); }
+    .bio-verdict-dev {
+      font-family: var(--font-dev);
+      font-size: 0.74rem;
+      color: var(--dev-green);
+      background: rgba(14, 18, 27, 0.85);
+      padding: 0.35rem 0.6rem;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      word-break: break-all;
     }
 
-    /* 3. KÉRDÉS: Mosogatás pörgető */
-    .spinner-box {
-      min-height: 310px;
-      background: rgba(16, 20, 29, 0.85);
-      border: 1px solid rgba(191, 160, 116, 0.25);
+    /* 3. KÉRDÉS: Házassági Recept & Hotfix Generátor */
+    .rx-generator-box {
+      min-height: 330px;
+      background: rgba(16, 20, 29, 0.88);
+      border: 1px solid rgba(191, 160, 116, 0.28);
       border-radius: 12px;
-      padding: 1.5rem 1.2rem;
+      padding: 1.4rem 1.2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 1.2rem;
+      gap: 1.1rem;
       text-align: center;
+      position: relative;
     }
 
-    .spinner-display-frame {
+    .rx-card-frame {
       width: 100%;
       background: #141824;
-      border: 2px solid var(--dev-border);
-      border-radius: 14px;
-      padding: 1.2rem;
-      position: relative;
-      overflow: hidden;
-      box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+      border: 1.5px solid rgba(191, 160, 116, 0.4);
+      border-radius: 12px;
+      padding: 1.1rem;
+      text-align: left;
+      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.45);
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    .spinner-active-name {
+    .rx-card-frame.flip {
+      transform: scale(0.96);
+      opacity: 0.7;
+    }
+
+    .rx-card-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .rx-stamp-pill {
+      font-family: var(--font-dev);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--med-gold);
+      background: rgba(191, 160, 116, 0.15);
+      border: 1px solid rgba(191, 160, 116, 0.35);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .rx-counter {
+      font-family: var(--font-dev);
+      font-size: 0.7rem;
+      color: var(--dev-text-muted);
+    }
+
+    .rx-case-title {
       font-family: var(--font-med-head);
-      font-size: 2rem;
+      font-size: 1.12rem;
       font-weight: 700;
       color: #ffd8d4;
-      transition: transform 0.1s ease, color 0.1s ease;
-      min-height: 48px;
+      margin-bottom: 0.65rem;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.4rem;
+    }
+
+    .rx-card-content {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      gap: 0.55rem;
     }
 
-    .spinner-active-name.spinning {
-      transform: scale(1.12);
-      color: var(--love-accent);
-      filter: blur(0.5px);
+    .rx-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      line-height: 1.4;
     }
 
-    .spinner-subnote {
+    .rx-med-item {
+      color: #f7dedd;
+    }
+
+    .rx-dev-item {
+      color: #c9d1d9;
       font-family: var(--font-dev);
-      font-size: 0.72rem;
-      color: var(--dev-text-muted);
-      margin-top: 0.3rem;
+      font-size: 0.74rem;
+      background: rgba(11, 14, 22, 0.6);
+      padding: 0.35rem 0.5rem;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .btn-spin {
+    .rx-dev-item code {
+      color: var(--dev-green);
+    }
+
+    .btn-rx-draw {
       background: linear-gradient(135deg, rgba(191, 160, 116, 0.25), rgba(184, 93, 114, 0.25));
       border: 1px solid var(--med-gold);
       color: #f0d5b5;
       font-family: var(--font-dev);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      padding: 0.65rem 1.6rem;
+      padding: 0.65rem 1.5rem;
       border-radius: 8px;
       cursor: pointer;
       transition: var(--transition-smooth);
       box-shadow: 0 3px 12px rgba(191, 160, 116, 0.15);
     }
 
-    .btn-spin:hover:not(:disabled) {
+    .btn-rx-draw:hover {
       background: var(--med-gold);
       color: #1a1612;
       box-shadow: 0 4px 18px rgba(191, 160, 116, 0.35);
       transform: translateY(-2px);
     }
 
-    .btn-spin:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    .spinner-result-verdict {
-      font-family: var(--font-med-body);
-      font-size: 0.84rem;
+    .rx-footer-note {
+      font-family: var(--font-dev);
+      font-size: 0.7rem;
+      color: var(--dev-text-muted);
       font-style: italic;
-      color: #e6edf3;
-      min-height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     /* ==========================================================================
@@ -1653,14 +1766,8 @@
       font-family: var(--font-med-head);
       font-size: 1.22rem;
       color: #f0f6fc;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0;
       font-weight: 700;
-    }
-
-    .photo-caption-sub {
-      font-family: var(--font-dev);
-      font-size: 0.82rem;
-      color: var(--dev-text-muted);
     }
 
     /* ==========================================================================
@@ -2856,53 +2963,85 @@
           </div>
         </div>
 
-        <!-- 2. KÉRDÉS: Mennyire szeretitek egymást? (Love Meter + Overflow Error) -->
-        <div class="interactive-card reveal-item">
+        <!-- 2. KÉRDÉS: Biometrikus Hazugságvizsgáló / Elemzés: Ki a főnök otthon? -->
+        <div class="interactive-card reveal-item" id="bioScanCard">
           <div class="interactive-card-header">
-            <span class="interactive-q-badge">Teszt #02 • Bio-telemetria</span>
-            <h3 class="interactive-card-title">Mennyire szeretitek egymást?</h3>
-            <p class="interactive-card-subtitle">Kattints a klinikai benchmark futtatásához!</p>
+            <span class="interactive-q-badge">Teszt #02 • Biometrikus Elemzés</span>
+            <h3 class="interactive-card-title">Ki a főnök otthon?</h3>
+            <p class="interactive-card-subtitle">Helyezzétek a mutatóujjatokat a szkennerre az elemzéshez!</p>
           </div>
 
-          <div class="love-meter-box">
-            <div class="love-meter-readout" id="loveMeterReadout">0%</div>
-
-            <div class="love-meter-track">
-              <div class="love-meter-fill" id="loveMeterFill"></div>
+          <div class="bio-scanner-box">
+            <div class="bio-touchpad" id="bioTouchpad" role="button" tabindex="0" title="Kattints ide a szkenneléshez!">
+              <div class="bio-scanner-laser" id="bioScannerLaser"></div>
+              <svg class="bio-fingerprint-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/>
+                <path d="M14 13.12c0 2.38 0 6.38-1 8.88"/>
+                <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/>
+                <path d="M2 12a10 10 0 0 1 18-6"/>
+                <path d="M2 16h.01"/>
+                <path d="M21.8 16c.2-2 .131-5.354 0-6"/>
+                <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"/>
+                <path d="M8.65 22c.21-.66.45-1.32.57-2"/>
+                <path d="M9 6.8a6 6 0 0 1 9 5.2v2"/>
+              </svg>
+              <div class="bio-touchpad-label" id="bioTouchpadLabel">ÉRINTSD MEG A MÉRÉSHEZ</div>
             </div>
 
-            <button type="button" class="btn-measure-love" id="btnMeasureLove">
-              Mérés indítása 💓
+            <div class="bio-status-text" id="bioStatusText">Készenlétben • Algoritmikus szívritmus és tekintély-szenzor</div>
+
+            <button type="button" class="btn-bio-scan" id="btnBioScan">
+              Szkennelés indítása 🔍
             </button>
 
-            <div class="love-overflow-banner" id="loveOverflowBanner">
-              ⚠️ <strong>MÉRÉSI TARTOMÁNYON KÍVÜL</strong><br>
-              OVERFLOW ERROR 💕<br>
-              Hibaüzenet: HeartBufferOverflowException!
+            <div class="bio-verdict-box" id="bioVerdictBox">
+              <div class="bio-verdict-head">👑 Hivatalos Diagnózis: 100% BOGI!</div>
+              <div class="bio-verdict-body" id="bioVerdictBody">
+                <p class="bio-verdict-med">🩺 <strong>Orvosi lelet:</strong> Megkérdőjelezhetetlen családfői státusz, orvosi prioritás.</p>
+                <div class="bio-verdict-dev">💻 <code>sudo grant_all_permissions --to=bogi --forever</code> (Exit 0)</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 3. KÉRDÉS: Ki mosogat holnap? (Véletlenszerű pörgető) -->
-        <div class="interactive-card reveal-item">
+        <!-- 3. KÉRDÉS: Házassági Recept & Hotfix Generátor -->
+        <div class="interactive-card reveal-item" id="rxCard">
           <div class="interactive-card-header">
-            <span class="interactive-q-badge">Teszt #03 • Erőforrás-ütemezés</span>
-            <h3 class="interactive-card-title">Ki mosogat holnap?</h3>
-            <p class="interactive-card-subtitle">A viták elkerülésére kialakított döntéshozó</p>
+            <span class="interactive-q-badge">Teszt #03 • Receptúra &amp; Patch</span>
+            <h3 class="interactive-card-title">Házassági Recept Generátor</h3>
+            <p class="interactive-card-subtitle">Klinikai és fejlesztői terápia a mindennapokra</p>
           </div>
 
-          <div class="spinner-box">
-            <div class="spinner-display-frame">
-              <div class="spinner-active-name" id="spinnerActiveName">🩺 Bogi</div>
-              <div class="spinner-subnote">Fair-share háztartási process scheduling</div>
+          <div class="rx-generator-box">
+            <div class="rx-card-frame" id="rxCardFrame">
+              <div class="rx-card-topbar">
+                <span class="rx-stamp-pill">Rx / HOTFIX</span>
+                <span class="rx-counter" id="rxCounter">Receptúra #01 / 06</span>
+              </div>
+              <h4 class="rx-case-title" id="rxCaseTitle">Akut Fáradtság Szindróma</h4>
+              
+              <div class="rx-card-content" id="rxCardContent">
+                <div class="rx-item rx-med-item">
+                  <span class="rx-item-icon">💊</span>
+                  <div class="rx-item-text">
+                    <strong>Javallat:</strong> 200mg csokoládé p.o. és azonnali fekvés a kanapéra.
+                  </div>
+                </div>
+                <div class="rx-item rx-dev-item">
+                  <span class="rx-item-icon">💻</span>
+                  <div class="rx-item-text">
+                    <strong>Hotfix:</strong> <code>git reset --hard TODAY_STRESS</code> és 8 óra alvás.
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <button type="button" class="btn-spin" id="btnSpin">
-              Pörgetés! 🎲
+            <button type="button" class="btn-rx-draw" id="btnRxDraw">
+              Új Recept Felírása 💊
             </button>
 
-            <div class="spinner-result-verdict" id="spinnerVerdict">
-              Kattints a pörgetésre a feladat kiosztásához!
+            <div class="rx-footer-note" id="rxFooterNote">
+              Dr. Bogi és Barna hivatalos háztartási protokollja
             </div>
           </div>
         </div>
@@ -2944,7 +3083,6 @@
           </div>
           <div class="photo-caption-box">
             <h3 class="photo-caption-title">Közös kalandok a hegyekben</h3>
-            <p class="photo-caption-sub">Hófödte csúcsok, forró tea &amp; végtelen mosoly ❄️</p>
           </div>
         </article>
 
@@ -2955,7 +3093,6 @@
           </div>
           <div class="photo-caption-box">
             <h3 class="photo-caption-title">Tavaszi virágzás &amp; Szerelem</h3>
-            <p class="photo-caption-sub">Cseresznyevirágok alatt, kéz a kézben az oltár felé 🌸</p>
           </div>
         </article>
 
@@ -2966,7 +3103,6 @@
           </div>
           <div class="photo-caption-box">
             <h3 class="photo-caption-title">Felejthetetlen utazások</h3>
-            <p class="photo-caption-sub">Városnézés, Big Ben &amp; közös felfedezések 🏛️</p>
           </div>
         </article>
       </div>
@@ -3080,7 +3216,7 @@
                 </ul>
               </div>
 
-              <div class="gift-card-stamp">★ Szeretettel: Virgínia ❤️ ★</div>
+              <div class="gift-card-stamp">★ Szeretettel: Virgínia &amp; Jácint ❤️ ★</div>
             </div>
           </div>
         </div>
@@ -3135,7 +3271,7 @@
       </div>
 
       <div class="footer-credit-line">
-        Készítette: Virgínia 💜 | Forráskód megtekintése: <span>F12 😏</span>
+        Készítette: Virgínia &amp; Jácint 💜 | Forráskód megtekintése: <span>F12 😏</span>
       </div>
     </div>
   </footer>
@@ -3354,90 +3490,140 @@
       });
     }
 
-    // --- Kérdés 2: Love Meter (9999% Overflow Error) ---
-    const btnMeasureLove = document.getElementById('btnMeasureLove');
-    const loveMeterFill = document.getElementById('loveMeterFill');
-    const loveMeterReadout = document.getElementById('loveMeterReadout');
-    const loveOverflowBanner = document.getElementById('loveOverflowBanner');
-    let isLoveMeasuring = false;
+    // --- Kérdés 2: Biometrikus Szkenner (Ki a főnök otthon?) ---
+    const btnBioScan = document.getElementById('btnBioScan');
+    const bioTouchpad = document.getElementById('bioTouchpad');
+    const bioStatusText = document.getElementById('bioStatusText');
+    const bioTouchpadLabel = document.getElementById('bioTouchpadLabel');
+    const bioVerdictBox = document.getElementById('bioVerdictBox');
+    const bioVerdictBody = document.getElementById('bioVerdictBody');
+    let isBioScanning = false;
+    let bioScanCount = 0;
 
-    if (btnMeasureLove) {
-      btnMeasureLove.addEventListener('click', () => {
-        if (isLoveMeasuring) return;
-        isLoveMeasuring = true;
-        btnMeasureLove.disabled = true;
-        loveOverflowBanner.style.display = 'none';
+    const bioResponses = [
+      {
+        med: "🩺 <strong>Orvosi lelet:</strong> Megkérdőjelezhetetlen családfői státusz, orvosi prioritás.",
+        dev: "💻 <code>sudo grant_all_permissions --to=bogi --forever</code> (Exit code: 0)"
+      },
+      {
+        med: "🩺 <strong>Orvosi lelet:</strong> A sztetoszkóp szava mindig felülírja a terminált.",
+        dev: "💻 <code>chmod 777 /home/bogi_rules</code> (Root hozzáférés jóváhagyva)"
+      },
+      {
+        med: "🩺 <strong>Orvosi lelet:</strong> 100% konszenzus – nem bug, ez a legjobb családi feature! 💕",
+        dev: "💻 Barna reakciója a logban: <code>„Igenis drágám, teljesen igazad van!”</code>"
+      },
+      {
+        med: "🩺 <strong>Orvosi lelet:</strong> Akut boldogság és abszolút Bogi-irányítás a fedélzeten.",
+        dev: "💻 <code>git merge bogi_decisions --strategy=theirs -m \"Bogi nyert\"</code>"
+      }
+    ];
 
-        let currentPercent = 0;
-        const interval = setInterval(() => {
-          if (currentPercent < 100) {
-            currentPercent += 2;
-            loveMeterFill.style.width = `${currentPercent}%`;
-            loveMeterReadout.textContent = `${currentPercent}%`;
-          } else if (currentPercent < 350) {
-            currentPercent += 15;
-            loveMeterFill.style.width = '100%';
-            loveMeterReadout.textContent = `${currentPercent}%`;
-            loveMeterReadout.style.color = '#d9706b';
-          } else {
-            clearInterval(interval);
-            loveMeterReadout.textContent = '9999% 💕';
-            loveOverflowBanner.style.display = 'block';
-            launchConfetti();
-            btnMeasureLove.textContent = 'Újramérés 🔄';
-            btnMeasureLove.disabled = false;
-            isLoveMeasuring = false;
-          }
-        }, 35);
-      });
+    function triggerBioScan() {
+      if (isBioScanning) return;
+      isBioScanning = true;
+      if (btnBioScan) btnBioScan.disabled = true;
+      if (bioVerdictBox) bioVerdictBox.style.display = 'none';
+
+      bioTouchpad.classList.add('scanning');
+      bioStatusText.textContent = 'Biometrikus minta elemzése... Pulzus & tekintély mérése... ⚡';
+      bioTouchpadLabel.textContent = 'SZKENNELÉS...';
+
+      setTimeout(() => {
+        bioTouchpad.classList.remove('scanning');
+        bioStatusText.textContent = '✅ Elemzés befejezve • 100% konzisztens adat!';
+        bioTouchpadLabel.textContent = 'KÉSZ ✓';
+
+        const res = bioResponses[bioScanCount % bioResponses.length];
+        bioScanCount++;
+        if (bioVerdictBody) {
+          bioVerdictBody.innerHTML = `
+            <p class="bio-verdict-med">${res.med}</p>
+            <div class="bio-verdict-dev">${res.dev}</div>
+          `;
+        }
+        if (bioVerdictBox) bioVerdictBox.style.display = 'block';
+
+        launchConfetti();
+        if (btnBioScan) {
+          btnBioScan.disabled = false;
+          btnBioScan.textContent = 'Újramérés 🔄';
+        }
+        isBioScanning = false;
+      }, 1600);
     }
 
-    // --- Kérdés 3: Mosogatás Pörgető (Spinner) ---
-    const btnSpin = document.getElementById('btnSpin');
-    const spinnerActiveName = document.getElementById('spinnerActiveName');
-    const spinnerVerdict = document.getElementById('spinnerVerdict');
-    let isSpinning = false;
+    if (btnBioScan) btnBioScan.addEventListener('click', triggerBioScan);
+    if (bioTouchpad) bioTouchpad.addEventListener('click', triggerBioScan);
 
-    if (btnSpin) {
-      btnSpin.addEventListener('click', () => {
-        if (isSpinning) return;
-        isSpinning = true;
-        btnSpin.disabled = true;
-        spinnerVerdict.textContent = 'Döntési algoritmus futtatása...';
-        spinnerActiveName.classList.add('spinning');
+    // --- Kérdés 3: Házassági Recept & Hotfix Generátor ---
+    const btnRxDraw = document.getElementById('btnRxDraw');
+    const rxCardFrame = document.getElementById('rxCardFrame');
+    const rxCounter = document.getElementById('rxCounter');
+    const rxCaseTitle = document.getElementById('rxCaseTitle');
+    const rxCardContent = document.getElementById('rxCardContent');
+    let rxIndex = 0;
 
-        const candidates = ['🩺 Bogi', '💻 Barna'];
-        let currentIndex = 0;
-        let speed = 60;
-        let elapsed = 0;
-        const totalDuration = 2400;
+    const rxList = [
+      {
+        title: "Akut Fáradtság Szindróma",
+        med: "<strong>Javallat:</strong> 200mg csokoládé p.o. és azonnali fekvés a kanapéra.",
+        dev: "<strong>Hotfix:</strong> <code>git reset --hard TODAY_STRESS</code> és 8 óra zavartalan alvás."
+      },
+      {
+        title: "Üres Hűtő Vészhelyzet",
+        med: "<strong>Javallat:</strong> Sürgősségi pizza infúzió extra sajttal és fokhagymás öntettel.",
+        dev: "<strong>Hotfix:</strong> <code>sudo apt-get install dinner_ready</code> – Barna fizeti, Bogi választ!"
+      },
+      {
+        title: "Ki Vigye Le a Szemetet?",
+        med: "<strong>Javallat:</strong> Klinikai vizsgálat lezárva: a vödör megtelt.",
+        dev: "<strong>Hotfix:</strong> <code>rm -rf /garbage</code> – Barna elvégzi a garbage collectiont, cserébe jár egy puszi."
+      },
+      {
+        title: "Koffein-hiányos Kórállapot",
+        med: "<strong>Javallat:</strong> 1 bögre forró kávé ágyba szállítva reggel pontban 8:00-kor.",
+        dev: "<strong>Hotfix:</strong> <code>systemctl restart coffee_machine.service</code> – prioritás: CRITICAL."
+      },
+      {
+        title: "Hétvégi Kalandvágy",
+        med: "<strong>Javallat:</strong> Receptre felírva: Spontán utazás, hegyi levegő és termálfürdő.",
+        dev: "<strong>Hotfix:</strong> <code>curl -X GET https://adventure.bogi-barna.hu</code> – telefonok repülőgép üzemmódban!"
+      },
+      {
+        title: "Szeretet-túltengés",
+        med: "<strong>Javallat:</strong> Napi minimum 10 ölelés, étkezéstől és napszaktól függetlenül.",
+        dev: "<strong>Hotfix:</strong> <code>while (alive) { bogi.love(barna); }</code> – ellenjavallat nincs!"
+      }
+    ];
 
-        function stepSpin() {
-          currentIndex = 1 - currentIndex;
-          spinnerActiveName.textContent = candidates[currentIndex];
-          elapsed += speed;
+    if (btnRxDraw) {
+      btnRxDraw.addEventListener('click', () => {
+        if (!rxCardFrame) return;
+        rxCardFrame.classList.add('flip');
 
-          if (elapsed < totalDuration) {
-            if (elapsed > 1600) speed += 25;
-            setTimeout(stepSpin, speed);
-          } else {
-            const finalChoice = Math.random() < 0.5 ? 0 : 1;
-            spinnerActiveName.textContent = candidates[finalChoice];
-            spinnerActiveName.classList.remove('spinning');
+        setTimeout(() => {
+          rxIndex = (rxIndex + 1) % rxList.length;
+          const currentRx = rxList[rxIndex];
 
-            if (finalChoice === 0) {
-              spinnerVerdict.innerHTML = '🎉 <strong>A sors döntött: Bogi mosogat!</strong><br>(De Barna főzi a reggeli kávét cserébe ☕)';
-            } else {
-              spinnerVerdict.innerHTML = '🎉 <strong>A sors döntött: Barna mosogat!</strong><br><code>git commit -m "chore: dishes washed"</code> 🧽';
-            }
-
-            btnSpin.disabled = false;
-            btnSpin.textContent = 'Újrapörgetés! 🎲';
-            isSpinning = false;
+          if (rxCounter) rxCounter.textContent = `Receptúra #0${rxIndex + 1} / 0${rxList.length}`;
+          if (rxCaseTitle) rxCaseTitle.textContent = currentRx.title;
+          if (rxCardContent) {
+            rxCardContent.innerHTML = `
+              <div class="rx-item rx-med-item">
+                <span class="rx-item-icon">💊</span>
+                <div class="rx-item-text">${currentRx.med}</div>
+              </div>
+              <div class="rx-item rx-dev-item">
+                <span class="rx-item-icon">💻</span>
+                <div class="rx-item-text">${currentRx.dev}</div>
+              </div>
+            `;
           }
-        }
 
-        stepSpin();
+          rxCardFrame.classList.remove('flip');
+          btnRxDraw.textContent = 'Következő Recept Felírása 💊';
+        }, 180);
       });
     }
 
@@ -3457,13 +3643,13 @@
 
     const loveLetterString = `Drága Bogi és Barna! 💕
 
-Először is: ha ezt olvassátok, gratulálok – sikeresen feltörtétek a széfet!
+Először is: ha ezt olvassátok, gratulálunk – sikeresen feltörtétek a széfet!
 
 Ti ketten vagytok a tökéletes "merge request" – zero conflicts, all tests passing,
 és a világ legszebb szimbiózisa a kódok és a gyógyítás között.
 
-Nagyon sok boldogságot, végtelen nevetést és felejthetetlen közös éveket kívánok Nektek!
-A társasjáték mellé pedig szeretnék még egy igazán különleges meglepetést adni:
+Nagyon sok boldogságot, végtelen nevetést és felejthetetlen közös éveket kívánunk Nektek!
+A társasjáték mellé pedig szeretnénk még egy igazán különleges meglepetést adni:
 
 🎁 AZ ÉRZÉKI KALANDOK PÁROKNAK KÁRTYACSOMAGOT! 🎁
 Hogy a fárasztó kórházi ügyeletek és a hosszú debuggolások után
@@ -3473,7 +3659,7 @@ A beváltáshoz szükséges részleteket és a bónuszkódot
 lentebb, az ajándékkártyán találjátok!
 
 Szeretettel,
-Virgínia ❤️`;
+Virgínia & Jácint ❤️`;
 
     let isUnlocked = false;
 

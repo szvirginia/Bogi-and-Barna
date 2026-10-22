@@ -7,5 +7,8 @@ Egyedi, interaktív esküvői ajándék weboldal, amely összeköti a programoz�
 
 - 💻 **Fejlesztői világ:** Sötét terminál esztétika, `git log` commit naplók, `release_v1.0.0` jegyzék és F12 konzol húsvéti tojás.
 - 🩺 **Orvosi világ:** Elegáns lágy pasztell és florális tónusok, klinikai kórelőzmények, `Amor chronicus progressivus` lelet és valós idejű szívritmus (EKG).
-- 🧪 **Interaktív játékok:** Menekülő „Igen” gomb, túlpörgő Love Meter (9999% overflow), mosogatás-sorsoló algoritmus.
+- 🧪 **Interaktív játékok:** Menekülő „Igen” gomb, biometrikus ujjlenyomat-szkenner („Ki a főnök otthon?”), házassági recept & hotfix generátor.
 - 🔐 **Titkos Széf:** `20261022` biztonsági kód mögé rejtett személyes levél és ajándékutalvány.
+
+---
+*Készítette sok szeretettel: **Virgínia & Jácint** ❤️*
