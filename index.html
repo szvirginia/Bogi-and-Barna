@@ -3245,7 +3245,7 @@
   <footer class="site-footer">
     <div class="reveal-item">
       <h3 class="footer-countdown-title" id="marriageTimerTitle">Házasságban eltöltött idő</h3>
-      <div class="footer-countdown-subtitle" id="marriageTimerSub">2026. október 22. óta szinkronizált szívritmus 💍</div>
+      <div class="footer-countdown-subtitle" id="marriageTimerSub">2026. október 22. 15:30 óta szinkronizált szívritmus 💍</div>
 
       <div class="countdown-grid" id="countdownGrid">
         <div class="countdown-box">
@@ -3767,9 +3767,9 @@ Virgínia & Jácint ❤️`;
     }
 
     /* ==========================================================================
-       6. HÁZASSÁGBAN ELTÖLTÖTT IDŐ SZÁMLÁLÓJA (2026. OKTÓBER 22. 14:00)
+       6. HÁZASSÁGBAN ELTÖLTÖTT IDŐ SZÁMLÁLÓJA (2026. OKTÓBER 22. 15:30)
        ========================================================================== */
-    const weddingDate = new Date(2026, 9, 22, 14, 0, 0).getTime(); // Hónap index 9 = Október
+    const weddingDate = new Date(2026, 9, 22, 15, 30, 0).getTime(); // 2026. 10. 22. 15:30 (Hónap index 9 = Október)
 
     const cdDaysEl = document.getElementById('cdDays');
     const cdHoursEl = document.getElementById('cdHours');
@@ -3808,12 +3808,12 @@ Virgínia & Jácint ❤️`;
       const diff = effectiveNow - weddingDate;
 
       if (diff >= 0) {
-        // Esküvő napján vagy utána: FELFELÉ számol folyamatosan!
+        // Esküvő időpontjától (15:30) kezdve FELFELÉ számol folyamatosan!
         marriageTimerTitle.textContent = 'Házasságban eltöltött boldog idő';
         if (isPreviewSimulation) {
-          marriageTimerSub.innerHTML = '✨ <em>[Szimuláció: 100 nappal az esküvő után]</em> — 2026. október 22. óta szüntelenül növekszik 💕';
+          marriageTimerSub.innerHTML = '✨ <em>[Szimuláció: 100 nappal az esküvő után]</em> — 2026. október 22. 15:30 óta szüntelenül növekszik 💕';
         } else {
-          marriageTimerSub.textContent = '2026. október 22. óta szüntelenül növekszik 💕';
+          marriageTimerSub.textContent = '2026. október 22. 15:30 óta szüntelenül növekszik 💕';
         }
 
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -3826,15 +3826,19 @@ Virgínia & Jácint ❤️`;
         if (cdMinutesEl) cdMinutesEl.textContent = String(minutes).padStart(2, '0');
         if (cdSecondsEl) cdSecondsEl.textContent = String(seconds).padStart(2, '0');
       } else {
-        // Esküvő előtt: Pozitív visszaszámlálás, negatív számok nélkül
+        // 15:30 előtt: Pozitív visszaszámlálás az esküvő időpontjáig
         const untilDiff = Math.abs(diff);
         const daysUntil = Math.floor(untilDiff / (1000 * 60 * 60 * 24));
         const hoursUntil = Math.floor((untilDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutesUntil = Math.floor((untilDiff % (1000 * 60 * 60)) / (1000 * 60));
         const secondsUntil = Math.floor((untilDiff % (1000 * 60)) / 1000);
 
-        marriageTimerTitle.textContent = 'Házasságban eltöltött napok számlálója';
-        marriageTimerSub.innerHTML = `Még <strong>${daysUntil} nap</strong> az esküvőig — 2026. 10. 22-kor aktiválódik a közös élet számlálója! 💍`;
+        marriageTimerTitle.textContent = 'Házasság számláló aktiválásáig hátralévő idő';
+        if (daysUntil === 0) {
+          marriageTimerSub.innerHTML = `Ma van a Nagy Nap! 💍 Még <strong>${hoursUntil} óra ${minutesUntil} perc</strong> az esküvőig (15:30)! ✨`;
+        } else {
+          marriageTimerSub.innerHTML = `Még <strong>${daysUntil} nap</strong> az esküvőig — 2026. 10. 22. 15:30-kor aktiválódik a közös élet számlálója! 💍`;
+        }
 
         if (cdDaysEl) cdDaysEl.textContent = String(daysUntil).padStart(2, '0');
         if (cdHoursEl) cdHoursEl.textContent = String(hoursUntil).padStart(2, '0');
