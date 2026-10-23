@@ -3492,7 +3492,7 @@
       </div>
 
       <div class="footer-credit-line">
-        Készítette szeretettel: <span class="creator-secret-trigger" id="secretCounterTrigger" title="Látogatási időablak megnyitása">Virgínia &amp; Jácint</span> <span class="creator-secret-trigger" id="secretHeartTrigger" title="Látogatási időablak megnyitása">💜</span>
+        Készítette szeretettel: <span>Virgínia &amp; Jácint</span> <span class="creator-secret-trigger" id="secretHeartTrigger">💜</span>
       </div>
     </div>
   </footer>
@@ -4290,7 +4290,6 @@ Virgínia & Jácint ❤️`;
     }
 
     const secretAnalyticsModal = document.getElementById('secretAnalyticsModal');
-    const secretCounterTrigger = document.getElementById('secretCounterTrigger');
     const secretHeartTrigger = document.getElementById('secretHeartTrigger');
     const secretModalCloseBtn = document.getElementById('secretModalCloseBtn');
     const btnRefreshTelemetry = document.getElementById('btnRefreshTelemetry');
@@ -4313,7 +4312,6 @@ Virgínia & Jácint ❤️`;
       secretAnalyticsModal.setAttribute('aria-hidden', 'true');
     }
 
-    if (secretCounterTrigger) secretCounterTrigger.addEventListener('click', openSecretAnalytics);
     if (secretHeartTrigger) secretHeartTrigger.addEventListener('click', openSecretAnalytics);
     if (secretModalCloseBtn) secretModalCloseBtn.addEventListener('click', closeSecretAnalytics);
     if (btnRefreshTelemetry) btnRefreshTelemetry.addEventListener('click', loadAndRenderVisits);
