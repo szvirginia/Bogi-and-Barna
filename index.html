@@ -2310,33 +2310,6 @@
       letter-spacing: 1px;
     }
 
-    .btn-preview-timer {
-      background: rgba(93, 149, 207, 0.12);
-      border: 1px solid var(--dev-blue);
-      color: var(--dev-blue);
-      font-family: var(--font-dev);
-      font-size: 0.82rem;
-      padding: 0.55rem 1.35rem;
-      border-radius: 999px;
-      cursor: pointer;
-      margin-top: 1rem;
-      margin-bottom: 2.5rem;
-      transition: var(--transition-smooth);
-    }
-
-    .btn-preview-timer:hover {
-      background: var(--dev-blue);
-      color: #10141d;
-      box-shadow: 0 3px 12px rgba(93, 149, 207, 0.3);
-    }
-
-    .btn-preview-timer.active {
-      background: var(--love-accent);
-      border-color: var(--love-accent);
-      color: #ffffff;
-      box-shadow: 0 3px 15px rgba(184, 93, 114, 0.35);
-    }
-
     .footer-credit-line {
       font-family: var(--font-dev);
       font-size: 0.85rem;
@@ -3266,10 +3239,6 @@
         </div>
       </div>
 
-      <div>
-        <button type="button" class="btn-preview-timer" id="btnPreviewTimer">Előnézet: Mi lesz 100 nappal az esküvő után? ✨</button>
-      </div>
-
       <div class="footer-credit-line">
         Készítette szeretettel: <span>Virgínia &amp; Jácint</span> 💜
       </div>
@@ -3777,44 +3746,15 @@ Virgínia & Jácint ❤️`;
     const cdSecondsEl = document.getElementById('cdSeconds');
     const marriageTimerTitle = document.getElementById('marriageTimerTitle');
     const marriageTimerSub = document.getElementById('marriageTimerSub');
-    const btnPreviewTimer = document.getElementById('btnPreviewTimer');
-
-    let isPreviewSimulation = false;
-
-    if (btnPreviewTimer) {
-      btnPreviewTimer.addEventListener('click', () => {
-        isPreviewSimulation = !isPreviewSimulation;
-        if (isPreviewSimulation) {
-          btnPreviewTimer.textContent = 'Vissza a valós dátumhoz ⏱️';
-          btnPreviewTimer.classList.add('active');
-        } else {
-          btnPreviewTimer.textContent = 'Előnézet: Mi lesz 100 nappal az esküvő után? ✨';
-          btnPreviewTimer.classList.remove('active');
-        }
-        updateMarriageTimer();
-      });
-    }
 
     function updateMarriageTimer() {
-      const realNow = new Date().getTime();
-      let effectiveNow = realNow;
-
-      if (isPreviewSimulation) {
-        // Szimuláció: 100 nappal az esküvő után + a futó másodpercek
-        const offset100Days = 100 * 24 * 60 * 60 * 1000 + (realNow % (24 * 60 * 60 * 1000));
-        effectiveNow = weddingDate + offset100Days;
-      }
-
-      const diff = effectiveNow - weddingDate;
+      const now = new Date().getTime();
+      const diff = now - weddingDate;
 
       if (diff >= 0) {
         // Esküvő időpontjától (15:30) kezdve FELFELÉ számol folyamatosan!
         marriageTimerTitle.textContent = 'Házasságban eltöltött boldog idő';
-        if (isPreviewSimulation) {
-          marriageTimerSub.innerHTML = '✨ <em>[Szimuláció: 100 nappal az esküvő után]</em> — 2026. október 22. 15:30 óta szüntelenül növekszik 💕';
-        } else {
-          marriageTimerSub.textContent = '2026. október 22. 15:30 óta szüntelenül növekszik 💕';
-        }
+        marriageTimerSub.textContent = '2026. október 22. 15:30 óta szüntelenül növekszik 💕';
 
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
