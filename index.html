@@ -2324,6 +2324,258 @@
       color: var(--dev-purple);
     }
 
+    .creator-secret-trigger {
+      cursor: pointer;
+      display: inline-block;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .creator-secret-trigger:hover {
+      transform: scale(1.08);
+      color: var(--love-accent) !important;
+    }
+
+    /* Titkos Látogatási Időablak Modal */
+    .secret-modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(8, 10, 16, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 100000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .secret-modal-backdrop.active {
+      display: flex;
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .secret-modal-dialog {
+      background: #141824;
+      border: 1.5px solid var(--dev-blue);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 740px;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 30px rgba(93, 149, 207, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .secret-modal-header {
+      padding: 1.6rem 2rem 1.2rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .secret-modal-badge {
+      display: inline-block;
+      background: rgba(93, 149, 207, 0.15);
+      color: var(--dev-blue);
+      border: 1px solid var(--dev-blue);
+      font-family: var(--font-dev);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.18rem 0.55rem;
+      border-radius: 4px;
+      letter-spacing: 0.8px;
+      margin-bottom: 0.4rem;
+    }
+
+    .secret-modal-title {
+      font-family: var(--font-med-head);
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #ffd8d4;
+      line-height: 1.2;
+    }
+
+    .secret-modal-subtitle {
+      font-family: var(--font-dev);
+      font-size: 0.8rem;
+      color: var(--dev-text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .secret-modal-close {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #f0f6fc;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      line-height: 1;
+    }
+
+    .secret-modal-close:hover {
+      background: var(--dev-red);
+      color: #ffffff;
+      transform: rotate(90deg);
+    }
+
+    .secret-modal-stats {
+      padding: 1.2rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      background: rgba(16, 20, 29, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .secret-stat-card {
+      background: #0f131d;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      text-align: center;
+    }
+
+    .secret-stat-num {
+      display: block;
+      font-family: var(--font-dev);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--dev-green);
+    }
+
+    .secret-stat-lbl {
+      display: block;
+      font-size: 0.74rem;
+      color: var(--dev-text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .secret-modal-actions {
+      padding: 0.8rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-refresh-telemetry {
+      background: rgba(93, 149, 207, 0.2);
+      border: 1px solid var(--dev-blue);
+      color: #f0f6fc;
+      font-family: var(--font-dev);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-refresh-telemetry:hover {
+      background: var(--dev-blue);
+      color: #0d1117;
+    }
+
+    .secret-sync-indicator {
+      font-family: var(--font-dev);
+      font-size: 0.72rem;
+      color: var(--dev-text-muted);
+    }
+
+    .secret-visits-container {
+      padding: 1.4rem 2rem 2rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .secret-visit-card {
+      background: #0f131d;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      padding: 0.9rem 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .secret-visit-card:hover {
+      transform: translateX(4px);
+      border-color: var(--dev-blue);
+    }
+
+    .secret-visit-left {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .secret-visit-flag {
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .secret-visit-place {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #f0f6fc;
+    }
+
+    .secret-visit-isp {
+      font-family: var(--font-dev);
+      font-size: 0.72rem;
+      color: var(--dev-text-muted);
+    }
+
+    .secret-visit-right {
+      text-align: right;
+    }
+
+    .secret-visit-time {
+      font-family: var(--font-dev);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--dev-green);
+    }
+
+    .secret-visit-device {
+      font-family: var(--font-dev);
+      font-size: 0.72rem;
+      color: var(--med-text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .secret-visits-empty,
+    .secret-visits-loading {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-family: var(--font-dev);
+      font-size: 0.85rem;
+      color: var(--dev-text-muted);
+    }
+
     /* Konfetti vászon */
     .confetti-canvas {
       position: fixed;
@@ -3240,10 +3492,52 @@
       </div>
 
       <div class="footer-credit-line">
-        Készítette szeretettel: <span>Virgínia &amp; Jácint</span> 💜
+        Készítette szeretettel: <span class="creator-secret-trigger" id="secretCounterTrigger" title="Látogatási időablak megnyitása">Virgínia &amp; Jácint</span> <span class="creator-secret-trigger" id="secretHeartTrigger" title="Látogatási időablak megnyitása">💜</span>
       </div>
     </div>
   </footer>
+
+  <!-- ==========================================================================
+       TITKOS LÁTOGATÁSI IDŐABLAK MODAL (Csak Virgínia & Jácint számára)
+       ========================================================================== -->
+  <div class="secret-modal-backdrop" id="secretAnalyticsModal" aria-hidden="true">
+    <div class="secret-modal-dialog">
+      <div class="secret-modal-header">
+        <div class="secret-modal-title-group">
+          <div class="secret-modal-badge">🔐 REJTETT TELEMETRIA</div>
+          <h3 class="secret-modal-title">Látogatási Időablak</h3>
+          <p class="secret-modal-subtitle">Valós idejű napló: mikor és honnan nyitották meg a weboldalt</p>
+        </div>
+        <button type="button" class="secret-modal-close" id="secretModalCloseBtn" aria-label="Bezárás">&times;</button>
+      </div>
+
+      <div class="secret-modal-stats">
+        <div class="secret-stat-card">
+          <span class="secret-stat-num" id="statTotalVisits">0</span>
+          <span class="secret-stat-lbl">Összes megnyitás</span>
+        </div>
+        <div class="secret-stat-card">
+          <span class="secret-stat-num" id="statUniqueLocs">0</span>
+          <span class="secret-stat-lbl">Különböző helyszín</span>
+        </div>
+        <div class="secret-stat-card">
+          <span class="secret-stat-num" id="statLastVisit">Még nincs</span>
+          <span class="secret-stat-lbl">Utolsó megnyitás</span>
+        </div>
+      </div>
+
+      <div class="secret-modal-actions">
+        <button type="button" class="btn-refresh-telemetry" id="btnRefreshTelemetry">
+          Frissítés 🔄
+        </button>
+        <span class="secret-sync-indicator" id="secretSyncStatus">Felhővel szinkronizálva ✓</span>
+      </div>
+
+      <div class="secret-visits-container" id="secretVisitsList">
+        <div class="secret-visits-loading">Adatok betöltése a felhőből...</div>
+      </div>
+    </div>
+  </div>
 
   <!-- ==========================================================================
        JAVASCRIPT FUNKCIÓK ÉS INTERAKCIÓK
@@ -3895,6 +4189,207 @@ Virgínia & Jácint ❤️`;
         }
       }
       requestAnimationFrame(updateConfettiFrame);
+    }
+
+    /* ==========================================================================
+       8. LÁTHATATLAN LÁTOGATÁSI COUNTER ÉS TITKOS IDŐABLAK (Virgíniának)
+       ========================================================================== */
+    const CLOUD_STORAGE_URL = 'https://api.restful-api.dev/objects/ff808181a09d98f701a167c63745677a';
+    const NTFY_URL = 'https://ntfy.sh/bogi_barna_wedding_visits_2026';
+
+    function detectDeviceDetails() {
+      const ua = navigator.userAgent;
+      let os = "Ismeretlen OS";
+      if (/iPhone/i.test(ua)) os = "iOS (iPhone)";
+      else if (/iPad/i.test(ua)) os = "iOS (iPad)";
+      else if (/Android/i.test(ua)) os = "Android";
+      else if (/Windows/i.test(ua)) os = "Windows PC";
+      else if (/Macintosh|Mac OS/i.test(ua)) os = "Mac";
+      else if (/Linux/i.test(ua)) os = "Linux";
+
+      let browser = "Böngésző";
+      if (/Chrome/i.test(ua) && !/Edg/i.test(ua)) browser = "Chrome";
+      else if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) browser = "Safari";
+      else if (/Firefox/i.test(ua)) browser = "Firefox";
+      else if (/Edg/i.test(ua)) browser = "Edge";
+
+      return `${os} • ${browser}`;
+    }
+
+    async function recordInvisibleVisit() {
+      try {
+        const now = new Date();
+        const timeFormatted = now.toLocaleString('hu-HU', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        });
+
+        let geo = {};
+        try {
+          const geoRes = await fetch('https://ipwho.is/', { cache: 'no-store' });
+          if (geoRes.ok) geo = await geoRes.json();
+        } catch (e) {}
+
+        const visitRecord = {
+          id: Date.now(),
+          time: timeFormatted,
+          city: geo.city || 'Ismeretlen város',
+          region: geo.region || '',
+          country: geo.country || 'Magyarország',
+          countryCode: geo.country_code || 'HU',
+          flag: (geo.flag && geo.flag.emoji) ? geo.flag.emoji : '🇭🇺',
+          isp: (geo.connection && (geo.connection.isp || geo.connection.org)) ? (geo.connection.isp || geo.connection.org) : '',
+          device: detectDeviceDetails(),
+          referrer: document.referrer ? (new URL(document.referrer).hostname || 'Külső hivatkozás') : 'Közvetlen / QR-kód'
+        };
+
+        // 1. Mentés helyi tárolóba
+        let localVisits = [];
+        try {
+          localVisits = JSON.parse(localStorage.getItem('bb_secret_visits') || '[]');
+        } catch (e) { localVisits = []; }
+        localVisits.unshift(visitRecord);
+        if (localVisits.length > 80) localVisits = localVisits.slice(0, 80);
+        localStorage.setItem('bb_secret_visits', JSON.stringify(localVisits));
+
+        // 2. Szinkronizálás a központi felhőbe (restful-api.dev)
+        try {
+          const cloudGet = await fetch(CLOUD_STORAGE_URL, { cache: 'no-store' });
+          let cloudVisits = [];
+          if (cloudGet.ok) {
+            const cloudJson = await cloudGet.json();
+            cloudVisits = (cloudJson.data && Array.isArray(cloudJson.data.visits)) ? cloudJson.data.visits : [];
+          }
+          cloudVisits.unshift(visitRecord);
+          if (cloudVisits.length > 80) cloudVisits = cloudVisits.slice(0, 80);
+
+          await fetch(CLOUD_STORAGE_URL, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: 'bogi_barna_wedding_visits_log',
+              data: { visits: cloudVisits }
+            })
+          });
+        } catch (cloudErr) {}
+
+        // 3. Valós idejű ntfy értesítés kiküldése a háttérben
+        try {
+          fetch(NTFY_URL, {
+            method: 'POST',
+            body: `${visitRecord.time} | ${visitRecord.city}, ${visitRecord.country} | ${visitRecord.device}`,
+            headers: { 'Title': '💌 Bogi & Barna oldalt megnyitották!' }
+          }).catch(() => {});
+        } catch (e) {}
+
+      } catch (err) {}
+    }
+
+    const secretAnalyticsModal = document.getElementById('secretAnalyticsModal');
+    const secretCounterTrigger = document.getElementById('secretCounterTrigger');
+    const secretHeartTrigger = document.getElementById('secretHeartTrigger');
+    const secretModalCloseBtn = document.getElementById('secretModalCloseBtn');
+    const btnRefreshTelemetry = document.getElementById('btnRefreshTelemetry');
+    const secretVisitsList = document.getElementById('secretVisitsList');
+    const statTotalVisits = document.getElementById('statTotalVisits');
+    const statUniqueLocs = document.getElementById('statUniqueLocs');
+    const statLastVisit = document.getElementById('statLastVisit');
+    const secretSyncStatus = document.getElementById('secretSyncStatus');
+
+    function openSecretAnalytics() {
+      if (!secretAnalyticsModal) return;
+      secretAnalyticsModal.classList.add('active');
+      secretAnalyticsModal.setAttribute('aria-hidden', 'false');
+      loadAndRenderVisits();
+    }
+
+    function closeSecretAnalytics() {
+      if (!secretAnalyticsModal) return;
+      secretAnalyticsModal.classList.remove('active');
+      secretAnalyticsModal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (secretCounterTrigger) secretCounterTrigger.addEventListener('click', openSecretAnalytics);
+    if (secretHeartTrigger) secretHeartTrigger.addEventListener('click', openSecretAnalytics);
+    if (secretModalCloseBtn) secretModalCloseBtn.addEventListener('click', closeSecretAnalytics);
+    if (btnRefreshTelemetry) btnRefreshTelemetry.addEventListener('click', loadAndRenderVisits);
+
+    if (secretAnalyticsModal) {
+      secretAnalyticsModal.addEventListener('click', (e) => {
+        if (e.target === secretAnalyticsModal) closeSecretAnalytics();
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && secretAnalyticsModal && secretAnalyticsModal.classList.contains('active')) {
+        closeSecretAnalytics();
+      }
+    });
+
+    async function loadAndRenderVisits() {
+      if (!secretVisitsList) return;
+      secretVisitsList.innerHTML = '<div class="secret-visits-loading">Adatok frissítése a felhőből... ⏳</div>';
+      if (secretSyncStatus) secretSyncStatus.textContent = 'Szinkronizálás...';
+
+      let visits = [];
+      try {
+        const res = await fetch(CLOUD_STORAGE_URL, { cache: 'no-store' });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.data && Array.isArray(json.data.visits)) {
+            visits = json.data.visits;
+          }
+        }
+      } catch (e) {}
+
+      if (!visits || visits.length === 0) {
+        try {
+          visits = JSON.parse(localStorage.getItem('bb_secret_visits') || '[]');
+        } catch (e) { visits = []; }
+      }
+
+      if (secretSyncStatus) secretSyncStatus.textContent = `Frissítve: ${new Date().toLocaleTimeString('hu-HU')}`;
+
+      if (statTotalVisits) statTotalVisits.textContent = visits.length;
+      const uniqueCities = new Set(visits.map(v => v.city || 'Ismeretlen').filter(Boolean));
+      if (statUniqueLocs) statUniqueLocs.textContent = uniqueCities.size;
+      if (statLastVisit) statLastVisit.textContent = visits.length > 0 ? visits[0].time : 'Még nincs';
+
+      if (visits.length === 0) {
+        secretVisitsList.innerHTML = '<div class="secret-visits-empty">Még nem érkezett látogatási adat a felhőbe.</div>';
+        return;
+      }
+
+      let html = '';
+      visits.forEach(v => {
+        html += `
+          <div class="secret-visit-card">
+            <div class="secret-visit-left">
+              <span class="secret-visit-flag">${v.flag || '📍'}</span>
+              <div>
+                <div class="secret-visit-place">${v.city || 'Ismeretlen város'}, ${v.country || 'Magyarország'}</div>
+                <div class="secret-visit-isp">${v.isp ? v.isp + ' • ' : ''}${v.referrer || 'Közvetlen'}</div>
+              </div>
+            </div>
+            <div class="secret-visit-right">
+              <div class="secret-visit-time">🕒 ${v.time}</div>
+              <div class="secret-visit-device">📱 ${v.device || 'Böngésző'}</div>
+            </div>
+          </div>
+        `;
+      });
+
+      secretVisitsList.innerHTML = html;
+    }
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      setTimeout(recordInvisibleVisit, 1000);
+    } else {
+      document.addEventListener('DOMContentLoaded', () => setTimeout(recordInvisibleVisit, 1000));
     }
   </script>
 </body>
